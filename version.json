@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
   "download_url": "https://github.com/Asunano/wp-omni-auth/releases/download/v0.1.0/wp-omni-auth.zip",
-  "details_url": "https://blog.drxian.cn/archives/1465",
+  "details_url": "https://github.com/Asunano/wp-omni-auth/releases/tag/v0.1.0",
   "requires": "6.0",
   "tested": "",
   "requires_php": "7.4",
