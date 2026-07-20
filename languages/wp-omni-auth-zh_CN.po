@@ -1,0 +1,2711 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP-OmniAuth 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/Asunano/wp-omni-auth\n"
+"POT-Creation-Date: 2026-07-19 17:58+0000\n"
+"PO-Revision-Date: 2026-07-07 15:00+0000\n"
+"Last-Translator: WP-OmniAuth\n"
+"Language-Team: Chinese (Simplified)\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: includes/core/class-emergency-access.php:380
+msgid "%1$d %2$s %3$d ="
+msgstr "%1$d %2$s %3$d ="
+
+#: includes/admin/traits/class-settings-ajax.php:503
+msgid "%d login log entries"
+msgstr "登录日志"
+
+#: includes/admin/traits/class-settings-ajax.php:493
+msgid "%d user bindings"
+msgstr "用户 OAuth 绑定"
+
+#: includes/views/settings/dashboard-tab.php:54
+msgid "%s ago"
+msgstr "%s 前"
+
+#: includes/views/emergency-page.php:131
+#: includes/views/oauth-login-screen.php:28
+msgid "&larr; Back to %s"
+msgstr "← 返回 %s"
+
+#: includes/admin/class-settings-page.php:148
+msgid "(log is empty)"
+msgstr "（日志为空）"
+
+#: includes/providers/class-apple-provider.php:12
+msgid "10-character Team ID from Membership details."
+msgstr "来自会员详情的 10 位团队 ID。"
+
+#: includes/views/settings/provider-list-view.php:10
+msgid ""
+"<strong>免责声明：</strong>本插件展示的 OAuth 提供商图标仅用于身份识别目的，"
+"不代表与相关品牌有任何关联、认可或合作关系。部分图标系作者根据公开资料制作，"
+"可能与官方图标存在差异。所有商标和品牌名称归各自权利人所有。\n"
+"如您认为某图标侵犯了您的合法权益，或存在与事实不符、误导用户、影响品牌声誉的"
+"情形，请与我们联系，我们将在核实后尽快处理。\n"
+"欢迎前往 <a href=\"%s\" target=\"_blank\">我们的设置指南</a> 提交准确的官方图"
+"标资源。"
+msgstr ""
+
+#: includes/views/settings/settings-page.php:22
+msgid "About"
+msgstr "关于"
+
+#: includes/core/class-event-dispatcher.php:118
+msgid "Access Denied"
+msgstr "访问被拒绝"
+
+#: includes/core/class-event-dispatcher.php:123
+#: includes/core/class-event-dispatcher.php:124
+#: includes/views/settings/notifications-section.php:34
+#: includes/views/settings/notifications-section.php:67
+msgid "Access denied"
+msgstr "访问被拒绝"
+
+#: includes/core/class-oauth-manager.php:564
+msgid "Access denied. This account is not authorized."
+msgstr "访问被拒绝，此账户未获授权。"
+
+#: includes/core/class-oauth-manager.php:394
+#: includes/core/class-oauth-manager.php:709
+msgid "Access denied. Your IP address has been blocked."
+msgstr "访问被拒绝，你的 IP 地址已被封禁。"
+
+#: includes/core/class-oauth-manager.php:539
+msgid "Account not found. Please use the correct OAuth account."
+msgstr "未找到账户，请使用正确的 OAuth 账户。"
+
+#: includes/views/settings/dashboard-tab.php:23
+msgid "Active Providers"
+msgstr "活跃提供商"
+
+#: includes/views/settings/data-management-section.php:26
+msgid "Active rate limit counters"
+msgstr "当前活跃的速率限制计数器"
+
+#: includes/admin/class-settings-page.php:161
+#: includes/views/settings/settings-page.php:207
+msgid "Add"
+msgstr "添加"
+
+#: includes/admin/class-settings-page.php:157
+#: includes/views/settings/provider-list-view.php:22
+#: includes/views/settings/provider-list-view.php:24
+#: includes/views/settings/settings-page.php:199
+msgid "Add Custom Provider"
+msgstr "添加自定义提供商"
+
+#: includes/views/settings/security-section.php:143
+msgid "Added"
+msgstr "添加时间"
+
+#: includes/core/class-event-dispatcher.php:65
+msgid "Admin"
+msgstr "管理员"
+
+#: includes/views/settings/user-profile-oauth-section.php:40
+msgid ""
+"After unbinding, the user must log in via OAuth again to re-establish the "
+"binding."
+msgstr "解除绑定后，用户需要通过 OAuth 重新登录以建立新的绑定。"
+
+#: includes/core/class-event-dispatcher.php:166
+#: includes/core/class-emergency-access.php:622
+msgid "Alert"
+msgstr "告警"
+
+#: includes/admin/traits/class-settings-ajax.php:332
+msgid "All data has been reset to defaults."
+msgstr "所有数据已重置为默认值。"
+
+#: includes/views/settings/general-section.php:50
+msgid "All registered users"
+msgstr "所有已注册用户"
+
+#: includes/views/settings/settings-page.php:167
+msgid "All settings and provider configurations"
+msgstr "所有设置和提供商配置"
+
+#: includes/views/settings/general-section.php:32
+msgid "Allowed Users"
+msgstr "允许登录的用户"
+
+#: includes/views/settings/field.php:20
+msgid "Already configured — leave empty to keep current"
+msgstr "已配置 — 留空保持不变"
+
+#: includes/core/class-emergency-access.php:624
+msgid "An emergency login link was requested for %s."
+msgstr "已为 %s 请求了紧急登录链接。"
+
+#: includes/views/settings/general-section.php:51
+msgid "Any WordPress user matched by OAuth email can log in."
+msgstr "任何通过 OAuth 邮箱匹配的 WordPress 用户均可登录。"
+
+#: includes/providers/class-qq-provider.php:12
+#: includes/providers/class-feishu-provider.php:9
+msgid "App ID"
+msgstr "App ID"
+
+#: includes/providers/class-qq-provider.php:13
+#, fuzzy
+msgid "App Key"
+msgstr "App ID"
+
+#: includes/providers/class-weibo-provider.php:11
+msgid "App Key (App ID)"
+msgstr "App Key（App ID）"
+
+#: includes/providers/class-feishu-provider.php:10
+#: includes/providers/class-weibo-provider.php:12
+msgid "App Secret"
+msgstr "App Secret"
+
+#: includes/providers/class-wechat-provider.php:12
+msgid "AppID"
+msgstr "AppID"
+
+#: includes/providers/class-dingtalk-provider.php:9
+msgid "AppKey"
+msgstr "AppKey"
+
+#: includes/providers/class-wechat-provider.php:13
+#: includes/providers/class-dingtalk-provider.php:10
+msgid "AppSecret"
+msgstr "AppSecret"
+
+#: includes/providers/class-apple-provider.php:7
+msgid "Apple"
+msgstr ""
+
+#: includes/providers/class-apple-provider.php:11
+msgid "Apple Developer → Identifiers → Service IDs"
+msgstr "Apple 开发者 → 标识符 → 服务 ID"
+
+#: includes/providers/class-microsoft-provider.php:9
+msgid "Application (client) ID"
+msgstr "应用程序（客户端）ID"
+
+#: includes/admin/class-settings-page.php:153
+msgid "Are you sure you want to clear the debug log?"
+msgstr "确定要清除调试日志吗？"
+
+#: includes/views/settings/settings-page.php:262
+msgid ""
+"Are you sure you want to regenerate the emergency key? The old key will stop "
+"working immediately."
+msgstr "确定要重新生成紧急密钥吗？旧密钥将立即失效。"
+
+#: includes/admin/class-settings-page.php:164
+#: includes/views/settings/settings-page.php:221
+msgid ""
+"Are you sure you want to remove this custom provider? All settings will be "
+"lost."
+msgstr "确定要移除此自定义提供商吗？所有设置将会丢失。"
+
+#: includes/admin/class-settings-page.php:145
+msgid "Are you sure you want to remove this provider?"
+msgstr "确定要移除此提供商吗？"
+
+#: includes/views/settings/user-profile-oauth-section.php:37
+msgid ""
+"Are you sure you want to unbind this OAuth account? The user will need to re-"
+"authenticate via OAuth."
+msgstr "确定要解除此 OAuth 账户的绑定吗？用户需要通过 OAuth 重新认证。"
+
+#: includes/core/class-event-dispatcher.php:135
+msgid "Attempted Email"
+msgstr "尝试邮箱"
+
+#: includes/core/class-event-dispatcher.php:122
+#: includes/core/class-event-dispatcher.php:127
+msgid "Authentication failed"
+msgstr "认证失败"
+
+#: includes/providers/class-authentik-provider.php:5
+msgid "Authentik"
+msgstr ""
+
+#: includes/providers/class-authentik-provider.php:11
+msgid "Authentik URL"
+msgstr "Authentik 地址"
+
+#: includes/providers/class-custom-provider.php:38
+msgid "Authorization URL"
+msgstr "授权 URL"
+
+#: includes/views/settings/security-section.php:24
+msgid "Auto (CF-Connecting-IP → X-Forwarded-For first → X-Real-IP)"
+msgstr ""
+
+#: includes/views/settings/security-section.php:97
+msgid "Auto-Ban Duration"
+msgstr "自动封禁时长"
+
+#: includes/views/settings/security-section.php:83
+msgid "Auto-Ban Threshold"
+msgstr "自动封禁阈值"
+
+#: includes/views/settings/security-section.php:90
+msgid "Auto-Ban Window"
+msgstr "自动封禁窗口"
+
+#: includes/core/class-security.php:394
+msgid "Auto-banned"
+msgstr "自动封禁"
+
+#: includes/providers/class-gitee-provider.php:11
+msgid ""
+"Available: user_info projects pull_requests issues notes keys hook groups "
+"gists enterprises"
+msgstr ""
+
+#: includes/views/emergency-page.php:92 includes/views/emergency-page.php:128
+msgid "Back to choice"
+msgstr "返回选择"
+
+#: includes/views/settings/provider-detail-view.php:8
+msgid "Back to provider list"
+msgstr "返回提供商列表"
+
+#: includes/core/class-event-dispatcher.php:63
+msgid "Binding successful"
+msgstr "绑定成功"
+
+#: includes/views/settings/data-management-section.php:21
+msgid "Blocked IP addresses"
+msgstr "已封禁的 IP 地址"
+
+#: includes/views/settings/provider-detail-view.php:83
+msgid "Bound"
+msgstr "已绑定"
+
+#: includes/views/settings/user-profile-oauth-section.php:26
+msgid "Bound Since"
+msgstr "绑定时间"
+
+#: includes/views/settings/about-tab.php:80
+msgid "Built-in support for GitHub and Google OAuth."
+msgstr "内置 GitHub 和 Google OAuth 支持。"
+
+#: includes/providers/class-custom-provider.php:31
+msgid "Button Color"
+msgstr "按钮颜色"
+
+#: includes/views/settings/about-tab.php:18
+msgid "By"
+msgstr "作者"
+
+#: includes/admin/traits/class-settings-ajax.php:255
+#: includes/views/settings/data-management-section.php:30
+msgid "Caches"
+msgstr "缓存"
+
+#: includes/views/oauth-login-screen.php:26
+msgid "Can&rsquo;t sign in? Use emergency access."
+msgstr "无法登录？请使用紧急访问。"
+
+#: includes/admin/class-settings-page.php:160
+#: includes/views/settings/settings-page.php:176
+#: includes/views/settings/settings-page.php:206
+#: includes/views/settings/settings-page.php:225
+#: includes/views/settings/settings-page.php:265
+msgid "Cancel"
+msgstr "取消"
+
+#: includes/views/settings/about-tab.php:34
+msgid "Check for Updates"
+msgstr "检查更新"
+
+#: includes/admin/class-settings-page.php:175
+msgid "Checking..."
+msgstr "检查中..."
+
+#: includes/providers/class-feishu-provider.php:11
+msgid "China (feishu.cn)"
+msgstr "中国（feishu.cn）"
+
+#: includes/views/oauth-login-screen.php:21
+msgid "Choose a provider to continue."
+msgstr "请选择登录方式以继续。"
+
+#: includes/views/emergency-page.php:46
+msgid "Choose how to regain password login:"
+msgstr "请选择恢复密码登录的方式："
+
+#: includes/views/settings/data-management-section.php:10
+msgid "Clear Data"
+msgstr "清除数据"
+
+#: includes/views/settings/debug-log-section.php:37
+msgid "Clear Debug Log"
+msgstr "清除调试日志"
+
+#: includes/views/settings/data-management-section.php:45
+msgid "Clear Selected"
+msgstr "清除所选"
+
+#: includes/admin/traits/class-settings-ajax.php:281
+msgid "Cleared: %s"
+msgstr "已清除：%s"
+
+#: includes/admin/class-settings-page.php:154
+msgid "Clearing..."
+msgstr "清除中..."
+
+#: includes/views/callback-page.php:173
+msgid "Click here if not redirected"
+msgstr "未跳转请点击这里"
+
+#: includes/admin/class-settings-page.php:168
+#: includes/views/settings/settings-page.php:242
+msgid "Click to copy"
+msgstr "点击复制"
+
+#: includes/providers/class-gitee-provider.php:9
+#: includes/providers/class-google-provider.php:15
+#: includes/providers/class-custom-provider.php:17
+#: includes/providers/class-authentik-provider.php:9
+#: includes/providers/class-github-provider.php:15
+msgid "Client ID"
+msgstr "客户端 ID"
+
+#: includes/views/settings/security-section.php:19
+msgid "Client IP Source"
+msgstr "客户端 IP 来源"
+
+#: includes/providers/class-microsoft-provider.php:10
+#: includes/providers/class-gitee-provider.php:10
+#: includes/providers/class-google-provider.php:22
+#: includes/providers/class-custom-provider.php:24
+#: includes/providers/class-authentik-provider.php:10
+#: includes/providers/class-github-provider.php:22
+msgid "Client Secret"
+msgstr "客户端密钥"
+
+#: includes/admin/class-settings-page.php:173
+#: includes/views/settings/settings-page.php:246
+msgid "Close"
+msgstr "关闭"
+
+#: includes/views/settings/security-section.php:25
+msgid "Cloudflare (CF-Connecting-IP)"
+msgstr ""
+
+#: includes/views/emergency-page.php:73 includes/views/emergency-page.php:109
+msgid "Code"
+msgstr "验证码"
+
+#: includes/providers/class-custom-provider.php:34
+msgid ""
+"Color of this provider’s button on the login screen. Leave blank to use the "
+"site’s admin theme color. Text color is chosen automatically for contrast."
+msgstr ""
+"该提供商在登录界面上按钮的颜色。留空则使用站点的管理主题色。文字颜色会自动选"
+"择以保证对比度。此提供商在登录界面上的按钮颜色。留空则使用站点的管理主题色，"
+"文字颜色将根据对比度自动选择。"
+
+#: includes/views/settings/provider-card.php:25
+msgid "Configure"
+msgstr "配置"
+
+#: includes/views/settings/about-tab.php:94
+msgid "Configure Providers"
+msgstr "配置提供商"
+
+#: includes/core/class-provider-checker.php:63
+msgid "Configured"
+msgstr "已配置"
+
+#: includes/views/settings/settings-page.php:162
+msgid "Confirm Full Reset"
+msgstr "确认完全重置"
+
+#: includes/admin/class-settings-page.php:169
+msgid "Copied!"
+msgstr "已复制！"
+
+#: includes/views/settings/settings-page.php:240
+msgid "Current key"
+msgstr "当前密钥"
+
+#: includes/views/settings/about-tab.php:29
+msgid "Current version:"
+msgstr "当前版本："
+
+#: includes/views/settings/security-section.php:43
+msgid "Custom Header Name"
+msgstr "自定义提供商"
+
+#: includes/admin/class-settings-page.php:141
+#: includes/admin/traits/class-settings-ajax.php:22
+msgid "Custom Provider"
+msgstr "自定义提供商"
+
+#: includes/views/settings/security-section.php:31
+msgid "Custom header (configure below)"
+msgstr ""
+
+#: includes/views/settings/settings-page.php:13
+msgid "Dashboard"
+msgstr "仪表盘"
+
+#: includes/views/settings/data-management-section.php:31
+msgid "Dashboard stats & GitHub release cache"
+msgstr "仪表盘统计和 GitHub 版本检查缓存"
+
+#: includes/admin/traits/class-settings-views.php:83
+#: includes/admin/traits/class-settings-registration.php:56
+#: includes/views/settings/settings-page.php:147
+msgid "Data Management"
+msgstr "数据管理"
+
+#: includes/admin/traits/class-settings-views.php:82
+#: includes/admin/traits/class-settings-registration.php:29
+msgid "Debug Log"
+msgstr "调试日志"
+
+#: includes/views/settings/debug-log-section.php:8
+msgid "Debug Mode"
+msgstr "调试模式"
+
+#: includes/admin/traits/class-settings-ajax.php:81
+#, fuzzy
+msgid ""
+"Debug Mode is off. Enable it (Debug Log settings) and perform an OAuth login "
+"to generate the log file."
+msgstr ""
+"调试模式已关闭。请在（通用设置）中启用，并执行一次 OAuth 登录以生成日志文件。"
+"调试模式已关闭。请先在“常规”设置中启用，并执行一次 OAuth 登录以生成日志文件。"
+
+#: includes/admin/traits/class-settings-ajax.php:263
+#: includes/views/settings/data-management-section.php:35
+msgid "Debug log"
+msgstr "调试日志"
+
+#: includes/views/settings/data-management-section.php:36
+msgid "Debug log file contents"
+msgstr "调试日志文件内容"
+
+#: includes/admin/traits/class-settings-ajax.php:124
+msgid "Debug log file has not been created yet."
+msgstr "调试日志文件尚未创建。"
+
+#: includes/admin/traits/class-settings-ajax.php:80
+msgid ""
+"Debug log file has not been created yet. Perform an OAuth login or any "
+"plugin action to generate it."
+msgstr "调试日志文件尚未创建。请执行一次 OAuth 登录或任意插件操作以生成它。"
+
+#: includes/views/settings/about-tab.php:82
+msgid "Debug logging with built-in log viewer."
+msgstr "调试日志及内置日志查看器。"
+
+#: includes/views/settings/debug-log-section.php:23
+msgid ""
+"Debug logs are written to the following file (dot-prefixed, not web-"
+"accessible). It only appears after a debug-logged event occurs while Debug "
+"Mode is on — use"
+msgstr ""
+"调试日志写入以下文件（以点开头，不可通过 Web 访问）。仅在调试模式开启且发生记"
+"录事件后才会出现 —— 使用调试日志将写入以下文件（以点开头，无法通过 Web 访"
+"问）。仅当调试模式开启且发生被记录的事件后才会出现 —— 使用"
+
+#: includes/admin/traits/class-settings-ajax.php:463
+msgid "Decryption failed. This backup was exported from a different site."
+msgstr "解密失败。此备份文件是从其他站点导出的。"
+
+#: includes/views/settings/notifications-section.php:22
+msgid "Defaults to admin email if empty."
+msgstr "留空则使用管理员邮箱。"
+
+#: includes/views/settings/data-management-section.php:53
+msgid ""
+"Delete ALL plugin data and restore default settings. This cannot be undone."
+msgstr "删除所有插件数据并恢复默认设置。此操作不可撤销。"
+
+#: includes/views/settings/security-section.php:39
+msgid ""
+"Different CDNs populate X-Forwarded-For inconsistently. Pick the header / "
+"segment that carries the real client IP for your setup."
+msgstr ""
+"不同 CDN 对 X-Forwarded-For 的处理各不相同。请选择能获取真实客户端 IP 的请求"
+"头和位置。"
+
+#: includes/providers/class-dingtalk-provider.php:5
+msgid "DingTalk"
+msgstr "钉钉"
+
+#: includes/providers/class-dingtalk-provider.php:9
+msgid ""
+"DingTalk Open Platform → App Details → Credentials & Basic Info → AppKey"
+msgstr "钉钉开放平台 → 应用详情 → 凭证与基础信息 → AppKey"
+
+#: includes/views/settings/about-tab.php:50
+#: includes/views/settings/about-tab.php:60
+msgid "Direct (GitHub)"
+msgstr "直连（GitHub）"
+
+#: includes/views/settings/provider-card.php:13
+msgid "Disabled"
+msgstr "已禁用"
+
+#: includes/views/settings/debug-log-section.php:39
+#: includes/views/settings/debug-log-section.php:41
+msgid "Download Debug Log"
+msgstr "下载调试日志"
+
+#: includes/views/settings/data-management-section.php:63
+msgid ""
+"Download all plugin data as JSON for backup, or restore from a previous "
+"export."
+msgstr "下载所有插件数据为 JSON 以备份，或从之前的导出文件恢复。"
+
+#: includes/views/settings/security-section.php:27
+msgid "ESA / generic CDN (X-Forwarded-For last → X-Real-IP)"
+msgstr ""
+
+#: includes/views/settings/security-section.php:26
+msgid "EdgeOne (EO-Connecting-IP)"
+msgstr ""
+
+#: includes/core/class-event-dispatcher.php:74
+#: includes/core/class-event-dispatcher.php:99
+#: includes/views/emergency-page.php:48 includes/views/emergency-page.php:67
+msgid "Email"
+msgstr "邮箱"
+
+#: includes/providers/class-custom-provider.php:62
+msgid "Email Field"
+msgstr "邮箱字段"
+
+#: includes/views/settings/notifications-section.php:6
+msgid "Email Notifications"
+msgstr "邮件通知"
+
+#: includes/views/emergency-page.php:50
+msgid "Email login link"
+msgstr "邮件登录链接"
+
+#: includes/views/emergency-page.php:12 includes/views/emergency-page.php:42
+msgid "Emergency Access"
+msgstr "紧急访问"
+
+#: includes/views/settings/general-section.php:18
+msgid "Emergency Access Key"
+msgstr "紧急访问密钥"
+
+#: includes/views/emergency-page.php:103
+msgid "Emergency Key"
+msgstr "紧急密钥"
+
+#: includes/admin/class-settings-page.php:171
+#: includes/views/settings/settings-page.php:237
+msgid "Emergency Key Management"
+msgstr "紧急密钥管理"
+
+#: includes/views/settings/settings-page.php:170
+msgid "Emergency access key"
+msgstr "紧急访问密钥"
+
+#: includes/views/emergency-page.php:54
+msgid "Emergency key"
+msgstr "紧急密钥"
+
+#: includes/core/class-emergency-access.php:609
+msgid "Emergency mode activated. Password login is available for 15 minutes."
+msgstr "紧急模式已激活。密码登录将在 15 分钟内可用。"
+
+#: includes/views/settings/provider-detail-view.php:58
+msgid "Enable"
+msgstr "启用"
+
+#: includes/views/settings/provider-detail-view.php:64
+msgid "Enable %s login"
+msgstr "启用 %s 登录"
+
+#: includes/views/settings/notifications-section.php:9
+msgid "Enable Email Notifications"
+msgstr "启用邮件通知"
+
+#: includes/views/settings/debug-log-section.php:13
+msgid "Enable debug logging for OAuth callbacks"
+msgstr "启用 OAuth 回调的调试日志"
+
+#: includes/views/settings/security-section.php:15
+msgid ""
+"Enable only if your site is behind Cloudflare, CDN, or a reverse proxy. "
+"Leave disabled for direct connections."
+msgstr ""
+"仅当您的站点位于 Cloudflare、CDN 或反向代理之后时启用。直连时请保持关闭。仅在"
+"站点位于 Cloudflare、CDN 或反向代理后面时启用。直连站点请保持禁用。"
+
+#: includes/admin/traits/class-settings-views.php:233
+#: includes/views/settings/provider-card.php:13
+msgid "Enabled"
+msgstr "已启用"
+
+#: includes/views/settings/dashboard-tab.php:25
+msgid "Enabled OAuth providers"
+msgstr "已启用的 OAuth 提供商"
+
+#: includes/views/settings/provider-detail-view.php:47
+msgid ""
+"Enter an image URL (e.g. https://example.com/icon.svg) or paste SVG code."
+msgstr "输入图片 URL（如 https://example.com/icon.svg）或粘贴 SVG 代码。"
+
+#: includes/admin/class-settings-page.php:140
+msgid "Enter provider name:"
+msgstr "输入提供商名称："
+
+#: includes/views/emergency-page.php:99
+msgid "Enter the emergency access key to temporarily enable password login."
+msgstr "输入紧急访问密钥以临时启用密码登录。"
+
+#: includes/views/emergency-page.php:63
+msgid "Enter your admin email to receive a one-time link (valid 15 min)."
+msgstr "输入管理员邮箱以获取一次性登录链接（有效期 15 分钟）。"
+
+#: includes/core/class-emergency-access.php:125
+#: includes/core/class-emergency-access.php:151
+#: includes/core/class-emergency-access.php:221
+#: includes/core/class-emergency-access.php:261
+#: includes/core/class-emergency-access.php:286
+msgid "Error"
+msgstr "错误"
+
+#: includes/views/settings/security-section.php:144
+msgid "Expires"
+msgstr "过期时间"
+
+#: includes/views/settings/data-management-section.php:61
+msgid "Export / Restore"
+msgstr "导出 / 恢复"
+
+#: includes/views/settings/data-management-section.php:65
+msgid "Export Data"
+msgstr "导出数据"
+
+#: includes/views/settings/dashboard-tab.php:20
+msgid "Failed attempts (7 days)"
+msgstr "近 7 天失败尝试次数"
+
+#: includes/admin/class-settings-page.php:142
+msgid "Failed to add provider: "
+msgstr "添加提供商失败："
+
+#: includes/core/class-oauth-manager.php:468
+msgid "Failed to get access token."
+msgstr "获取访问令牌失败。"
+
+#: includes/core/class-oauth-manager.php:479
+msgid "Failed to get user data."
+msgstr "获取用户数据失败。"
+
+#: includes/admin/traits/class-settings-ajax.php:129
+msgid "Failed to read log file."
+msgstr "读取日志文件失败。"
+
+#: includes/admin/class-settings-page.php:146
+msgid "Failed to remove provider: "
+msgstr "移除提供商失败："
+
+#: includes/admin/class-settings-page.php:151
+msgid "Failed: "
+msgstr "失败："
+
+#: includes/views/settings/dashboard-tab.php:18
+msgid "Failures (Week)"
+msgstr "失败次数（本周）"
+
+#: includes/views/settings/about-tab.php:77
+msgid "Features"
+msgstr "功能特性"
+
+#: includes/providers/class-feishu-provider.php:5
+msgid "Feishu"
+msgstr "飞书"
+
+#: includes/providers/class-feishu-provider.php:9
+msgid "Feishu Open Platform → App Details → Credentials & Basic Info → App ID"
+msgstr "飞书开放平台 → 应用详情 → 凭证与基础信息 → App ID"
+
+#: includes/views/settings/debug-log-section.php:30
+msgid "File exists"
+msgstr "文件已存在"
+
+#: includes/admin/traits/class-settings-ajax.php:453
+msgid "File upload failed."
+msgstr "文件上传失败。"
+
+#: includes/views/settings/security-section.php:55
+msgid "First (leftmost) — client IP from X-Forwarded-For"
+msgstr ""
+
+#: includes/views/settings/security-section.php:57
+msgid ""
+"For chained X-Forwarded-For, choose which comma-separated segment to trust. "
+"Use \"First\" when your CDN places the client IP at the start."
+msgstr ""
+
+#: includes/views/settings/data-management-section.php:51
+msgid "Full Reset"
+msgstr "完全重置"
+
+#: includes/admin/traits/class-settings-ajax.php:385
+msgid "Full plugin data export"
+msgstr "完整插件数据导出"
+
+#: includes/admin/traits/class-settings-views.php:79
+msgid "General"
+msgstr "通用设置"
+
+#: includes/admin/traits/class-settings-registration.php:20
+msgid "General Settings"
+msgstr "通用设置"
+
+#: includes/admin/class-settings-page.php:166
+msgid "Generating..."
+msgstr "生成中..."
+
+#: includes/providers/class-github-provider.php:8
+msgid "GitHub"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:91
+msgid "GitHub Repository"
+msgstr "GitHub 仓库"
+
+#: includes/providers/class-gitee-provider.php:5
+msgid "Gitee"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:178
+msgid "Go to Plugins page"
+msgstr "前往插件页面"
+
+#: includes/providers/class-google-provider.php:8
+msgid "Google"
+msgstr ""
+
+#: includes/views/settings/security-section.php:46
+msgid ""
+"HTTP header holding the client IP (no HTTP_ prefix). E.g. X-Forwarded-For, X-"
+"Real-IP, X-Client-IP."
+msgstr ""
+
+#: includes/views/settings/dashboard-tab.php:63
+msgid "Hide IP"
+msgstr "隐藏 IP"
+
+#: includes/views/settings/general-section.php:13
+msgid "Hide username/password login form (show only OAuth buttons)"
+msgstr "隐藏用户名/密码登录表单（仅显示 OAuth 按钮）"
+
+#: includes/views/settings/about-tab.php:39
+msgid ""
+"Hooks into WordPress's native update system — update notifications appear on "
+"the standard Plugins → Installed Plugins page. Version metadata is served "
+"via version.json on GitHub, no API key required."
+msgstr ""
+"集成 WordPress 原生更新系统——更新通知将显示在标准的「插件 → 已安装插件」页"
+"面。版本元数据通过 GitHub 上的 version.json 分发，无需 API 密钥。"
+
+#: includes/views/emergency-page.php:71 includes/views/emergency-page.php:107
+msgid "Human verification code"
+msgstr "人机验证验证码"
+
+#: includes/core/class-event-dispatcher.php:76
+#: includes/core/class-event-dispatcher.php:102
+#: includes/core/class-event-dispatcher.php:138
+#: includes/views/settings/dashboard-tab.php:47
+#: includes/views/settings/security-section.php:141
+msgid "IP"
+msgstr "IP"
+
+#: includes/views/settings/security-section.php:133
+msgid "IP Blacklist"
+msgstr "IP 黑名单"
+
+#: includes/core/class-event-dispatcher.php:119
+msgid "IP Blocked"
+msgstr "IP 已被限制"
+
+#: includes/admin/traits/class-settings-ajax.php:240
+#: includes/views/settings/data-management-section.php:20
+msgid "IP blacklist"
+msgstr "IP 黑名单"
+
+#: includes/views/settings/settings-page.php:169
+msgid "IP blacklist and rate limits"
+msgstr "IP 黑名单和速率限制"
+
+#: includes/views/settings/notifications-section.php:35
+#: includes/views/settings/notifications-section.php:68
+msgid "IP blocked"
+msgstr "IP 被封禁"
+
+#: includes/views/settings/provider-detail-view.php:40
+msgid "Icon"
+msgstr "图标"
+
+#: includes/views/emergency-page.php:36
+msgid "If that email is authorized, a one-time login link has been sent."
+msgstr "若该邮箱已授权，一次性登录链接已发送。"
+
+#: includes/core/class-emergency-access.php:627
+msgid "If you did not request this, you can safely ignore this email."
+msgstr "如果您未请求此邮件，请放心忽略。"
+
+#: includes/views/settings/provider-detail-view.php:44
+msgid "Image URL or SVG code"
+msgstr "图片 URL 或 SVG 代码"
+
+#: includes/admin/class-settings-page.php:189
+msgid "Importing..."
+msgstr "导入中…"
+
+#: includes/admin/traits/class-settings-registration.php:499
+msgid "Incomplete configuration:"
+msgstr "配置不完整："
+
+#: includes/views/emergency-page.php:28
+msgid "Incorrect emergency key. Please try again."
+msgstr "紧急密钥错误，请重试。"
+
+#: includes/views/emergency-page.php:30
+msgid "Incorrect verification code. Please try again."
+msgstr "验证码错误，请重试。"
+
+#: includes/providers/class-feishu-provider.php:11
+msgid "International (larksuite.com)"
+msgstr "国际版（larksuite.com）"
+
+#: includes/core/class-oauth-manager.php:414
+#: includes/core/class-oauth-manager.php:727
+#: includes/core/class-oauth-manager.php:736
+#: includes/core/class-oauth-manager.php:776
+msgid "Invalid OAuth provider."
+msgstr "无效的 OAuth 提供商。"
+
+#: includes/core/class-oauth-manager.php:421
+msgid "Invalid OAuth response."
+msgstr "无效的 OAuth 响应。"
+
+#: includes/core/class-oauth-provider.php:126
+msgid "Invalid URL format."
+msgstr "无效的 URL 格式。"
+
+#: includes/admin/traits/class-settings-ajax.php:471
+msgid "Invalid backup file."
+msgstr "无效的备份文件。"
+
+#: includes/core/class-oauth-manager.php:767
+msgid "Invalid or disabled OAuth provider."
+msgstr "无效的 OAuth 提供商。"
+
+#: includes/admin/traits/class-settings-views.php:451
+msgid "Invalid user."
+msgstr "无效的用户。"
+
+#: includes/views/emergency-page.php:52
+msgid "Key"
+msgstr "密钥"
+
+#: includes/providers/class-apple-provider.php:13
+msgid "Key ID"
+msgstr "密钥 ID"
+
+#: includes/providers/class-apple-provider.php:13
+msgid "Key ID of the \"Sign in with Apple\" key."
+msgstr "“通过 Apple 登录”密钥的密钥 ID。"
+
+#: includes/admin/class-settings-page.php:170
+#: includes/views/settings/general-section.php:26
+msgid "Key Management"
+msgstr "密钥管理"
+
+#: includes/admin/class-settings-page.php:167
+msgid "Key regenerated"
+msgstr "密钥已重新生成"
+
+#: includes/views/settings/security-section.php:54
+msgid "Last (rightmost) — trusted edge appended it"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:88
+msgid "Links"
+msgstr "链接"
+
+#: includes/admin/class-settings-page.php:147
+msgid "Loading..."
+msgstr "加载中..."
+
+#: includes/admin/class-settings-page.php:155
+msgid "Log cleared"
+msgstr "日志已清除"
+
+#: includes/views/settings/debug-log-section.php:41
+msgid "Log file not created yet"
+msgstr "日志文件尚未创建"
+
+#: includes/core/class-emergency-access.php:626
+msgid "Log in now"
+msgstr "立即登录"
+
+#: includes/admin/class-settings-page.php:149
+msgid "Log is empty"
+msgstr "日志为空"
+
+#: includes/admin/class-settings-page.php:150
+msgid "Log loaded (%s lines)"
+msgstr "日志已加载（%s 行）"
+
+#: includes/core/class-oauth-manager.php:669
+#: includes/core/class-event-dispatcher.php:117
+#: includes/core/class-event-dispatcher.php:126
+msgid "Login Failed"
+msgstr "登录失败"
+
+#: includes/core/class-oauth-manager.php:668
+#: includes/views/callback-page.php:159
+msgid "Login Successful"
+msgstr "登录成功"
+
+#: includes/core/class-oauth-manager.php:444
+#: includes/core/class-oauth-manager.php:454
+msgid "Login already in progress. Please try again."
+msgstr "登录正在进行中，请重试。"
+
+#: includes/views/settings/notifications-section.php:33
+#: includes/views/settings/notifications-section.php:66
+msgid "Login failure"
+msgstr "登录失败"
+
+#: includes/views/settings/settings-page.php:168
+msgid "Login history logs"
+msgstr "登录历史日志"
+
+#: includes/views/settings/dashboard-tab.php:37
+msgid "Login history table not yet created."
+msgstr "登录历史表尚未创建。"
+
+#: includes/admin/traits/class-settings-ajax.php:234
+#: includes/views/settings/data-management-section.php:15
+msgid "Login logs"
+msgstr "登录日志"
+
+#: includes/views/settings/notifications-section.php:32
+#: includes/views/settings/notifications-section.php:65
+msgid "Login success"
+msgstr "登录成功"
+
+#: includes/core/class-event-dispatcher.php:92
+msgid "Login successful"
+msgstr "登录成功"
+
+#: includes/core/class-login-buttons.php:82
+msgid "Login with %s"
+msgstr "使用 %s 登录"
+
+#: includes/views/settings/debug-log-section.php:15
+msgid ""
+"Logs are saved to wp-content/.wp-omni-auth-debug.log (dot-prefix, not web-"
+"accessible)"
+msgstr ""
+"日志保存至 wp-content/.wp-omni-auth-debug.log（以点开头，不可通过 Web 访问）"
+"日志保存在 wp-content/.wp-omni-auth-debug.log（点前缀，不可通过 Web 访问）"
+
+#: includes/admin/traits/class-settings-registration.php:257
+msgid "Manual entry"
+msgstr "手动添加"
+
+#: includes/providers/class-microsoft-provider.php:5
+msgid "Microsoft"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:49
+#: includes/views/settings/about-tab.php:64
+msgid "Mirror (gh-proxy.org)"
+msgstr "镜像源（gh-proxy.org）"
+
+#: includes/admin/traits/class-settings-views.php:351
+msgid "Missing: "
+msgstr "缺失："
+
+#: includes/views/settings/about-tab.php:79
+msgid ""
+"Modular OAuth provider system — add new providers by dropping a single file."
+msgstr "模块化 OAuth 提供商系统 — 只需添加一个文件即可支持新的提供商。"
+
+#: includes/admin/class-settings-page.php:152
+msgid "Network error"
+msgstr "网络错误"
+
+#: includes/admin/class-settings-page.php:144
+msgid "Network error. Please try again."
+msgstr "网络错误，请重试。"
+
+#: includes/core/class-event-dispatcher.php:92
+msgid "New Login"
+msgstr "新登录"
+
+#: includes/admin/class-settings-page.php:177
+msgid "New version %s available."
+msgstr "有新版本 %s 可用。"
+
+#: includes/views/settings/settings-page.php:94
+msgid "No OAuth providers configured."
+msgstr "未配置任何 OAuth 提供商。"
+
+#: includes/admin/traits/class-settings-ajax.php:222
+msgid "No categories selected."
+msgstr "未选择任何类别。"
+
+#: includes/admin/class-settings-page.php:270
+#: includes/views/settings/health-check.php:28
+msgid ""
+"No emergency access key is set. If all OAuth providers go down, you will be "
+"locked out. Generate a key in the settings page."
+msgstr ""
+"尚未设置紧急访问密钥。若所有 OAuth 提供商均不可用，您将被锁定。请在设置页面生"
+"成密钥。未设置紧急访问密钥。如果所有 OAuth 提供商不可用，你将被锁定。请在设置"
+"页面生成密钥。"
+
+#: includes/admin/traits/class-settings-ajax.php:152
+msgid "No emergency key set. Click \"Regenerate Key\" to create one."
+msgstr "未设置紧急密钥。点击「重新生成密钥」创建一个。"
+
+#: includes/views/settings/dashboard-tab.php:87
+msgid "No enabled providers yet."
+msgstr "尚未启用任何提供商。"
+
+#: includes/views/settings/dashboard-tab.php:39
+msgid "No login records yet."
+msgstr "暂无登录记录。"
+
+#: includes/views/settings/provider-list-view.php:17
+msgid "No providers configured yet."
+msgstr "尚未配置任何提供商。"
+
+#: includes/core/class-oauth-manager.php:510
+msgid "No user identity found in OAuth response."
+msgstr "OAuth 响应中未找到邮箱。"
+
+#: includes/core/class-provider-checker.php:64
+#: includes/admin/traits/class-settings-views.php:236
+#: includes/views/settings/provider-card.php:16
+msgid "Not configured"
+msgstr "未配置"
+
+#: includes/views/settings/debug-log-section.php:32
+msgid "Not created yet"
+msgstr "尚未创建"
+
+#: includes/admin/traits/class-settings-ajax.php:274
+msgid "Nothing to clear."
+msgstr "没有可清除的内容。"
+
+#: includes/views/settings/notifications-section.php:19
+msgid "Notification Email"
+msgstr "通知邮箱"
+
+#: includes/admin/traits/class-settings-views.php:81
+#: includes/admin/traits/class-settings-registration.php:47
+msgid "Notifications"
+msgstr "通知"
+
+#: includes/views/settings/notifications-section.php:26
+msgid "Notify On"
+msgstr "通知条件"
+
+#: includes/views/settings/about-tab.php:14
+msgid ""
+"OAuth 2.0 login for WordPress with GitHub, Google, and unlimited custom "
+"providers. Supports OAuth-only mode, a security/rate-limit layer, login "
+"history, and self-updates via GitHub (with an optional mirror source for "
+"mainland China)."
+msgstr ""
+"为 WordPress 提供 OAuth 2.0 登录，支持 GitHub、Google 及无限自定义提供商。支"
+"持仅 OAuth 模式、安全与限流层、登录历史记录，以及通过 GitHub 自更新（可选中国"
+"大陆镜像源）。"
+
+#: includes/views/settings/user-profile-oauth-section.php:6
+msgid "OAuth Binding"
+msgstr "OAuth 绑定"
+
+#: includes/views/settings/user-profile-oauth-section.php:20
+msgid "OAuth Email"
+msgstr "OAuth 邮箱"
+
+#: includes/core/class-event-dispatcher.php:73
+#: includes/views/settings/user-profile-oauth-section.php:14
+msgid "OAuth ID"
+msgstr "OAuth ID"
+
+#: includes/admin/class-settings-page.php:47
+#: includes/admin/class-settings-page.php:48
+msgid "OAuth Login"
+msgstr "OAuth 登录"
+
+#: includes/views/settings/provider-list-view.php:6
+#: includes/views/settings/settings-page.php:16
+msgid "OAuth Providers"
+msgstr "OAuth 提供商"
+
+#: includes/views/settings/unbind-notice.php:7
+msgid "OAuth binding removed successfully."
+msgstr "OAuth 绑定已成功移除。"
+
+#: includes/views/settings/data-management-section.php:41
+msgid "OAuth code replay protection data"
+msgstr "OAuth 验证码重放保护数据"
+
+#: includes/core/class-oauth-provider.php:121
+msgid "OAuth endpoints must use HTTPS for security."
+msgstr "出于安全考虑，OAuth 端点必须使用 HTTPS。"
+
+#: includes/views/settings/data-management-section.php:16
+msgid "OAuth login history records"
+msgstr "OAuth 登录历史记录"
+
+#: includes/views/settings/general-section.php:8
+msgid "OAuth-Only Mode"
+msgstr "仅 OAuth 模式"
+
+#: includes/views/settings/health-check.php:14
+msgid ""
+"OAuth-only mode is enabled, but no OAuth providers are configured. Users "
+"<strong>cannot log in</strong>. <a href=\"%s\">Configure providers</a>."
+msgstr ""
+"已启用仅 OAuth 模式，但尚未配置任何 OAuth 提供商。用户<strong>无法登录</"
+"strong>。<a href=\"%s\">配置提供商</a>。"
+
+#: includes/admin/class-settings-page.php:262
+msgid ""
+"OAuth-only mode is enabled, but no OAuth providers are configured. Users "
+"cannot log in."
+msgstr ""
+"已启用仅 OAuth 模式，但尚未配置任何 OAuth 提供商。用户<strong>无法登录</"
+"strong>。<a href=\"%s\">配置提供商</a>。"
+
+#: includes/views/settings/about-tab.php:83
+msgid "OAuth-only mode to disable password login."
+msgstr "仅 OAuth 模式，可禁用密码登录。"
+
+#: includes/views/settings/security-section.php:134
+msgid "One IP or CIDR per line (e.g. 1.2.3.4 or 5.6.7.0/24)"
+msgstr "每行一个 IP 或 CIDR（如 1.2.3.4 或 5.6.7.0/24）"
+
+#: includes/views/settings/security-section.php:78
+msgid ""
+"Only trust proxy headers (X-Forwarded-For, etc.) when the direct connection "
+"comes from one of these IPs/CIDRs. Leaving this empty trusts headers from "
+"any source (only safe behind a proxy that strips client-supplied headers). "
+"Required to prevent IP spoofing of rate limits / bans."
+msgstr ""
+"仅当直接连接来自这些 IP/CIDR 时才信任代理请求头（X-Forwarded-For 等）。留空则"
+"信任所有来源的请求头（仅当代理会清除客户端提供的请求头时才安全）。用于防止限"
+"流/封禁的 IP 伪造。"
+
+#: includes/views/emergency-page.php:97
+msgid "Or use your emergency key"
+msgstr "或使用紧急密钥"
+
+#: includes/core/class-oauth-manager.php:368
+#: includes/core/class-login-guard.php:159
+msgid "Password login is disabled. Please use OAuth to log in."
+msgstr "密码登录已禁用。请使用 OAuth 登录。"
+
+#: includes/providers/class-apple-provider.php:14
+msgid "Paste the .p8 file contents (including BEGIN/END PRIVATE KEY)."
+msgstr "粘贴 .p8 文件内容（包含 BEGIN/END PRIVATE KEY）。"
+
+#: includes/views/settings/security-section.php:153
+msgid "Permanent"
+msgstr "永久"
+
+#: includes/views/emergency-page.php:83 includes/views/emergency-page.php:119
+msgid "Please enter the code shown (letters and numbers only)."
+msgstr "请输入显示的验证码（仅限字母和数字）。"
+
+#: includes/views/emergency-page.php:83 includes/views/emergency-page.php:119
+msgid "Please enter the number shown (digits only, 100 or less)."
+msgstr "请输入上方算式的结果（仅限数字，且不超过 100）。"
+
+#: includes/views/settings/settings-page.php:98
+msgid ""
+"Please go to <a href=\"%s\">OAuth Providers</a> to set up at least one login "
+"method."
+msgstr "请前往 <a href=\"%s\">OAuth 提供商</a> 设置至少一种登录方式。"
+
+#: includes/admin/class-settings-page.php:186
+msgid "Please select at least one category."
+msgstr "请至少选择一个类别。"
+
+#: includes/views/settings/provider-detail-view.php:50
+msgid "Preview:"
+msgstr "预览："
+
+#: includes/providers/class-apple-provider.php:14
+msgid "Private Key (.p8)"
+msgstr "私钥 (.p8)"
+
+#: includes/core/class-event-dispatcher.php:72
+#: includes/core/class-event-dispatcher.php:100
+#: includes/core/class-event-dispatcher.php:136
+#: includes/views/settings/dashboard-tab.php:46
+#: includes/views/settings/user-profile-oauth-section.php:9
+msgid "Provider"
+msgstr "提供商"
+
+#: includes/core/class-event-dispatcher.php:63
+msgid "Provider Bound"
+msgstr "提供商已绑定"
+
+#: includes/admin/class-settings-page.php:158
+#: includes/views/settings/settings-page.php:202
+#: includes/views/settings/provider-detail-view.php:33
+msgid "Provider Name"
+msgstr "提供商名称"
+
+#: includes/views/settings/dashboard-tab.php:81
+msgid "Provider Status"
+msgstr "提供商状态"
+
+#: includes/views/settings/notifications-section.php:36
+#: includes/views/settings/notifications-section.php:69
+msgid "Provider bound"
+msgstr "提供商已绑定"
+
+#: includes/admin/traits/class-settings-registration.php:506
+msgid "Provider settings saved. All enabled providers are configured."
+msgstr "提供商设置已保存。所有已启用的提供商均已配置完成。"
+
+#: includes/providers/class-qq-provider.php:8
+msgid "QQ"
+msgstr ""
+
+#: includes/views/settings/security-section.php:111
+msgid "Rate Limit (global)"
+msgstr "频率限制（全局）"
+
+#: includes/views/settings/security-section.php:104
+msgid "Rate Limit (per IP)"
+msgstr "频率限制（单 IP）"
+
+#: includes/views/settings/security-section.php:125
+msgid "Rate Limit (per identity)"
+msgstr "频率限制（单身份）"
+
+#: includes/views/settings/security-section.php:118
+msgid "Rate Limit (per provider)"
+msgstr "频率限制（单提供商）"
+
+#: includes/admin/traits/class-settings-ajax.php:247
+#: includes/views/settings/data-management-section.php:25
+msgid "Rate limits"
+msgstr "速率限制"
+
+#: includes/views/settings/provider-detail-view.php:76
+msgid "Re-test & re-bind"
+msgstr "重新测试并绑定"
+
+#: includes/views/settings/security-section.php:13
+msgid "Read client IP from proxy headers (Cloudflare, X-Forwarded-For)"
+msgstr "从代理头读取客户端 IP（Cloudflare、X-Forwarded-For）"
+
+#: includes/core/class-event-dispatcher.php:139
+#: includes/views/settings/security-section.php:142
+msgid "Reason"
+msgstr "原因"
+
+#: includes/views/settings/dashboard-tab.php:33
+msgid "Recent Logins"
+msgstr "最近登录"
+
+#: includes/views/oauth-login-screen.php:36
+msgid "Redirecting"
+msgstr "跳转中"
+
+#: includes/views/oauth-login-screen.php:35
+msgid "Redirecting to %s"
+msgstr "正在为你跳转到 %s"
+
+#: includes/views/callback-page.php:172
+msgid "Redirecting..."
+msgstr "正在跳转..."
+
+#: includes/views/settings/settings-page.php:266
+msgid "Regenerate"
+msgstr "重新生成"
+
+#: includes/views/settings/settings-page.php:259
+msgid "Regenerate Emergency Key"
+msgstr "重新生成紧急密钥"
+
+#: includes/views/settings/settings-page.php:248
+msgid "Regenerate Key"
+msgstr "重新生成密钥"
+
+#: includes/providers/class-feishu-provider.php:11
+msgid "Region"
+msgstr "地区"
+
+#: includes/admin/class-settings-page.php:162
+#: includes/views/settings/provider-card.php:22
+#: includes/views/settings/settings-page.php:226
+msgid "Remove"
+msgstr "移除"
+
+#: includes/admin/class-settings-page.php:163
+#: includes/views/settings/settings-page.php:218
+msgid "Remove Provider"
+msgstr "移除提供商"
+
+#: includes/views/emergency-page.php:61
+msgid "Request a login link"
+msgstr "发送登录链接"
+
+#: includes/views/settings/data-management-section.php:55
+msgid "Reset All Data"
+msgstr "重置所有数据"
+
+#: includes/views/settings/settings-page.php:177
+msgid "Reset Everything"
+msgstr "重置所有内容"
+
+#: includes/admin/class-settings-page.php:187
+msgid "Resetting..."
+msgstr "重置中..."
+
+#: includes/views/settings/data-management-section.php:68
+msgid "Restore from file:"
+msgstr "从文件恢复："
+
+#: includes/admin/traits/class-settings-ajax.php:511
+msgid "Restored: %s"
+msgstr "已清除：%s"
+
+#: includes/views/callback-page.php:186
+msgid "Return to login"
+msgstr "返回登录"
+
+#: includes/views/settings/about-tab.php:71
+msgid ""
+"Route both update checks and downloads through a GitHub mirror (gh-proxy."
+"org) to avoid connectivity issues in mainland China. When enabled, the proxy "
+"prefix is added to the version.json URL and the update package URL."
+msgstr ""
+"通过 GitHub 镜像（gh-proxy.org）进行更新检查与下载，以避免中国大陆的网络连接"
+"问题。启用后，代理前缀将添加到 version.json URL 与更新包 URL。将更新检查和下"
+"载都通过 GitHub 镜像（gh-proxy.org）进行，以避免中国大陆的网络连接问题。启用"
+"后，代理前缀会同时加在 version.json 地址和更新包下载地址上。"
+
+#: includes/views/settings/provider-detail-view.php:73
+msgid "Save Changes"
+msgstr "保存更改"
+
+#: includes/admin/class-settings-page.php:184
+msgid "Save failed"
+msgstr "保存失败"
+
+#: includes/admin/class-settings-page.php:183
+msgid "Saved"
+msgstr "已保存"
+
+#: includes/admin/class-settings-page.php:182
+msgid "Saving..."
+msgstr "保存中…"
+
+#: includes/providers/class-microsoft-provider.php:13
+#: includes/providers/class-gitee-provider.php:11
+#: includes/providers/class-google-provider.php:29
+#: includes/providers/class-custom-provider.php:69
+#: includes/providers/class-authentik-provider.php:12
+#: includes/providers/class-github-provider.php:29
+msgid "Scope"
+msgstr "作用域 (Scope)"
+
+#: includes/views/settings/field.php:22
+msgid "Secret is configured"
+msgstr "密钥已配置"
+
+#: includes/admin/traits/class-settings-views.php:80
+msgid "Security"
+msgstr "安全设置"
+
+#: includes/admin/traits/class-settings-registration.php:38
+msgid "Security Settings"
+msgstr "安全设置"
+
+#: includes/core/class-emergency-access.php:130
+#: includes/core/class-emergency-access.php:135
+#: includes/core/class-emergency-access.php:266
+#: includes/core/class-emergency-access.php:271
+msgid "Security check failed."
+msgstr "安全检查失败。"
+
+#: includes/admin/traits/class-settings-registration.php:407
+msgid "Security check failed. Please refresh the page and try again."
+msgstr "安全验证失败，请刷新页面后重试。"
+
+#: includes/core/class-oauth-manager.php:432
+msgid "Security verification failed."
+msgstr "安全验证失败。"
+
+#: includes/views/settings/security-section.php:50
+msgid "Segment Position"
+msgstr "分段位置"
+
+#: includes/admin/class-settings-page.php:188
+msgid "Select a file first"
+msgstr "请先选择文件"
+
+#: includes/views/settings/data-management-section.php:6
+msgid "Select data categories to clear, or perform a full reset."
+msgstr "选择要清除的数据类别，或执行完全重置。"
+
+#: includes/views/settings/notifications-section.php:46
+msgid "Select which events trigger an email notification."
+msgstr "选择哪些事件触发邮件通知。"
+
+#: includes/providers/class-custom-provider.php:79
+msgid "Send access token in Authorization header (Bearer)"
+msgstr "在 Authorization 头中发送访问令牌 (Bearer)"
+
+#: includes/views/settings/notifications-section.php:14
+msgid "Send email notifications for login events"
+msgstr "登录事件时发送邮件通知"
+
+#: includes/views/emergency-page.php:90
+msgid "Send link"
+msgstr "发送登录链接"
+
+#: includes/providers/class-apple-provider.php:11
+msgid "Service ID"
+msgstr "服务 ID"
+
+#: includes/core/class-emergency-access.php:125
+#: includes/core/class-emergency-access.php:151
+#: includes/core/class-emergency-access.php:221
+#: includes/core/class-emergency-access.php:261
+#: includes/core/class-emergency-access.php:286
+msgid "Service temporarily unavailable."
+msgstr "服务暂时不可用。"
+
+#: includes/views/settings/settings-page.php:19
+msgid "Settings"
+msgstr "设置"
+
+#: wp-omni-auth.php:62
+msgid "Guide"
+msgstr "教程"
+
+#: wp-omni-auth.php:62
+msgid "Configuration Guide"
+msgstr "配置教程"
+
+#: includes/views/settings/settings-page.php:32
+msgid "Settings saved."
+msgstr "设置已保存。"
+
+#: includes/views/settings/settings-page.php:78
+msgid "Settings sections"
+msgstr "设置栏目"
+
+#: includes/views/settings/dashboard-tab.php:62
+msgid "Show IP"
+msgstr "显示 IP"
+
+#: includes/views/oauth-login-screen.php:13
+msgid "Sign in &lsaquo; %s"
+msgstr "登录 &lsaquo; %s"
+
+#: includes/views/settings/general-section.php:37
+msgid "Specific users only"
+msgstr "仅指定用户"
+
+#: includes/views/settings/dashboard-tab.php:48
+msgid "Status"
+msgstr "状态"
+
+#: includes/core/class-event-dispatcher.php:166
+msgid "Success"
+msgstr "成功"
+
+#: includes/views/settings/dashboard-tab.php:15
+msgid "Successful logins (7 days)"
+msgstr "近 7 天成功登录次数"
+
+#: includes/views/settings/dashboard-tab.php:10
+msgid "Successful logins today"
+msgstr "今日成功登录次数"
+
+#: includes/providers/class-apple-provider.php:12
+msgid "Team ID"
+msgstr "团队 ID"
+
+#: includes/providers/class-microsoft-provider.php:11
+msgid "Tenant ID"
+msgstr "租户 ID"
+
+#: includes/views/settings/provider-detail-view.php:76
+msgid "Test connection & bind"
+msgstr "测试连接并绑定"
+
+#: includes/providers/class-custom-provider.php:87
+msgid "The key in the token response that contains the access token."
+msgstr "令牌响应中包含访问令牌的键名。"
+
+#: includes/core/class-oauth-manager.php:818
+msgid "The provider did not return a stable user ID, so it cannot be bound."
+msgstr "提供商未返回稳定用户 ID，无法完成绑定。"
+
+#: includes/views/settings/dashboard-tab.php:13
+msgid "This Week"
+msgstr "本周"
+
+#: includes/views/settings/settings-page.php:173
+msgid "This action cannot be undone!"
+msgstr "此操作不可撤销！"
+
+#: includes/core/class-emergency-access.php:625
+msgid ""
+"This link is valid for 15 minutes and only works from the IP that requested "
+"it (%s). Do not share it."
+msgstr "此链接有效期为 15 分钟，且仅从请求时的 IP（%s）可用。请勿分享。"
+
+#: includes/views/emergency-page.php:34
+msgid ""
+"This login link is invalid or has expired (wrong IP or timeout). Please "
+"request a new one."
+msgstr "此登录链接无效或已过期（IP 不符或超时）。请重新获取。"
+
+#: includes/views/settings/settings-page.php:165
+msgid "This will delete ALL plugin data including:"
+msgstr "这将删除所有插件数据，包括："
+
+#: includes/core/class-event-dispatcher.php:75
+#: includes/core/class-event-dispatcher.php:101
+#: includes/core/class-event-dispatcher.php:137
+#: includes/views/settings/dashboard-tab.php:44
+msgid "Time"
+msgstr "时间"
+
+#: includes/views/settings/dashboard-tab.php:8
+msgid "Today's Logins"
+msgstr "今日登录"
+
+#: includes/views/settings/dashboard-tab.php:61
+msgid "Toggle IP visibility"
+msgstr "切换 IP 可见性"
+
+#: includes/providers/class-custom-provider.php:83
+msgid "Token Response Key"
+msgstr "令牌响应键名"
+
+#: includes/providers/class-custom-provider.php:46
+msgid "Token URL"
+msgstr "令牌 URL"
+
+#: includes/providers/class-custom-provider.php:76
+msgid "Token in Header"
+msgstr "令牌在 Header 中"
+
+#: includes/core/class-oauth-manager.php:526
+#: includes/core/class-oauth-manager.php:717
+msgid "Too many login attempts. Please try again later."
+msgstr "请求过于频繁，请稍后再试。"
+
+#: includes/core/class-oauth-manager.php:402
+msgid "Too many requests. Please try again later."
+msgstr "请求过于频繁，请稍后再试。"
+
+#: includes/views/settings/notifications-section.php:60
+msgid "Trigger Events"
+msgstr "触发事件"
+
+#: includes/views/settings/security-section.php:75
+msgid "Trusted Proxy IPs"
+msgstr "受信代理 IP"
+
+#: includes/views/settings/security-section.php:8
+msgid "Trusted Proxy Mode"
+msgstr "可信代理模式"
+
+#: includes/admin/traits/class-settings-ajax.php:117
+#: includes/admin/traits/class-settings-registration.php:368
+#: includes/admin/traits/class-settings-registration.php:403
+msgid "Unauthorized"
+msgstr "未授权"
+
+#: includes/admin/traits/class-settings-ajax.php:449
+msgid "Unauthorized."
+msgstr "未授权。"
+
+#: includes/views/settings/user-profile-oauth-section.php:31
+msgid "Unbind"
+msgstr "解除绑定"
+
+#: includes/views/settings/user-profile-oauth-section.php:38
+msgid "Unbind OAuth"
+msgstr "解除 OAuth 绑定"
+
+#: includes/admin/class-github-updater.php:197
+msgid ""
+"Unified OAuth 2.0 login for WordPress with 12 built-in providers (GitHub, "
+"Google, Apple, Discord, Facebook, GitLab, LinkedIn, Microsoft, QQ, WeChat, "
+"WeCom, Weibo), unlimited custom OAuth providers, a security/rate-limit "
+"layer, login history, and self-updates via the native WordPress update "
+"system. Supports OAuth-only mode, emergency access, debug logging, and "
+"trusted proxy IP allowlisting."
+msgstr ""
+
+#: includes/core/class-event-dispatcher.php:90
+msgid "Unknown"
+msgstr "未知错误"
+
+#: includes/admin/class-settings-page.php:143
+msgid "Unknown error"
+msgstr "未知错误"
+
+#: includes/views/settings/about-tab.php:81
+msgid ""
+"Unlimited custom OAuth providers for self-hosted or third-party servers."
+msgstr "支持无限自定义 OAuth 提供商（自建或第三方服务器）。"
+
+#: includes/admin/class-settings-page.php:179
+msgid "Update check failed."
+msgstr "更新检查失败。"
+
+#: includes/views/settings/about-tab.php:43
+msgid "Update source:"
+msgstr "更新源："
+
+#: includes/views/settings/about-tab.php:27
+msgid "Updates"
+msgstr "更新"
+
+#: includes/views/settings/data-management-section.php:70
+msgid "Upload & Restore"
+msgstr "上传并恢复"
+
+#: includes/providers/class-microsoft-provider.php:12
+msgid ""
+"Use \"common\" for personal + organizational, \"consumers\" for personal "
+"only, \"organizations\" for work/school only, or a specific Tenant ID."
+msgstr ""
+"使用“common”表示个人 + 组织，“consumers”仅个人，“organizations”仅工作或学校，"
+"或使用特定的租户 ID。使用“common”表示个人+组织账号，“consumers”仅个"
+"人，“organizations”仅工作或学校账号，或填写具体的租户 ID。"
+
+#: includes/admin/traits/class-settings-ajax.php:268
+#: includes/views/settings/data-management-section.php:40
+msgid "Used codes"
+msgstr "已用验证码"
+
+#: includes/views/settings/notifications-section.php:85
+msgid ""
+"Used for HMAC-SHA256 signature verification. Leave empty to disable signing."
+msgstr "用于 HMAC-SHA256 签名验证。留空则禁用签名。"
+
+#: includes/views/settings/general-section.php:21
+msgid ""
+"Used for emergency password login when all OAuth providers are down. Access "
+"via:"
+msgstr "当所有 OAuth 提供商不可用时用于紧急密码登录。访问地址："
+
+#: includes/core/class-event-dispatcher.php:71
+#: includes/core/class-event-dispatcher.php:98
+#: includes/views/settings/dashboard-tab.php:45
+msgid "User"
+msgstr "用户"
+
+#: includes/providers/class-custom-provider.php:54
+msgid "User Info URL"
+msgstr "用户信息 URL"
+
+#: includes/views/settings/settings-page.php:171
+msgid "User OAuth bindings"
+msgstr "用户 OAuth 绑定"
+
+#: includes/views/emergency-page.php:126
+msgid "Verify"
+msgstr "验证"
+
+#: includes/views/settings/debug-log-section.php:36
+msgid "View Debug Log"
+msgstr "查看调试日志"
+
+#: includes/admin/class-settings-page.php:172
+#: includes/views/settings/settings-page.php:247
+msgid "View Full Key"
+msgstr "查看完整密钥"
+
+#: includes/admin/class-settings-page.php:264
+#: includes/admin/class-settings-page.php:272
+msgid "WP-OmniAuth"
+msgstr "WP-OmniAuth 设置"
+
+#: includes/views/settings/settings-page.php:11
+msgid "WP-OmniAuth navigation"
+msgstr "WP-OmniAuth 导航"
+
+#: includes/views/settings/health-check.php:9
+#: includes/views/settings/health-check.php:27
+msgid "WP-OmniAuth:"
+msgstr "WP-OmniAuth 设置"
+
+#: includes/core/class-emergency-access.php:603
+msgid ""
+"WP-OmniAuth: Emergency mode active. Password login is temporarily enabled "
+"(expires in 15 minutes)."
+msgstr "WP-OmniAuth：紧急模式已激活。密码登录已临时启用（15 分钟后过期）。"
+
+#: includes/views/emergency-page.php:32
+msgid ""
+"We could not send the email. Please check your mail configuration or use the "
+"manual key below."
+msgstr "邮件发送失败。请检查邮件配置，或使用下方的手动密钥。"
+
+#: includes/providers/class-wechat-provider.php:8
+msgid "WeChat"
+msgstr "微信"
+
+#: includes/views/settings/notifications-section.php:51
+msgid "Webhook"
+msgstr "Webhook"
+
+#: includes/views/settings/notifications-section.php:82
+msgid "Webhook Secret"
+msgstr "Webhook 密钥"
+
+#: includes/views/settings/notifications-section.php:54
+msgid "Webhook URL"
+msgstr "Webhook URL"
+
+#: includes/views/emergency-page.php:87 includes/views/emergency-page.php:123
+msgid "Website"
+msgstr "网站"
+
+#: includes/views/callback-page.php:168
+msgid "Welcome back,"
+msgstr "欢迎回来，"
+
+#: includes/views/settings/security-section.php:28
+msgid "X-Forwarded-For (first segment)"
+msgstr ""
+
+#: includes/views/settings/security-section.php:29
+msgid "X-Forwarded-For (last segment)"
+msgstr ""
+
+#: includes/views/settings/security-section.php:30
+msgid "X-Real-IP"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:176
+msgid "You are running the latest version."
+msgstr "你已运行最新版本。"
+
+#: includes/admin/traits/class-settings-views.php:460
+msgid "You do not have permission to edit this user."
+msgstr "你没有编辑此用户的权限。"
+
+#: includes/core/class-oauth-manager.php:761
+msgid "You must be an administrator to perform this action."
+msgstr "您需要管理员权限才能执行此操作。"
+
+#: includes/providers/class-authentik-provider.php:11
+msgid "Your Authentik instance URL (no trailing slash)."
+msgstr "你的 Authentik 实例地址（结尾不要斜杠）。"
+
+#: includes/views/settings/provider-detail-view.php:85
+msgid "Your account is linked to this provider via its stable ID (not email)."
+msgstr "您的账户已通过稳定 ID 与此提供商绑定（非邮箱）。"
+
+#: includes/core/class-oauth-manager.php:810
+msgid "Your login session expired during binding. Please log in and try again."
+msgstr "绑定过程中登录会话已过期，请重新登录后重试。"
+
+#: includes/core/class-emergency-access.php:184
+#: includes/core/class-emergency-access.php:623
+msgid "[%s] Emergency login link"
+msgstr "[%s] 紧急登录链接"
+
+#: includes/views/settings/security-section.php:121
+msgid ""
+"authorization requests per minute per provider (0 = disabled). Protects a "
+"single OAuth app from being overwhelmed."
+msgstr ""
+"每分钟每个提供商的授权请求数（0 = 禁用）。防止单个 OAuth 应用被请求压垮。"
+
+#: includes/admin/class-settings-page.php:159
+#: includes/views/settings/settings-page.php:203
+msgid "e.g. My GitLab"
+msgstr "例如 My GitLab"
+
+#: includes/views/settings/security-section.php:86
+msgid "failed attempts before auto-banning an IP (0 = disabled)"
+msgstr "次失败后自动封禁 IP（0 = 禁用）"
+
+#: includes/views/settings/security-section.php:100
+msgid ""
+"hours an IP stays banned after auto-ban (time-limited, so a shared/NAT IP is "
+"not locked out forever). Manual blacklist entries remain permanent."
+msgstr ""
+"自动封禁后 IP 被封禁的小时数（限时封禁，因此共享/NAT 下的 IP 不会被永久锁"
+"死）。手动加入黑名单的条目仍为永久。"
+
+#: includes/views/settings/security-section.php:93
+msgid "hours to look back for failures"
+msgstr "小时内回溯失败次数"
+
+#: includes/admin/class-settings-page.php:180
+msgid "latest"
+msgstr "最新"
+
+#: includes/views/settings/security-section.php:128
+msgid ""
+"login attempts per minute per OAuth account/email (0 = disabled). Throttles "
+"a single looping or compromised account without permanently locking out "
+"legitimate users."
+msgstr ""
+"每分钟每个 OAuth 账户/邮箱的登录尝试次数（0 = 禁用）。可限制单个循环或被盗账"
+"户，而不会永久封禁正常用户。"
+
+#: includes/views/settings/debug-log-section.php:25
+msgid "or enable \"Show hidden files\" in your file manager to see it."
+msgstr "或在文件管理器中启用“显示隐藏文件”即可查看。"
+
+#: includes/views/settings/security-section.php:107
+msgid "requests per minute per IP (0 = disabled)"
+msgstr "次/分钟/每 IP（0 = 禁用）"
+
+#: includes/views/settings/security-section.php:114
+msgid "total requests per minute across all IPs (0 = disabled)"
+msgstr "次/分钟/所有 IP 总计（0 = 禁用）"
+
+#: includes/views/callback-page.php:166
+msgid "你的账号已成功绑定到 %s"
+msgstr ""
+
+#: includes/providers/class-weibo-provider.php:7
+msgid "微博"
+msgstr ""
+
+#: includes/views/callback-page.php:159
+msgid "绑定成功"
+msgstr ""
+
+#: includes/views/settings/provider-detail-view.php:24
+msgid "配置指导，请访问 <a href=\"%s\" target=\"_blank\">我们的设置指南</a>。"
+msgstr ""
+
+#~ msgid "\"common\" allows both personal and organizational accounts."
+#~ msgstr "“common”允许个人和组织账号。"
+
+#~ msgid ""
+#~ "Add permissions: <code>contact:user.email:readonly</code> and "
+#~ "<code>contact:user.id:readonly</code>."
+#~ msgstr ""
+#~ "添加权限：<code>contact:user.email:readonly</code> 与 <code>contact:user."
+#~ "id:readonly</code>。添加权限：<code>contact:user.email:readonly</code> 与 "
+#~ "<code>contact:user.id:readonly</code>。"
+
+#~ msgid ""
+#~ "Add the <strong>Facebook Login</strong> product, then choose <strong>Web</"
+#~ "strong>."
+#~ msgstr "填写 <strong>名称</strong> 并选择一个 <strong>工作区</strong>。"
+
+#~ msgid "Add this Authorized Redirect URL: <code>%s</code>"
+#~ msgstr "在“授权的重定向 URI”下，点击“添加 URI”并输入：<code>%s</code>"
+
+#~ msgid ""
+#~ "After approval, copy <strong>AppID</strong> and <strong>AppSecret</"
+#~ "strong> and paste above."
+#~ msgstr ""
+#~ "审核通过后，复制<strong>AppID</strong>与<strong>AppSecret</strong>并粘贴到"
+#~ "上方。审核通过后，复制 <strong>AppID</strong> 和 <strong>AppSecret</"
+#~ "strong> 并粘贴到上方。"
+
+#~ msgid ""
+#~ "After approval, copy the <strong>App Key</strong> and <strong>App Secret</"
+#~ "strong> and paste above."
+#~ msgstr ""
+#~ "审核通过后，复制<strong>AppID</strong>与<strong>AppSecret</strong>并粘贴到"
+#~ "上方。审核通过后，复制 <strong>AppID</strong> 和 <strong>AppSecret</"
+#~ "strong> 并粘贴到上方。"
+
+#~ msgid "All URLs must use HTTPS."
+#~ msgstr "所有 URL 必须使用 HTTPS。"
+
+#~ msgid ""
+#~ "Apple only provides the real email on FIRST authorization. Subsequent "
+#~ "logins may return a private relay email."
+#~ msgstr "Apple 仅在首次授权时提供真实邮箱，后续登录可能返回私有中继邮箱。"
+
+#~ msgid "Application ID"
+#~ msgstr "应用 ID"
+
+#~ msgid ""
+#~ "Authentik is a self-hosted identity provider. Supports OIDC and SAML."
+#~ msgstr "Authentik 是一个自托管的身份提供商，支持 OIDC 与 SAML。"
+
+#~ msgid "Channel ID"
+#~ msgstr "频道 ID"
+
+#~ msgid "Channel Secret"
+#~ msgstr "频道密钥"
+
+#~ msgid "Check \"Enable\" and click \"Save Changes\"."
+#~ msgstr "勾选\"启用\"并点击\"保存更改\"。"
+
+#~ msgid "Check \"Enable\" and save."
+#~ msgstr "勾选“启用”并保存。"
+
+#~ msgid ""
+#~ "Check <strong>Confidential</strong>. Under Scopes, check <code>openid</"
+#~ "code>, <code>email</code>, <code>profile</code>."
+#~ msgstr ""
+#~ "勾选<strong>机密应用</strong>。在“作用域”下勾选 <code>openid</code>、"
+#~ "<code>email</code>、<code>profile</code>。勾选 <strong>机密</strong>。在权"
+#~ "限范围下勾选 <code>openid</code>、<code>email</code>、<code>profile</"
+#~ "code>。"
+
+#~ msgid "Check the \"Enable\" box above and click \"Save Changes\"."
+#~ msgstr "勾选\"启用\"并点击\"保存更改\"。"
+
+#~ msgid "Choose \"From scratch\", enter App Name and Workspace."
+#~ msgstr "选择“从零开始”，输入应用名称与工作区。"
+
+#~ msgid ""
+#~ "Click \"Create\". Copy the <strong>Client ID</strong> and <strong>Client "
+#~ "Secret</strong> and paste them into the fields above."
+#~ msgstr ""
+#~ "点击“创建”。复制<strong>客户端 ID</strong>与<strong>客户端密钥</strong>并"
+#~ "粘贴到上方字段。点击 \"Create\"。复制 <strong>Client ID</strong> 和 "
+#~ "<strong>Client Secret</strong> 并粘贴到上方字段。"
+
+#~ msgid ""
+#~ "Click \"Generate a new client secret\", copy it and paste into the Client "
+#~ "Secret field above."
+#~ msgstr ""
+#~ "点击“生成新的客户端密钥”，复制并粘贴到上方的客户端密钥字段。点击 "
+#~ "\"Generate a new client secret\"，复制并粘贴到上方的 Client Secret 字段。"
+
+#~ msgid "Click \"Register application\"."
+#~ msgstr "点击 \"Register application\"。"
+
+#~ msgid ""
+#~ "Click \"Register\". Copy the <strong>Application (client) ID</strong> and "
+#~ "paste above."
+#~ msgstr ""
+#~ "点击“注册”。复制 <strong>应用程序（客户端）ID</strong> 并粘贴到上方。"
+
+#~ msgid ""
+#~ "Click \"Reset Secret\" to generate a <strong>Client Secret</strong>, copy "
+#~ "and paste above."
+#~ msgstr ""
+#~ "点击“重置密钥”以生成 <strong>客户端密钥</strong>，复制并粘贴到上方。"
+
+#~ msgid ""
+#~ "Click \"Save\". Copy <strong>Application ID</strong> and <strong>Secret</"
+#~ "strong> above."
+#~ msgstr ""
+#~ "点击“保存”。复制上方的<strong>应用 ID</strong>与<strong>密钥</strong>。点"
+#~ "击“保存”。复制上方的 <strong>应用 ID</strong> 和 <strong>密钥</strong>。"
+
+#~ msgid ""
+#~ "Client secrets expire. Set a reminder to rotate before expiry (max 2 "
+#~ "years)."
+#~ msgstr "客户端密码会过期。请设置提醒，在到期前（最长 2 年）轮换。"
+
+#~ msgid "Configure → set Return URL to: <code>%s</code>"
+#~ msgstr "配置 → 将返回 URL 设置为：<code>%s</code>"
+
+#~ msgid ""
+#~ "Copy <strong>App ID</strong> and <strong>App Secret</strong> from "
+#~ "Credentials page and paste above."
+#~ msgstr ""
+#~ "从“凭证”页面复制<strong>应用 ID</strong>与<strong>应用密钥</strong>并粘贴"
+#~ "到上方。从“凭证”页面复制 <strong>App ID</strong> 和 <strong>App Secret</"
+#~ "strong> 并粘贴到上方。"
+
+#~ msgid ""
+#~ "Copy <strong>AppKey</strong> and <strong>AppSecret</strong> and paste "
+#~ "above."
+#~ msgstr ""
+#~ "复制<strong>AppKey</strong>与<strong>AppSecret</strong>并粘贴到上方。复制 "
+#~ "<strong>AppKey</strong> 和 <strong>AppSecret</strong> 并粘贴到上方。"
+
+#~ msgid ""
+#~ "Copy <strong>Client ID</strong> and <strong>Client Secret</strong> and "
+#~ "paste above."
+#~ msgstr ""
+#~ "复制<strong>客户端 ID</strong>与<strong>客户端密钥</strong>并粘贴到上方。"
+#~ "复制 <strong>客户端 ID</strong> 和 <strong>客户端密钥</strong> 并粘贴到上"
+#~ "方。"
+
+#~ msgid ""
+#~ "Copy <strong>Client ID</strong> and <strong>Client Secret</strong> from "
+#~ "Basic Information and paste above."
+#~ msgstr ""
+#~ "从“基本信息”复制<strong>客户端 ID</strong>与<strong>客户端密钥</strong>并"
+#~ "粘贴到上方。从“基本信息”中复制 <strong>客户端 ID</strong> 和 <strong>客户"
+#~ "端密钥</strong> 并粘贴到上方。"
+
+#~ msgid ""
+#~ "Copy the <strong>App ID</strong> and <strong>App Secret</strong> and "
+#~ "paste above."
+#~ msgstr ""
+#~ "复制<strong>AppKey</strong>与<strong>AppSecret</strong>并粘贴到上方。复制 "
+#~ "<strong>AppKey</strong> 和 <strong>AppSecret</strong> 并粘贴到上方。"
+
+#~ msgid ""
+#~ "Copy the <strong>Channel ID</strong> and <strong>Channel Secret</strong> "
+#~ "from Basic settings and paste above."
+#~ msgstr ""
+#~ "从“基本设置”复制<strong>频道 ID</strong>与<strong>频道密钥</strong>并粘贴"
+#~ "到上方。从“基本设置”中复制 <strong>频道 ID</strong> 和 <strong>频道密钥</"
+#~ "strong> 并粘贴到上方。"
+
+#~ msgid ""
+#~ "Copy the <strong>Client ID</strong> and <strong>Client Secret</strong> "
+#~ "from the provider and paste them into the fields above."
+#~ msgstr ""
+#~ "从该提供商复制<strong>客户端 ID</strong>与<strong>客户端密钥</strong>并粘"
+#~ "贴到上方字段。从提供商处复制 <strong>Client ID</strong> 和 <strong>Client "
+#~ "Secret</strong> 并粘贴到上方字段。"
+
+#~ msgid "Copy the <strong>Client ID</strong> and paste above."
+#~ msgstr "复制 <strong>客户端 ID</strong> 并粘贴到上方。"
+
+#~ msgid "Copy the Client ID and Secret above, check \"Enable\" and save."
+#~ msgstr ""
+#~ "将客户端 ID、客户端密钥及您的 Authentik URL 粘贴到上方。勾选“启用”并保存。"
+#~ "在上方粘贴客户端 ID、客户端密钥以及你的 Authentik 地址。勾选“启用”并保存。"
+
+#~ msgid "Copy the Service ID and paste as \"Service ID\" above."
+#~ msgstr "复制服务 ID 并粘贴到上方的“服务 ID”。"
+
+#~ msgid ""
+#~ "Create a <strong>Key</strong> → enable \"Sign in with Apple\" → download ."
+#~ "p8 file."
+#~ msgstr ""
+#~ "创建一个<strong>密钥</strong> → 启用“通过 Apple 登录” → 下载 .p8 文件。创"
+#~ "建一个 <strong>密钥</strong> → 启用“通过 Apple 登录” → 下载 .p8 文件。"
+
+#~ msgid ""
+#~ "Create a <strong>Service ID</strong> (not App ID). Enable \"Sign in with "
+#~ "Apple\"."
+#~ msgstr ""
+#~ "创建一个<strong>服务 ID</strong>（而非 App ID）。启用“通过 Apple 登录”。创"
+#~ "建一个 <strong>服务 ID</strong>（不是 App ID）。启用“通过 Apple 登录”。"
+
+#~ msgid "Create an Application and link it to the provider."
+#~ msgstr "创建一个应用并将其关联到该提供商。"
+
+#~ msgid ""
+#~ "DingTalk uses QR-code scan login; users need the DingTalk app to scan."
+#~ msgstr "钉钉使用扫码登录，用户需要用钉钉 App 扫码。"
+
+#~ msgid ""
+#~ "Discord requires the email scope to be enabled in the Developer Portal "
+#~ "OAuth2 URL configuration."
+#~ msgstr "Discord 需要在开发者门户的 OAuth2 URL 配置中启用 email 权限范围。"
+
+#~ msgid ""
+#~ "Feishu OAuth does not use standard scopes; permissions are controlled "
+#~ "from the admin."
+#~ msgstr "飞书 OAuth 不使用标准作用域，权限由后台控制。"
+
+#~ msgid ""
+#~ "Fill in <strong>Name</strong> and select a <strong>Workspace</strong>."
+#~ msgstr "填写 <strong>名称</strong> 并选择一个 <strong>工作区</strong>。"
+
+#~ msgid ""
+#~ "Fill in <strong>Name</strong>, set <strong>Redirect URI</strong> to: "
+#~ "<code>%s</code>"
+#~ msgstr ""
+#~ "填写<strong>名称</strong>，将<strong>重定向 URI</strong>设置为：<code>%s</"
+#~ "code>"
+
+#~ msgid ""
+#~ "Fill in <strong>Name</strong>. Under <strong>Supported account types</"
+#~ "strong>, choose the appropriate option."
+#~ msgstr ""
+#~ "填写<strong>名称</strong>。在<strong>支持的帐号类型</strong>下选择相应选"
+#~ "项。填写 <strong>名称</strong>。在 <strong>支持的账户类型</strong> 下选择"
+#~ "合适的选项。"
+
+#~ msgid ""
+#~ "Fill in app info. Set the <strong>Authorized Callback Domain</strong> to "
+#~ "your domain (no protocol, no path):"
+#~ msgstr ""
+#~ "填写应用信息，将<strong>授权回调域</strong>设置为您的域名（不含协议与路"
+#~ "径）："
+
+#~ msgid ""
+#~ "Fill in the form: <strong>Application name</strong> can be anything (e.g. "
+#~ "your site name). <strong>Homepage URL</strong> should be your site URL. "
+#~ "<strong>Authorization callback URL</strong> must be exactly: <code>%s</"
+#~ "code>"
+#~ msgstr ""
+#~ "填写表单：<strong>应用名称</strong>可任意填写（例如您的站点名称）。"
+#~ "<strong>主页 URL</strong>应为您的站点地址。<strong>授权回调 URL</strong>必"
+#~ "须精确为：<code>%s</code>"
+
+#~ msgid ""
+#~ "Find the provider's OAuth documentation and fill in the "
+#~ "<strong>Authorization URL</strong>, <strong>Token URL</strong>, and "
+#~ "<strong>User Info URL</strong>. These are usually listed in the "
+#~ "provider's API docs."
+#~ msgstr ""
+#~ "查找该提供商的 OAuth 文档，填写<strong>授权 URL</strong>、<strong>令牌 "
+#~ "URL</strong>与<strong>用户信息 URL</strong>。这些通常列在提供商的 API 文档"
+#~ "中。查找提供商的 OAuth 文档，填写 <strong>授权 URL</strong>、<strong>令牌 "
+#~ "URL</strong> 和 <strong>用户信息 URL</strong>。这些信息通常在提供商的 API "
+#~ "文档中。"
+
+#~ msgid "For self-hosted GitLab, enter your instance URL."
+#~ msgstr "对于自托管 GitLab，请输入你的实例地址。"
+
+#~ msgid "For self-hosted GitLab, update the \"GitLab Instance URL\" field."
+#~ msgstr "对于自托管 GitLab，请更新“GitLab 实例地址”字段。"
+
+#~ msgid ""
+#~ "For the international version (Lark), set Region to International in the "
+#~ "settings."
+#~ msgstr "国际版（Lark）请在设置中将 Region 设为 International。"
+
+#~ msgid "GitLab Instance URL"
+#~ msgstr "GitLab 实例地址"
+
+#~ msgid "Gitee is a domestic platform and needs no proxy."
+#~ msgstr "Gitee 是国内平台，无需代理。"
+
+#~ msgid ""
+#~ "Go to <a href=\"%s\" target=\"_blank\">Apple Developer - Identifiers</a>."
+#~ msgstr "前往 <a href=\"%s\" target=\"_blank\">Apple 开发者 - 标识符</a>。"
+
+#~ msgid ""
+#~ "Go to <a href=\"%s\" target=\"_blank\">Azure Portal - App registrations</"
+#~ "a> and click \"New registration\"."
+#~ msgstr ""
+#~ "前往 <a href=\"%s\" target=\"_blank\">Azure 门户 - 应用注册</a> 并点击“新"
+#~ "注册”。"
+
+#~ msgid ""
+#~ "Go to <a href=\"%s\" target=\"_blank\">DingTalk Open Platform</a> and "
+#~ "create a new scan-login app."
+#~ msgstr ""
+#~ "前往 <a href=\"%s\" target=\"_blank\">钉钉开放平台</a> 并创建一个扫码登录"
+#~ "应用。"
+
+#~ msgid ""
+#~ "Go to <a href=\"%s\" target=\"_blank\">Discord Developer Portal</a> and "
+#~ "click \"New Application\"."
+#~ msgstr ""
+#~ "前往 <a href=\"%s\" target=\"_blank\">Discord 开发者门户</a> 并点击“新建应"
+#~ "用”。"
+
+#~ msgid ""
+#~ "Go to <a href=\"%s\" target=\"_blank\">Feishu Open Platform</a> and "
+#~ "create a new self-built app."
+#~ msgstr ""
+#~ "前往 <a href=\"%s\" target=\"_blank\">飞书开放平台</a> 并创建一个自建应"
+#~ "用。"
+
+#~ msgid ""
+#~ "Go to <a href=\"%s\" target=\"_blank\">GitHub Developer Settings</a> and "
+#~ "click \"New OAuth App\"."
+#~ msgstr ""
+#~ "前往 <a href=\"%s\" target=\"_blank\">GitHub 开发者设置</a> 并点击“新建 "
+#~ "OAuth 应用”。"
+
+#~ msgid ""
+#~ "Go to <a href=\"%s\" target=\"_blank\">GitLab Application Settings</a>."
+#~ msgstr "前往 <a href=\"%s\" target=\"_blank\">GitLab 应用设置</a>。"
+
+#~ msgid ""
+#~ "Go to <a href=\"%s\" target=\"_blank\">Gitee Applications</a> and click "
+#~ "\"Create App\"."
+#~ msgstr ""
+#~ "前往 <a href=\"%s\" target=\"_blank\">Gitee 应用</a> 并点击“创建应用”。"
+
+#~ msgid ""
+#~ "Go to <a href=\"%s\" target=\"_blank\">Google Cloud Console</a> and "
+#~ "create a new project (or select an existing one)."
+#~ msgstr ""
+#~ "前往 <a href=\"%s\" target=\"_blank\">Google Cloud 控制台</a> 并创建一个新"
+#~ "项目（或选择已有项目）。"
+
+#~ msgid ""
+#~ "Go to <a href=\"%s\" target=\"_blank\">LINE Developers Console</a> and "
+#~ "create a provider + LINE Login channel."
+#~ msgstr ""
+#~ "前往 <a href=\"%s\" target=\"_blank\">LINE 开发者控制台</a> 并创建一个提供"
+#~ "商以及 LINE Login 频道。"
+
+#~ msgid ""
+#~ "Go to <a href=\"%s\" target=\"_blank\">LinkedIn Developer Portal</a> and "
+#~ "create an app."
+#~ msgstr ""
+#~ "前往 <a href=\"%s\" target=\"_blank\">Discord 开发者门户</a> 并点击“新建应"
+#~ "用”。"
+
+#~ msgid ""
+#~ "Go to <a href=\"%s\" target=\"_blank\">Meta for Developers</a> and create "
+#~ "an app (type \"Consumer\")."
+#~ msgstr ""
+#~ "前往 <a href=\"%s\" target=\"_blank\">微信开放平台</a> 并创建一个网站应"
+#~ "用。"
+
+#~ msgid ""
+#~ "Go to <a href=\"%s\" target=\"_blank\">Notion My Integrations</a> and "
+#~ "click \"New integration\"."
+#~ msgstr ""
+#~ "前往 <a href=\"%s\" target=\"_blank\">Notion 我的集成</a> 并点击“新建集"
+#~ "成”。"
+
+#~ msgid ""
+#~ "Go to <a href=\"%s\" target=\"_blank\">Okta Admin Console</a> → "
+#~ "<strong>Applications</strong> → <strong>Create App Integration</strong>."
+#~ msgstr ""
+#~ "前往 <a href=\"%s\" target=\"_blank\">Okta 管理控制台</a> → <strong>应用</"
+#~ "strong> → <strong>创建应用集成</strong>。"
+
+#~ msgid ""
+#~ "Go to <a href=\"%s\" target=\"_blank\">Slack API Apps</a> and click "
+#~ "\"Create New App\"."
+#~ msgstr ""
+#~ "前往 <a href=\"%s\" target=\"_blank\">Slack API 应用</a> 并点击“创建新应"
+#~ "用”。"
+
+#~ msgid ""
+#~ "Go to <a href=\"%s\" target=\"_blank\">WeChat Open Platform</a> and "
+#~ "create a website application."
+#~ msgstr ""
+#~ "前往 <a href=\"%s\" target=\"_blank\">微信开放平台</a> 并创建一个网站应"
+#~ "用。"
+
+#~ msgid ""
+#~ "Go to <a href=\"%s\" target=\"_blank\">微博开放平台</a> and create a "
+#~ "website application."
+#~ msgstr ""
+#~ "前往 <a href=\"%s\" target=\"_blank\">微信开放平台</a> 并创建一个网站应"
+#~ "用。"
+
+#~ msgid ""
+#~ "Go to <strong>Certificates & secrets</strong> → \"New client secret\". "
+#~ "Copy the secret <strong>Value</strong> and paste above."
+#~ msgstr ""
+#~ "进入<strong>证书和密码</strong> → “新建客户端密码”。复制密码的<strong>值</"
+#~ "strong>并粘贴到上方。前往 <strong>证书和密码</strong> → “新建客户端密码”。"
+#~ "复制密码的 <strong>值</strong> 并粘贴到上方。"
+
+#~ msgid "Go to <strong>OAuth & Permissions</strong>. Add Redirect URL:"
+#~ msgstr "前往 <strong>OAuth 与权限</strong>。添加重定向 URL："
+
+#~ msgid "Go to <strong>OAuth Domain & URIs</strong>. Add redirect URL:"
+#~ msgstr "前往 <strong>OAuth 域名与 URI</strong>。添加重定向 URL："
+
+#~ msgid ""
+#~ "Go to <strong>OAuth2</strong> → <strong>Redirects</strong>, click \"Add "
+#~ "Redirect\" and enter:"
+#~ msgstr ""
+#~ "进入<strong>OAuth2</strong> → <strong>重定向</strong>，点击“添加重定向”并"
+#~ "输入：前往 <strong>OAuth2</strong> → <strong>重定向</strong>，点击“添加重"
+#~ "定向”并输入："
+
+#~ msgid ""
+#~ "Go to your Authentik admin → <strong>Applications</strong> → "
+#~ "<strong>Providers</strong> → <strong>Create</strong> → choose \"OAuth2/"
+#~ "OpenID Provider\"."
+#~ msgstr ""
+#~ "进入您的 Authentik 管理后台 → <strong>应用</strong> → <strong>提供商</"
+#~ "strong> → <strong>创建</strong> → 选择“OAuth2/OpenID 提供商”。前往 "
+#~ "Authentik 管理后台 → <strong>应用</strong> → <strong>提供商</strong> → "
+#~ "<strong>创建</strong> → 选择“OAuth2/OpenID 提供商”。"
+
+#~ msgid "How to set up %s"
+#~ msgstr "如何设置 %s"
+
+#~ msgid ""
+#~ "If the provider requires the access token as a query parameter instead of "
+#~ "a Bearer header, uncheck \"Token in Header\"."
+#~ msgstr ""
+#~ "若提供商要求将访问令牌作为查询参数（而非 Bearer 请求头），请取消勾选“令牌"
+#~ "在请求头中”。如果提供商要求以查询参数而非 Bearer 头的方式发送访问令牌，请"
+#~ "取消勾选\"令牌在 Header 中\"。"
+
+#~ msgid ""
+#~ "If the token response uses a non-standard key (not <code>access_token</"
+#~ "code>), set the <strong>Token Response Key</strong> accordingly."
+#~ msgstr ""
+#~ "若令牌响应的键名非标准（非 <code>access_token</code>），请相应设置<strong>"
+#~ "令牌响应键</strong>。如果令牌响应使用非标准键名（非 <code>access_token</"
+#~ "code>），请相应设置 <strong>令牌响应键名</strong>。"
+
+#~ msgid ""
+#~ "If the userinfo endpoint returns a nested object (e.g. <code>{\"user\": "
+#~ "{\"email\": \"...\"}}</code>), the plugin will automatically check the "
+#~ "<code>user</code> sub-object as a fallback."
+#~ msgstr ""
+#~ "若 userinfo 接口返回嵌套对象（例如 <code>{\"user\": {\"email\": \"...\"}}"
+#~ "</code>），插件会自动回退检查 <code>user</code> 子对象。如果用户信息端点返"
+#~ "回嵌套对象（如 <code>{\"user\": {\"email\": \"...\"}}</code>），插件会自动"
+#~ "检查 <code>user</code> 子对象作为回退。"
+
+#~ msgid ""
+#~ "If your Google account is in \"testing\" mode, only the test users you "
+#~ "added can log in. To allow other users, submit your app for Google "
+#~ "verification."
+#~ msgstr ""
+#~ "若您的 Google 帐号处于“测试”模式，仅您添加的测试用户可登录。要允许其他用"
+#~ "户，请提交应用进行 Google 验证。如果你的 Google 账号处于\"测试\"模式，只有"
+#~ "你添加的测试用户可以登录。要允许其他用户登录，需要将应用提交 Google 验证。"
+
+#~ msgid ""
+#~ "If your site uses Cloudflare, the callback must hit <code>wp-login.php</"
+#~ "code> directly."
+#~ msgstr ""
+#~ "若您的站点使用 Cloudflare，回调必须直接访问 <code>wp-login.php</code>。如"
+#~ "果你的站点使用 Cloudflare，回调必须直接访问 <code>wp-login.php</code>。"
+
+#~ msgid ""
+#~ "If your site uses Cloudflare, the callback must hit <code>wp-login.php</"
+#~ "code> directly. Create a Page Rule to bypass cache for the callback URL."
+#~ msgstr ""
+#~ "若您的站点使用 Cloudflare，回调必须直接访问 <code>wp-login.php</code>。请"
+#~ "创建 Page Rule 以绕过回调 URL 的缓存。如果你的站点使用 Cloudflare，回调必"
+#~ "须直接访问 <code>wp-login.php</code>。创建 Page Rule 来绕过回调 URL 的缓"
+#~ "存。"
+
+#~ msgid ""
+#~ "If your site uses Cloudflare, the callback must hit <code>wp-login.php</"
+#~ "code> directly. You may need to create a Page Rule to bypass cache for "
+#~ "the callback URL."
+#~ msgstr ""
+#~ "若您的站点使用 Cloudflare，回调必须直接访问 <code>wp-login.php</code>。您"
+#~ "可能需要创建 Page Rule 以绕过回调 URL 的缓存。如果你的站点使用 "
+#~ "Cloudflare，回调必须直接访问 <code>wp-login.php</code>。你可能需要创建 "
+#~ "Page Rule 来绕过回调 URL 的缓存。"
+
+#~ msgid "In Login & Share, add callback URL:"
+#~ msgstr "在“登录与分享”中添加回调地址："
+
+#~ msgid "In Security Settings, add redirect URL:"
+#~ msgstr "在“安全设置”中添加回调地址："
+
+#~ msgid "In the channel settings, go to <strong>LINE Login settings</strong>."
+#~ msgstr "在频道设置中，前往 <strong>LINE Login 设置</strong>。"
+
+#~ msgid ""
+#~ "In your OAuth provider, register a new application. Set the "
+#~ "<strong>Redirect / Callback URL</strong> to: <code>%s</code>"
+#~ msgstr ""
+#~ "在您的 OAuth 提供商处注册一个新应用。将<strong>重定向 / 回调 URL</strong>"
+#~ "设置为：<code>%s</code>"
+
+#~ msgid "LINE Login channel Channel ID"
+#~ msgstr "LINE Login 频道的 Channel ID"
+
+#~ msgid ""
+#~ "LINE Login requires email permission to be requested. Users must grant "
+#~ "email access."
+#~ msgstr "LINE Login 需要申请邮箱权限，用户必须授权邮箱访问。"
+
+#~ msgid "LINE is widely used in Japan, Thailand, Taiwan, and Indonesia."
+#~ msgstr "LINE 在日本、泰国、台湾和印度尼西亚广泛使用。"
+
+#~ msgid "LinkedIn"
+#~ msgstr "链接"
+
+#~ msgid ""
+#~ "Navigate to <strong>APIs & Services &gt; Credentials</strong>. Click "
+#~ "\"Create Credentials\" &gt; \"OAuth client ID\"."
+#~ msgstr ""
+#~ "进入<strong>API 和服务 &gt; 凭据</strong>。点击“创建凭据” &gt; “OAuth 客户"
+#~ "端 ID”。导航到 <strong>APIs & Services &gt; Credentials</strong>。点击 "
+#~ "\"Create Credentials\" &gt; \"OAuth client ID\"。"
+
+#~ msgid ""
+#~ "Navigate to <strong>APIs & Services &gt; OAuth consent screen</strong>. "
+#~ "Choose \"External\" user type. Fill in the required app information and "
+#~ "add your email as a test user."
+#~ msgstr ""
+#~ "进入<strong>API 和服务 &gt; OAuth 同意屏幕</strong>。选择“外部”用户类型。"
+#~ "填写所需的应用信息，并将您的邮箱添加为测试用户。导航到 <strong>APIs & "
+#~ "Services &gt; OAuth consent screen</strong>。选择 \"External\" 用户类型。"
+#~ "填写必填的应用信息并添加你的邮箱作为测试用户。"
+
+#~ msgid "Notes:"
+#~ msgstr "注意事项："
+
+#~ msgid ""
+#~ "Notion OAuth does not provide the user's email directly. It returns a bot/"
+#~ "workspace context."
+#~ msgstr "Notion OAuth 不直接提供用户邮箱，它返回的是机器人/工作区上下文。"
+
+#~ msgid "Okta Domain"
+#~ msgstr "Okta 域名"
+
+#~ msgid ""
+#~ "Okta has two domain formats: Classic (https://your-domain.okta.com) and "
+#~ "OIE (https://your-domain.okta.com/oauth2/default). Use the full issuer "
+#~ "URL."
+#~ msgstr ""
+#~ "Okta 有两种域名格式：Classic（https://your-domain.okta.com）与 OIE"
+#~ "（https://your-domain.okta.com/oauth2/default）。请使用完整的 issuer URL。"
+#~ "Okta 有两种域名格式：经典版（https://your-domain.okta.com）与 OIE"
+#~ "（https://your-domain.okta.com/oauth2/default）。请使用完整的签发者 URL。"
+
+#~ msgid ""
+#~ "On the app page, copy the <strong>Client ID</strong> and paste it into "
+#~ "the Client ID field above."
+#~ msgstr ""
+#~ "在应用页面，复制<strong>客户端 ID</strong>并粘贴到上方的客户端 ID 字段。在"
+#~ "应用页面复制 <strong>Client ID</strong> 并粘贴到上方的 Client ID 字段。"
+
+#~ msgid ""
+#~ "Paste Client ID, Client Secret, and your Authentik URL above. Check "
+#~ "\"Enable\" and save."
+#~ msgstr ""
+#~ "将客户端 ID、客户端密钥及您的 Authentik URL 粘贴到上方。勾选“启用”并保存。"
+#~ "在上方粘贴客户端 ID、客户端密钥以及你的 Authentik 地址。勾选“启用”并保存。"
+
+#~ msgid "Paste Key ID and .p8 contents above. Find Team ID in Membership."
+#~ msgstr "在上方粘贴密钥 ID 和 .p8 内容。在会员详情中查找团队 ID。"
+
+#~ msgid ""
+#~ "Publish the app version and wait for approval. Check \"Enable\" and save."
+#~ msgstr "发布应用版本并等待审核。勾选“启用”并保存。"
+
+#~ msgid "Requires OpenSSL PHP extension for ES256 signing."
+#~ msgstr "ES256 签名需要 OpenSSL PHP 扩展。"
+
+#~ msgid "Requires a paid Apple Developer account ($99/year)."
+#~ msgstr "需要付费的 Apple 开发者账号（$99/年）。"
+
+#~ msgid "Secret"
+#~ msgstr "密钥"
+
+#~ msgid "Select \"Web application\" as the application type."
+#~ msgstr "选择 \"Web application\" 作为应用类型。"
+
+#~ msgid ""
+#~ "Select <strong>OIDC - OpenID Connect</strong> and <strong>Web "
+#~ "Application</strong>."
+#~ msgstr ""
+#~ "选择<strong>OIDC - OpenID Connect</strong>与<strong>Web 应用</strong>。选"
+#~ "择 <strong>OIDC - OpenID Connect</strong> 与 <strong>Web 应用</strong>。"
+
+#~ msgid "Set <strong>Callback URL</strong> to: <code>%s</code>"
+#~ msgstr "将 <strong>回调 URL</strong> 设置为：<code>%s</code>"
+
+#~ msgid ""
+#~ "Set <strong>Client type</strong> to \"Confidential\". Copy the "
+#~ "<strong>Client ID</strong> and <strong>Client Secret</strong>."
+#~ msgstr ""
+#~ "将<strong>客户端类型</strong>设置为“机密”。复制<strong>客户端 ID</strong>"
+#~ "与<strong>客户端密钥</strong>。将 <strong>客户端类型</strong> 设置为“机"
+#~ "密”。复制 <strong>客户端 ID</strong> 和 <strong>客户端密钥</strong>。"
+
+#~ msgid "Set <strong>Redirect URI</strong> to: <code>%s</code>"
+#~ msgstr "将 <strong>重定向 URI</strong> 设置为：<code>%s</code>"
+
+#~ msgid "Set <strong>Sign-in redirect URIs</strong> to: <code>%s</code>"
+#~ msgstr "将 <strong>登录重定向 URI</strong> 设置为：<code>%s</code>"
+
+#~ msgid "Set the <strong>Callback URL</strong> to: <code>%s</code>"
+#~ msgstr "将<strong>回调 URL</strong>设置为：<code>%s</code>"
+
+#~ msgid ""
+#~ "Set the <strong>Email Field</strong> to the JSON key that contains the "
+#~ "user's email in the userinfo response (default: <code>email</code>)."
+#~ msgstr ""
+#~ "将<strong>邮箱字段</strong>设置为 userinfo 响应中包含用户邮箱的 JSON 键"
+#~ "（默认：<code>email</code>）。将 <strong>邮箱字段</strong> 设置为用户信息"
+#~ "响应中包含用户邮箱的 JSON 键名（默认：<code>email</code>）。"
+
+#~ msgid ""
+#~ "Set the <strong>Okta Domain</strong> field to your Okta domain (e.g. "
+#~ "https://your-domain.okta.com)."
+#~ msgstr ""
+#~ "将<strong>Okta 域名</strong>字段设置为您的 Okta 域名（例如 https://your-"
+#~ "domain.okta.com）。将 <strong>Okta 域名</strong> 字段设置为你的 Okta 域名"
+#~ "（例如 https://your-domain.okta.com）。"
+
+#~ msgid "Slack OpenID Connect requires the workspace to be on a paid plan."
+#~ msgstr "Slack 的 OpenID Connect 需要工作区处于付费套餐。"
+
+#~ msgid ""
+#~ "The base URL should be your Authentik instance URL, e.g. https://auth."
+#~ "example.com"
+#~ msgstr "基础地址应为你的 Authentik 实例 URL，例如 https://auth.example.com"
+
+#~ msgid ""
+#~ "The callback domain should only contain the domain (e.g. example.com), "
+#~ "without https:// or a path."
+#~ msgstr "回调域只需填写域名（例如 example.com），不含 https:// 与路径。"
+
+#~ msgid ""
+#~ "The default scope \"user_info emails\" retrieves user info and email."
+#~ msgstr "默认作用域 \"user_info emails\" 用于获取用户信息与邮箱。"
+
+#~ msgid ""
+#~ "The default scope <code>openid email profile</code> is recommended. "
+#~ "Removing <code>email</code> will break login."
+#~ msgstr ""
+#~ "建议使用默认作用域 <code>openid email profile</code>。移除 <code>email</"
+#~ "code> 将导致登录失败。推荐使用默认作用域 <code>openid email profile</"
+#~ "code>。移除 <code>email</code> 将导致无法登录。"
+
+#~ msgid ""
+#~ "The default scope <code>user:email</code> is sufficient. If you need "
+#~ "access to private email addresses, ensure the user has a public email or "
+#~ "the plugin will query the emails API."
+#~ msgstr ""
+#~ "默认作用域 <code>user:email</code> 已足够。若需访问私有邮箱地址，请确保用"
+#~ "户拥有公开邮箱，否则插件将查询 emails API。默认作用域 <code>user:email</"
+#~ "code> 已足够。如需访问私有邮箱地址，请确保用户有公开邮箱，否则插件将查询 "
+#~ "emails API。"
+
+#~ msgid "The email requires authorization from the enterprise admin."
+#~ msgstr "邮箱需要企业管理员授权后才能获取。"
+
+#~ msgid ""
+#~ "The user's email may be available via the Notion API if the integration "
+#~ "has the right permissions."
+#~ msgstr "如果集成具备相应权限，可通过 Notion API 获取用户邮箱。"
+
+#~ msgid ""
+#~ "Under \"Authorized redirect URIs\", click \"Add URI\" and enter: "
+#~ "<code>%s</code>"
+#~ msgstr "在“授权的重定向 URI”下，点击“添加 URI”并输入：<code>%s</code>"
+
+#~ msgid ""
+#~ "Under <strong>Facebook Login &rarr; Settings</strong>, add this Valid "
+#~ "OAuth Redirect URI: <code>%s</code>"
+#~ msgstr "在 <strong>重定向 URI</strong> 下，选择“Web”并输入：<code>%s</code>"
+
+#~ msgid ""
+#~ "Under <strong>Redirect URI</strong>, select \"Web\" and enter: <code>%s</"
+#~ "code>"
+#~ msgstr "在 <strong>重定向 URI</strong> 下，选择“Web”并输入：<code>%s</code>"
+
+#~ msgid ""
+#~ "Under <strong>Scopes</strong>, add: <code>openid</code>, <code>email</"
+#~ "code>, <code>profile</code>."
+#~ msgstr ""
+#~ "在<strong>作用域</strong>下添加：<code>openid</code>、<code>email</code>、"
+#~ "<code>profile</code>。在 <strong>权限范围</strong> 下添加：<code>openid</"
+#~ "code>、<code>email</code>、<code>profile</code>。"
+
+#~ msgid "Users with unverified emails may not have an email available."
+#~ msgstr "未验证邮箱的用户可能无法获取邮箱。"
+
+#~ msgid ""
+#~ "WeChat OAuth uses QR-code scan login; users need the WeChat app to scan."
+#~ msgstr "微信 OAuth 使用扫码登录，用户需要用微信 App 扫码。"
+
+#~ msgid ""
+#~ "WeChat Open Platform requires enterprise verification; review takes about "
+#~ "1-7 days."
+#~ msgstr "微信开放平台需要企业认证，审核周期约 1-7 天。"
+
+#~ msgid ""
+#~ "You must create a \"Scan-login App\", not an \"Internal Enterprise App\"."
+#~ msgstr "需要创建“扫码登录应用”，不是“企业内部应用”。"
+
+#~ msgid ""
+#~ "Your Okta domain (no trailing slash). For Okta Identity Engine, use /"
+#~ "oauth2/default."
+#~ msgstr ""
+#~ "您的 Okta 域名（不含末尾斜杠）。若使用 Okta Identity Engine，请使用 /"
+#~ "oauth2/default。你的 Okta 域名（结尾不要斜杠）。对于 Okta Identity "
+#~ "Engine，请使用 /oauth2/default。"
+
+#~ msgid ""
+#~ "An emergency login link was requested for %1\\$s.\\n\\nThis link is valid "
+#~ "for 15 minutes and only works from the IP address that requested it (%2\\"
+#~ "$s). Do not share it.\\n\\n%3\\$s\\n\\nIf you did not request this, you "
+#~ "can safely ignore this email."
+#~ msgstr ""
+#~ "已为 %1$s 请求紧急登录链接。\n"
+#~ "\n"
+#~ "该链接有效期为 15 分钟，且仅限请求它的 IP 地址（%2$s）使用。请勿分享。\n"
+#~ "\n"
+#~ "%3$s\n"
+#~ "\n"
+#~ "若您并未请求此链接，可直接忽略本邮件。"
+
+#~ msgid "Author:"
+#~ msgstr "作者："
+
+#~ msgid "Failures only"
+#~ msgstr "仅失败时"
+
+#~ msgid "Get a one-time login link"
+#~ msgstr "获取一次性登录链接"
+
+#~ msgid "No notifications"
+#~ msgstr "不通知"
+
+#~ msgid ""
+#~ "OAuth 2.0 login for WordPress with GitHub, Google, and unlimited custom "
+#~ "providers."
+#~ msgstr ""
+#~ "WordPress 的 OAuth 2.0 登录，支持 GitHub、Google 以及无限自定义提供商。"
+
+#~ msgid ""
+#~ "OAuth login for WordPress with GitHub, Google, and custom providers. "
+#~ "Supports OAuth-only mode, login history, security features, and more."
+#~ msgstr ""
+#~ "WordPress 的 OAuth 登录，支持 GitHub、Google 及自定义提供商。支持仅 OAuth "
+#~ "模式、登录历史、安全功能等。WordPress OAuth 登录，支持 GitHub、Google 及自"
+#~ "定义提供商。支持纯 OAuth 模式、登录历史、安全功能等。"
+
+#~ msgid "Please enter the verification code shown above."
+#~ msgstr "请输入上方显示的验证码"
+
+#~ msgid "Success and failures"
+#~ msgstr "成功和失败"
+
+#~ msgid "Verification code"
+#~ msgstr "验证码"
+
+#~ msgid "Verification code is incorrect. Please try again."
+#~ msgstr "验证码错误，请重试。"
+
+#~ msgid "Version:"
+#~ msgstr "版本："
+
+#~ msgid ""
+#~ "We’ll email a login link to your authorized admin address. The link works "
+#~ "for 15 minutes and only from the IP that requested it."
+#~ msgstr ""
+#~ "我们将向您授权的管理员邮箱发送登录链接。该链接有效期 15 分钟，且仅限请求它"
+#~ "的 IP 使用。我们会向你的管理员邮箱发送登录链接。该链接仅有效 15 分钟，且只"
+#~ "能从请求它的 IP 访问。"
+
+#~ msgid "Your email address"
+#~ msgstr "您的邮箱地址"
+
+#~ msgid ""
+#~ "Saved, but the following enabled providers are not fully configured: %s"
+#~ msgstr "已保存，但以下已启用的提供商尚未完成配置：%s"
+
+#~ msgid "Full IP: %s"
+#~ msgstr "完整 IP：%s"
+
+#~ msgid "Learn more"
+#~ msgstr "了解更多"

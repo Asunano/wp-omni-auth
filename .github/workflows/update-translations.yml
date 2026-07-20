@@ -1,0 +1,64 @@
+name: Update Translations
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.php'
+      - 'assets/js/**.js'
+
+permissions:
+  contents: write
+
+jobs:
+  update-translations:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: composer
+
+      - name: Install gettext tools
+        run: sudo apt-get update && sudo apt-get install -y gettext
+
+      - name: Extract strings to .pot
+        run: php tools/build-translations.php
+
+      - name: Merge .pot into .po files
+        run: |
+          for po in languages/*.po; do
+            if [ -f "$po" ]; then
+              echo "Merging $po ..."
+              msgmerge --update --backup=none "$po" languages/wp-omni-auth.pot
+            fi
+          done
+
+      - name: Compile .po to .mo
+        run: |
+          for po in languages/*.po; do
+            if [ -f "$po" ]; then
+              mo="${po%.po}.mo"
+              echo "Compiling $po -> $mo ..."
+              msgfmt -o "$mo" "$po"
+            fi
+          done
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add languages/
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: auto-update translation files (.pot/.po/.mo)"
+            git push
+          else
+            echo "No translation changes to commit."
+          fi

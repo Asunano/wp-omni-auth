@@ -1,0 +1,1244 @@
+/* ================================================================
+   WP-OmniAuth — login styles
+
+   Two concerns:
+   1. Shared OAuth provider buttons (.wpomni-btn) — used both on the
+      default wp-login form and on the full OAuth-only screen.
+   2. The full OAuth-only login screen (body.wpomni-oauth-page).
+
+   Design notes:
+   - The PAGE background is left to WordPress (we do NOT override it).
+     Only the card is redesigned.
+   - The card ADAPTS to light/dark via prefers-color-scheme.
+   - The card uses the same visual language as the OAuth callback
+     result page (render_callback_page): centered card, blur-in
+     entrance, soft shadow, calm spacing.
+   - A GLOBAL fade-in/out wraps the whole screen: the body fades in on
+     load and fades out (with the card) when the user navigates away.
+   - Button hover is a clear but smooth lift (no bounce).
+   ================================================================ */
+
+/* ----------------------------------------------------------------
+   Provider buttons (shared)
+   ---------------------------------------------------------------- */
+.wpomni-login-buttons {
+    margin: 20px 0;
+    padding: 20px 0 0;
+    border-top: 1px solid #dcdcde;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.wpomni-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+    max-width: none !important;
+    padding: 16px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.4;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
+    gap: 14px;
+    border: 1px solid transparent;
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.4s cubic-bezier(0.22, 1, 0.36, 1) !important;
+    opacity: 0;
+    transform: translateY(16px);
+    animation: wpomni-btn-in 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
+}
+
+.wpomni-btn:nth-child(1) { animation-delay: 0.12s; }
+.wpomni-btn:nth-child(2) { animation-delay: 0.20s; }
+.wpomni-btn:nth-child(3) { animation-delay: 0.28s; }
+.wpomni-btn:nth-child(4) { animation-delay: 0.36s; }
+.wpomni-btn:nth-child(5) { animation-delay: 0.44s; }
+
+@keyframes wpomni-btn-in {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Clear but smooth lift on hover — no overshoot/bounce. */
+.wpomni-btn:hover {
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-5px) !important;
+}
+
+.wpomni-btn:focus {
+    outline: none;
+}
+/* Ring only for keyboard focus — a mouse click must NOT leave a
+   persistent emphasis border on the button. */
+.wpomni-btn:focus-visible {
+    box-shadow: 0 0 0 3px rgba(34, 113, 177, 0.35), 0 10px 26px rgba(0, 0, 0, 0.16);
+    outline: none;
+}
+
+.wpomni-btn .wpomni-btn-label {
+    white-space: nowrap;
+}
+
+.wpomni-btn svg {
+    width: auto;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+/* Emergency-access method buttons reuse the exact same .wpomni-btn component
+   as the login screen's provider buttons, so they stay pixel-consistent.
+   Each method gets its own brand color, painted the same way provider
+   buttons are (solid bg + white text + darker shade on hover/focus). */
+.wpomni-btn-email {
+    background-color: #3b82f6 !important;
+    color: #ffffff !important;
+    border-color: #3b82f6 !important;
+}
+.wpomni-btn-email:hover,
+.wpomni-btn-email:focus {
+    background-color: #2563eb !important;
+    color: #ffffff !important;
+    border-color: #2563eb !important;
+}
+.wpomni-btn-key {
+    background-color: #8b5cf6 !important;
+    color: #ffffff !important;
+    border-color: #8b5cf6 !important;
+}
+.wpomni-btn-key:hover,
+.wpomni-btn-key:focus {
+    background-color: #7c3aed !important;
+    color: #ffffff !important;
+    border-color: #7c3aed !important;
+}
+
+/* Providers WITHOUT a brand color (get_button_color() returns empty) adopt
+   the WP admin theme color. Built-in + custom providers that declare a brand
+   color are painted via the .wpomni-btn-brand rule below. */
+.wpomni-btn:not(.wpomni-btn-brand):not(.wpomni-btn-email):not(.wpomni-btn-key) {
+    background-color: var(--wp-admin-theme-color, #2271b1);
+    color: #ffffff;
+    border-color: var(--wp-admin-theme-color, #2271b1);
+}
+.wpomni-btn:not(.wpomni-btn-brand):not(.wpomni-btn-email):not(.wpomni-btn-key):hover,
+.wpomni-btn:not(.wpomni-btn-brand):not(.wpomni-btn-email):not(.wpomni-btn-key):focus {
+    background-color: var(--wp-admin-theme-color-darker-10, #135e96);
+    color: #ffffff;
+    border-color: var(--wp-admin-theme-color-darker-10, #135e96);
+}
+
+/* Providers WITH a brand color (declared via get_button_color(); custom
+   providers read it from the "Button Color" setting). The bg, text, and
+   border colors arrive as CSS variables from the button's inline style.
+   Hover simply darkens via brightness — no clashing hue shift. */
+.wpomni-btn.wpomni-btn-brand {
+    background-color: var(--wpomni-btn-bg, var(--wp-admin-theme-color, #2271b1));
+    border-color: var(--wpomni-btn-border, var(--wpomni-btn-bg, var(--wp-admin-theme-color, #2271b1)));
+    color: var(--wpomni-btn-color, #ffffff);
+}
+.wpomni-btn.wpomni-btn-brand:hover,
+.wpomni-btn.wpomni-btn-brand:focus {
+    background-color: var(--wpomni-btn-bg, var(--wp-admin-theme-color, #2271b1));
+    border-color: var(--wpomni-btn-border, var(--wpomni-btn-bg, var(--wp-admin-theme-color, #2271b1)));
+    color: var(--wpomni-btn-color, #ffffff);
+}
+
+/* Focus ring uses the button's own color — but only for keyboard focus,
+   so a mouse click doesn't leave a persistent colored border. */
+.wpomni-btn.wpomni-btn-brand:focus {
+    outline: none;
+    box-shadow: none;
+}
+.wpomni-btn.wpomni-btn-brand:focus-visible {
+    outline: 3px solid var(--wpomni-btn-border, var(--wp-admin-theme-color, #2271b1));
+    outline-offset: 2px;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.16);
+}
+
+/* ----------------------------------------------------------------
+   Embedded on the DEFAULT wp-login form (OAuth-only mode OFF).
+   Here the provider buttons sit INSIDE WordPress' own login card, so the
+   standalone OAuth screen's "protrude" entrance (translateY) and hover-lift
+   look broken. Calm them down: a plain opacity fade-in (no translate), a
+   modest, compact size, and a gentle hover that does NOT lift the button
+   out of the card.
+   ---------------------------------------------------------------- */
+body.login:not(.wpomni-oauth-page) .wpomni-login-buttons {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: stretch;
+}
+
+body.login:not(.wpomni-oauth-page) .wpomni-btn {
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 12px 18px;
+    font-size: 14px;
+    opacity: 1;
+    transform: none;
+    /* `backwards` (not `both`) so the animation does NOT keep holding
+       `transform` after it ends — otherwise the hover scale(1.01) can't
+       transition smoothly and instead snaps. The resting transform:none /
+       opacity:1 match the keyframe end, so there is no jump. */
+    animation: wpomni-content-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) backwards !important;
+}
+
+body.login:not(.wpomni-oauth-page) .wpomni-btn:hover {
+    /* Same soft float as the OAuth-only screen's provider buttons. */
+    transform: scale(1.01) !important;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Emergency-access page submit buttons (Verify / Get verification code /
+   Verify & get key): white-on-black, inverting to black-on-white under
+   prefers-color-scheme: dark via the theme tokens above. Scoped to the
+   emergency page only so the OAuth login provider buttons are untouched. */
+body.wpomni-emergency-page .wpomni-btn:not(.wpomni-btn-email):not(.wpomni-btn-key) {
+    background-color: var(--wpomni-emergency-bg) !important;
+    color: var(--wpomni-emergency-fg) !important;
+    border-color: var(--wpomni-emergency-bg) !important;
+}
+body.wpomni-emergency-page .wpomni-btn:not(.wpomni-btn-email):not(.wpomni-btn-key):hover,
+body.wpomni-emergency-page .wpomni-btn:not(.wpomni-btn-email):not(.wpomni-btn-key):focus {
+    background-color: var(--wpomni-emergency-bg) !important;
+    color: var(--wpomni-emergency-fg) !important;
+    border-color: var(--wpomni-emergency-bg) !important;
+    filter: brightness(1.12);
+}
+
+/* Remove residual blue from emergency-page focus/link states (adapt to the
+   black/white theme instead of the default link blue). */
+body.wpomni-emergency-page .wpomni-btn:focus-visible {
+    outline: 3px solid var(--wpomni-emergency-fg) !important;
+    outline-offset: 2px;
+    box-shadow: none !important;
+}
+body.wpomni-emergency-page input[type="text"]:focus,
+body.wpomni-emergency-page input[type="email"]:focus,
+body.wpomni-emergency-page input[type="password"]:focus {
+    border-color: var(--wpomni-text) !important;
+    box-shadow: 0 0 0 3px var(--wpomni-shadow) !important;
+}
+body.wpomni-emergency-page .wpomni-emergency-back:hover {
+    color: var(--wpomni-text) !important;
+}
+body.wpomni-emergency-page .wpomni-oauth-emergency a:hover {
+    color: var(--wpomni-text-secondary) !important;
+}
+
+/* ----------------------------------------------------------------
+   Theme tokens — light (matches WordPress' native login background;
+   the page background itself is NOT overridden).
+   ---------------------------------------------------------------- */
+:root {
+    --wpomni-card-bg: #ffffff;
+    --wpomni-text: #1d2327;
+    --wpomni-text-secondary: #646970;
+    --wpomni-border: #dcdcde;
+    --wpomni-link: var(--wp-admin-theme-color, #2271b1);
+    --wpomni-link-hover: var(--wp-admin-theme-color-darker-10, #135e96);
+    --wpomni-shadow: rgba(0, 0, 0, 0.12);
+    --wpomni-divider: #f0f0f1;
+    --wpomni-error-bg: #fcf0f1;
+    --wpomni-error-border: #f0c0c4;
+    --wpomni-error-text: #d63638;
+    --wpomni-success-bg: #eff9f1;
+    --wpomni-success-border: #b7e3c4;
+    --wpomni-success-text: #1a7f37;
+    /* Emergency-page submit buttons: white-on-black in light mode. */
+    --wpomni-emergency-bg: #000000;
+    --wpomni-emergency-fg: #ffffff;
+}
+
+/* ----------------------------------------------------------------
+   Dark mode — the CARD adapts; the page background stays WordPress'
+   native login background (unchanged). Provider button colors are
+   handled by their own rules above (brand blue, or the user-chosen
+   color), so they are intentionally not overridden here.
+   ---------------------------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --wpomni-card-bg: #2c3338;
+        --wpomni-text: #f0f0f1;
+        --wpomni-text-secondary: #a7aaad;
+        --wpomni-border: #50575e;
+        --wpomni-link: #72aee6;
+        --wpomni-link-hover: #4ec0e8;
+        --wpomni-shadow: rgba(0, 0, 0, 0.45);
+        --wpomni-divider: #3c434a;
+        --wpomni-error-bg: rgba(240, 113, 113, 0.12);
+        --wpomni-error-border: rgba(240, 113, 113, 0.35);
+        --wpomni-error-text: #f07171;
+        --wpomni-success-bg: rgba(26, 127, 55, 0.16);
+        --wpomni-success-border: rgba(26, 127, 55, 0.45);
+        --wpomni-success-text: #6bcb85;
+        /* Emergency-page submit buttons: invert to black-on-white in dark
+           mode so they stay readable against the dark card (a black button
+           on a dark background would vanish). */
+        --wpomni-emergency-bg: #ffffff;
+        --wpomni-emergency-fg: #000000;
+    }
+}
+
+/* ----------------------------------------------------------------
+   Full OAuth-only login screen
+
+   IMPORTANT: This page renders as a complete HTML document with
+   <body class="login wpomni-oauth-page">, so WordPress core login
+   styles (login.min.css) are also loaded via render_login_head().
+   Those rules are scoped to ".login" and will interfere with our
+   card layout / typography / animations unless we explicitly
+   override them below.
+   ---------------------------------------------------------------- */
+body.wpomni-oauth-page {
+    /* Undo WP login.css body rules that may conflict. */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 18px;
+    box-sizing: border-box;
+    color: var(--wpomni-text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    /* NOTE: the page background (left to WordPress / the active theme)
+       is intentionally NOT animated — only the CARD animates, so the
+       background stays completely static. */
+}
+
+/* ----------------------------------------------------------------
+   WP-login-css isolation sandbox
+   Reset any WP login.min.css rules that leak into our card so the
+   preview and production look identical.
+   ---------------------------------------------------------------- */
+
+/* 1) Site title — WP login.css hides h1>a text for its logo image. */
+body.wpomni-oauth-page .wpomni-oauth-title,
+body.wpomni-oauth-page .wpomni-oauth-title a {
+    display: block !important;
+    visibility: visible !important;
+    text-indent: 0 !important;
+    overflow: visible !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: none !important;
+    background-image: none !important;
+    padding: 0 !important;
+    margin: 0 0 6px !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+}
+
+body.wpomni-oauth-page .wpomni-oauth-title a {
+    display: inline !important;
+}
+
+/* ----------------------------------------------------------------
+   ROBUST ISOLATION OVERRIDE
+   The OAuth-only page uses <body class="login ...">, so WP core
+   (login.min.css: `.login *{margin:0;padding:0}` and `a{transition...}`),
+   the active THEME (e.g. Argon login.css) and Gutenberg design tokens ALL
+   leak in and beat our plain `.wpomni-*` rules (their specificity is
+   higher). We re-assert every layout/animation property with a
+   body-prefixed selector (specificity 0,2,0 — beats `.login *` at 0,1,1)
+   plus !important so production matches the isolated preview exactly.
+   ---------------------------------------------------------------- */
+
+/* box-sizing sanity for the whole card subtree */
+body.wpomni-oauth-page .wpomni-oauth-card,
+body.wpomni-oauth-page .wpomni-oauth-card * {
+    box-sizing: border-box !important;
+}
+
+/* Card container */
+body.wpomni-oauth-page .wpomni-oauth-card {
+    max-width: 520px !important;
+    width: 100% !important;
+    /* Smaller top padding so the brand title hugs the top edge. */
+    padding: 32px 40px 36px !important;
+}
+
+/* Button — the critical one: .login * zeroes our padding. */
+body.wpomni-oauth-page .wpomni-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    /* Cap the horizontal width and center it so the login provider buttons
+       and the emergency-page buttons share one consistent, compact size. */
+    max-width: 360px !important;
+    padding: 12px 18px !important;
+    margin: 0 auto !important;
+    font-size: 14px !important;
+    border-radius: 8px !important;
+    gap: 10px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.4s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+/* Login-method buttons: a center "protrude" (凸起) on hover — the button
+   scales up slightly from its CENTER (transform-origin), with a soft ease
+   in/out (transition). This replaces the whole-card float. */
+body.wpomni-oauth-page .wpomni-btn {
+    transform-origin: center;
+    /* NOTE: opacity/transform are intentionally NOT !important here.
+       The `!important` would beat the animation's `backwards` fill and
+       force the button visible during the 0.5s delay, so it would pop in
+       instantly while the title/intro fade in later. Keep them normal so
+       the button is hidden until its grouped entrance, matching the other
+       inner card elements. */
+    opacity: 1;
+    transform: none;
+    /* Grouped entrance: fade in AFTER the card shell (together with the
+       other inner elements). */
+    animation: wpomni-content-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0s backwards !important;
+}
+
+body.wpomni-oauth-page .wpomni-btn:hover {
+    transform: scale(1.01) !important;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15) !important;
+}
+
+body.wpomni-oauth-page .wpomni-btn svg {
+    width: auto !important;
+    height: 22px !important;
+}
+
+/* Button wrappers — keep them full-width blocks, never constrained. */
+body.wpomni-oauth-page .wpomni-oauth-buttons,
+body.wpomni-oauth-page .wpomni-oauth-buttons .wpomni-login-buttons,
+body.wpomni-oauth-page .wpomni-oauth-buttons p,
+body.wpomni-oauth-page .wpomni-oauth-buttons .wpomni-login-buttons p {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+body.wpomni-oauth-page .wpomni-oauth-buttons {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+}
+
+body.wpomni-oauth-page .wpomni-oauth-buttons .wpomni-login-buttons {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    border-top: none !important;
+}
+
+/* Icon + label inside the button keep their size regardless of theme svg rules.
+   Height is fixed (22px) and width follows each icon's viewBox aspect ratio,
+   so wide logos like Discord render at the same height as square ones
+   (GitHub/Google) instead of being shrunk by letterboxing. */
+body.wpomni-oauth-page .wpomni-btn svg {
+    width: auto !important;
+    height: 22px !important;
+    flex-shrink: 0 !important;
+}
+
+@keyframes wpomni-page-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* The card — self-contained, independent of #login. */
+body.wpomni-oauth-page .wpomni-oauth-card {
+    background: var(--wpomni-card-bg);
+    border: 1px solid var(--wpomni-border);
+    border-radius: 12px;
+    box-shadow: 0 6px 24px var(--wpomni-shadow);
+    max-width: 520px;
+    width: 100%;
+    padding: 40px 46px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    /* Cap the card to the viewport so a tall email-recovery flow never
+       stretches past the top/bottom edges (and clips) — it scrolls
+       internally instead. 18px breathing room top & bottom. */
+    max-height: calc(100vh - 36px);
+    overflow-y: auto;
+    /* Entrance: soft, smooth fade + gentle rise for the whole card
+       (渐入). No heavy blur, so it doesn't feel stiff. Inner content
+       still fades in afterwards as a group (see wpomni-content-in). */
+    opacity: 1;
+    transform: translateY(0);
+    animation: wpomni-card-in 0.69s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes wpomni-card-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Inner content fades in AFTER the card shell (grouped, ~0.5s delay)
+   so the card appears first, then the content. `backwards` keeps the
+   content hidden (opacity 0) during the card's own entrance. */
+@keyframes wpomni-content-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Site title / brand — override WP login.css h1>a logo rules */
+body.wpomni-oauth-page .wpomni-oauth-title {
+    font-size: 30px !important;
+    font-weight: 800 !important;
+    color: var(--wpomni-text) !important;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin: 0 0 8px !important;
+    /* Fades in AFTER the card shell (grouped entrance). */
+    opacity: 1;
+    animation: wpomni-content-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0s backwards !important;
+}
+
+body.wpomni-oauth-page .wpomni-oauth-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+body.wpomni-oauth-page .wpomni-oauth-title a:hover {
+    color: var(--wpomni-link);
+}
+
+/* Intro / subtitle */
+body.wpomni-oauth-page .wpomni-oauth-intro {
+    color: var(--wpomni-text-secondary);
+    font-size: 15px;
+    margin: 0 0 30px !important;
+    line-height: 1.5;
+    /* Fades in AFTER the card shell (grouped entrance). */
+    opacity: 1;
+    animation: wpomni-content-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0s backwards !important;
+}
+
+/* Button group — force full-width; WP login.css may constrain p/form. */
+body.wpomni-oauth-page .wpomni-oauth-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: none !important;
+    width: 100% !important;
+}
+
+body.wpomni-oauth-page .wpomni-oauth-buttons .wpomni-login-buttons {
+    margin: 0;
+    padding: 0;
+    border-top: none;
+    max-width: none !important;
+    width: 100% !important;
+}
+
+body.wpomni-oauth-page .wpomni-oauth-buttons p,
+body.wpomni-oauth-page .wpomni-oauth-buttons .wpomni-login-buttons p {
+    margin: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+}
+
+/* Error message (sits at the top of the card) */
+body.wpomni-oauth-page .wpomni-oauth-error {
+    background: var(--wpomni-error-bg);
+    border: 1px solid var(--wpomni-error-border);
+    color: var(--wpomni-error-text);
+    border-radius: 10px;
+    padding: 13px 17px;
+    margin: 0 0 22px;
+    font-size: 14px;
+    text-align: left;
+    line-height: 1.55;
+    animation: wpomni-shake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes wpomni-shake {
+    0%, 100% { transform: translateX(0); }
+    20%      { transform: translateX(-6px); }
+    40%      { transform: translateX(6px); }
+    60%      { transform: translateX(-4px); }
+    80%      { transform: translateX(4px); }
+}
+
+/* ----------------------------------------------------------------
+   Toast notifications — server-status messages (code sent, key sent,
+   errors) float ABOVE the card instead of being rendered inline, so
+   the card stays compact on small / portrait screens. The toast host
+   is fixed-positioned and never adds to the card's height.
+   ---------------------------------------------------------------- */
+.wpomni-toast-host {
+    position: fixed;
+    top: max(16px, env(safe-area-inset-top));
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: calc(100% - 32px);
+    max-width: 420px;
+    pointer-events: none;
+}
+
+.wpomni-toast {
+    pointer-events: auto;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 420px;
+    /* Taller, button-like vertical rhythm (but still a notification, so no
+       full-bleed button chrome). 16px top/bottom keeps it comfortable on
+       touch while the text stays centered and calm. */
+    padding: 16px 20px;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 14.5px;
+    line-height: 1.5;
+    text-align: center;
+    box-shadow: 0 8px 24px var(--wpomni-shadow);
+    background: var(--wpomni-card-bg);
+    color: var(--wpomni-text);
+    border: 1px solid var(--wpomni-border);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    cursor: pointer;
+}
+
+.wpomni-toast.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.wpomni-toast-error {
+    background: var(--wpomni-error-bg);
+    border-color: var(--wpomni-error-border);
+    color: var(--wpomni-error-text);
+}
+
+.wpomni-toast-success {
+    background: var(--wpomni-success-bg);
+    border-color: var(--wpomni-success-border);
+    color: var(--wpomni-success-text);
+}
+
+/* Emergency access link — below a divider inside the card */
+body.wpomni-oauth-page .wpomni-oauth-emergency {
+    text-align: center;
+    margin: 26px 0 0;
+    padding-top: 20px;
+    border-top: 1px solid var(--wpomni-divider);
+    font-size: 13px;
+    /* Fades in AFTER the card shell (grouped entrance). */
+    opacity: 1;
+    animation: wpomni-content-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0s backwards !important;
+}
+
+body.wpomni-oauth-page .wpomni-oauth-emergency a {
+    color: var(--wpomni-text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+body.wpomni-oauth-page .wpomni-oauth-emergency a:hover {
+    color: var(--wpomni-text-secondary);
+    text-decoration: underline;
+}
+
+/* Footer "Back to site" link — inside the card, readable on the card
+   background. Fades in AFTER the card shell (grouped entrance). */
+body.wpomni-oauth-page .wpomni-oauth-footer {
+    margin: 16px 0 0;
+    font-size: 13px;
+    opacity: 1;
+    animation: wpomni-content-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0s backwards !important;
+}
+
+body.wpomni-oauth-page .wpomni-oauth-footer a {
+    color: var(--wpomni-text-secondary);
+    text-decoration: none;
+    opacity: 0.9;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+body.wpomni-oauth-page .wpomni-oauth-footer a:hover {
+    color: var(--wpomni-link);
+    opacity: 1;
+}
+
+/* ----------------------------------------------------------------
+   Redirecting state (after a login button is clicked)
+   The card stays put; its contents are swapped for the provider's
+   icon + "正在为你跳转到 {name}" message + a spinner, then the
+   browser navigates.
+   ---------------------------------------------------------------- */
+/* Quick fade-out of the current card content before the swap. */
+.wpomni-oauth-card.switching > * {
+    opacity: 0;
+    transition: opacity 0.18s ease;
+}
+
+.wpomni-redirecting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    /* Fill the (height-locked) card so the spinner sits centered
+       vertically — matches render_callback_page's centered column. */
+    flex: 1 1 auto;
+    padding: 8px 0;
+    animation: wpomni-redirect-fade 0.25s ease both;
+}
+
+.wpomni-redirect-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Gentle breathing pulse — kept subtle so it doesn't fight the spin. */
+    animation: wpomni-redirect-pulse 1.6s ease-in-out infinite;
+}
+
+/* Bigger provider icon — references render_callback_page's
+   .provider-icon svg { width:80px; height:80px }. */
+.wpomni-redirect-icon svg {
+    width: 80px;
+    height: 80px;
+}
+
+@keyframes wpomni-redirect-pulse {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.06); }
+}
+
+/* Spinner — centered and bold/large (was 32px / 3px, too thin & small).
+   Sits as the focal point, mirroring the callback page's calm loader. */
+.wpomni-spinner {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 5px solid var(--wpomni-border);
+    border-top-color: var(--wpomni-link);
+    animation: wpomni-spin 0.8s linear infinite;
+}
+
+@keyframes wpomni-spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes wpomni-redirect-fade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.wpomni-redirecting-text {
+    margin: 0;
+    color: var(--wpomni-text-secondary);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .wpomni-spinner {
+        animation: none;
+    }
+    .wpomni-redirect-icon {
+        animation: none;
+    }
+}
+
+/* ----------------------------------------------------------------
+   Global fade-OUT on navigation
+   When any link in the card is clicked, JS adds .wpomni-leaving to
+   <body>; the whole screen (and the card) eases out before the
+   browser navigates.
+   ---------------------------------------------------------------- */
+body.wpomni-oauth-page.wpomni-leaving {
+    /* Background is NOT faded — only the card fades out (see below). */
+    pointer-events: none;
+}
+
+@keyframes wpomni-page-out {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+body.wpomni-oauth-page.wpomni-leaving .wpomni-oauth-card {
+    /* Smooth fade-out (渐出) — mirrors the entrance easing. */
+    animation: wpomni-card-out 0.45s cubic-bezier(0.4, 0, 1, 1) forwards !important;
+}
+
+@keyframes wpomni-card-out {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+}
+
+/* While leaving, force every button back to its resting position so none
+   stays "floated" after the click. */
+body.wpomni-oauth-page.wpomni-leaving .wpomni-btn {
+    transform: none !important;
+}
+
+/* Inner content fades OUT smoothly and TOGETHER when navigating away —
+   the "渐出" counterpart to the entrance. The login-method buttons are
+   included in this group so the whole card exits as one motion. */
+body.wpomni-oauth-page.wpomni-leaving .wpomni-oauth-title,
+body.wpomni-oauth-page.wpomni-leaving .wpomni-oauth-intro,
+body.wpomni-oauth-page.wpomni-leaving .wpomni-btn,
+body.wpomni-oauth-page.wpomni-leaving .wpomni-oauth-emergency,
+body.wpomni-oauth-page.wpomni-leaving .wpomni-oauth-footer {
+    animation: wpomni-content-out 0.35s ease forwards !important;
+}
+
+@keyframes wpomni-content-out {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* ----------------------------------------------------------------
+   Reduced motion — honor the OS preference by removing movement
+   (transform / float / blur / shake) but KEEP a soft opacity fade so
+   the page still gently fades in/out (渐入渐出) instead of snapping
+   into place. This also avoids the "no animation at all" feeling when
+   a device has reduce-motion enabled.
+   ---------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    /* No background animation. The card only does a soft OPACITY fade
+       (no transform / blur / float) in and out. */
+    body.wpomni-oauth-page.wpomni-leaving {
+        pointer-events: none;
+    }
+    body.wpomni-oauth-page .wpomni-oauth-card {
+        animation: wpomni-page-in 0.4s ease both !important;
+        transform: none !important;
+        filter: none !important;
+    }
+    body.wpomni-oauth-page.wpomni-leaving .wpomni-oauth-card {
+        animation: wpomni-page-out 0.4s ease forwards !important;
+        transform: none !important;
+        filter: none !important;
+    }
+    /* No per-element entrance / hover movement under reduced motion. */
+    body.wpomni-oauth-page .wpomni-oauth-title,
+    body.wpomni-oauth-page .wpomni-oauth-intro,
+    body.wpomni-oauth-page .wpomni-btn,
+    body.wpomni-oauth-page .wpomni-emergency-options .wpomni-btn,
+    body.wpomni-oauth-page .wpomni-emergency-block:not([hidden]),
+    body.wpomni-oauth-page .wpomni-oauth-emergency,
+    body.wpomni-oauth-page .wpomni-oauth-footer,
+    body.wpomni-oauth-page .wpomni-oauth-error {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+    }
+    body.wpomni-oauth-page .wpomni-btn:hover {
+        transform: none !important;
+    }
+}
+
+/* ----------------------------------------------------------------
+   Responsive
+   ---------------------------------------------------------------- */
+/* Proportional fit ("等比缩小"): a tiny JS scaler sets the `scale`
+   property on the card to min(1, vw/560, vh/640) so the WHOLE interface
+   — title, option buttons, fields, captcha — shrinks TOGETHER on small or
+   short windows, instead of reflowing with different paddings per element.
+   The granular breakpoint reductions below are ONLY a fallback for browsers
+   that don't support the `scale` property, wrapped in @supports so the two
+   never double-shrink on modern browsers. */
+@supports not (scale: 1) {
+    @media screen and (max-width: 600px) {
+        body.wpomni-oauth-page { padding: 14px !important; }
+        body.wpomni-oauth-page .wpomni-oauth-card { padding: 26px 22px 30px !important; }
+        body.wpomni-oauth-page .wpomni-oauth-title { font-size: 24px !important; }
+        body.wpomni-oauth-page .wpomni-oauth-intro { font-size: 14px !important; margin: 0 0 22px !important; }
+        body.wpomni-oauth-page .wpomni-btn { font-size: 15px !important; padding: 14px 18px !important; }
+        body.wpomni-oauth-page .wpomni-captcha-img { height: 44px !important; }
+        body.wpomni-oauth-page .wpomni-emergency-captcha { gap: 9px !important; padding: 11px !important; }
+    }
+    @media screen and (max-width: 400px) {
+        body.wpomni-oauth-page { padding: 10px !important; }
+        body.wpomni-oauth-page .wpomni-oauth-card { padding: 20px 16px 24px !important; }
+        body.wpomni-oauth-page .wpomni-oauth-title { font-size: 21px !important; }
+        body.wpomni-oauth-page .wpomni-emergency-captcha { gap: 8px !important; padding: 10px !important; }
+        body.wpomni-oauth-page .wpomni-captcha-img { height: 42px !important; }
+        body.wpomni-oauth-page input[type="text"],
+        body.wpomni-oauth-page input[type="email"],
+        body.wpomni-oauth-page input[type="password"] { padding: 11px 12px !important; font-size: 16px !important; }
+    }
+}
+
+/* Very short windows (e.g. a small desktop window, landscape phone): the
+   card is capped at 100vh-36px and scrolls internally, but if the body
+   itself is shorter than its content we must allow the PAGE to scroll too,
+   otherwise the top of the card can get clipped by the flex centering. */
+@media screen and (max-height: 560px) {
+    body.wpomni-oauth-page {
+        min-height: 100vh !important;
+        overflow-y: auto !important;
+    }
+    body.wpomni-oauth-page .wpomni-oauth-card {
+        margin: 0 auto !important;
+        /* Drop the max-height cap so the page scroll (above) takes over
+           and the whole card stays reachable. */
+        max-height: none !important;
+        overflow-y: visible !important;
+    }
+}
+
+/* Reveal animation: when the user clicks a method (email / key) the matching
+   panel slides + fades IN, so the form feels like it arrives in place rather
+   than popping. Toggling the `hidden` attribute restarts the animation; the
+   JS also force-reflows it for browsers that don't restart on display change. */
+@keyframes wpomni-block-in {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+body.wpomni-oauth-page .wpomni-emergency-block:not([hidden]) {
+    animation: wpomni-block-in 0.42s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ----------------------------------------------------------------
+   Emergency access form — reuses the OAuth login card (.wpomni-oauth-card)
+   and its design tokens. Inputs / submit buttons / toggle use the SAME
+   visual language as the login screen so the two screens feel unified
+   (no separate styling, no fragmentation).
+   ---------------------------------------------------------------- */
+/* The emergency key screen uses a borderless card — drop the thin card
+   outline so the key-entry container reads as a clean, floating panel. */
+body.wpomni-oauth-page.wpomni-emergency-page .wpomni-oauth-card {
+    border: none;
+}
+
+/* A <button> carrying .wpomni-btn must drop native button chrome so it
+   matches the login screen's anchor-styled buttons exactly. */
+body.wpomni-oauth-page button.wpomni-btn {
+    appearance: none;
+    -webkit-appearance: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+body.wpomni-oauth-page .wpomni-emergency-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin: 0;
+}
+
+body.wpomni-oauth-page .wpomni-emergency-form form {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+body.wpomni-oauth-page .wpomni-emergency-field {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: left;
+}
+
+body.wpomni-oauth-page .wpomni-emergency-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--wpomni-text);
+}
+
+/* Honeypot — kept in the layout but pushed off-screen (NOT display:none, so
+   naive bots that fill every field still trip it). Real users never see it. */
+body.wpomni-oauth-page .wpomni-hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body.wpomni-oauth-page input[type="text"],
+body.wpomni-oauth-page input[type="email"],
+body.wpomni-oauth-page input[type="password"] {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--wpomni-border);
+    background: var(--wpomni-card-bg);
+    color: var(--wpomni-text);
+    font-size: 15px;
+    line-height: 1.4;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.wpomni-oauth-page input[type="text"]:focus,
+body.wpomni-oauth-page input[type="email"]:focus,
+body.wpomni-oauth-page input[type="password"]:focus {
+    outline: none;
+    border-color: var(--wpomni-link);
+    box-shadow: 0 0 0 3px rgba(34, 113, 177, 0.18);
+}
+
+/* Verification code is alphanumeric — show it spaced & uppercase for readability. */
+body.wpomni-oauth-page input[name="wpomni_code"] {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 600;
+}
+
+/* ----------------------------------------------------------------
+   Card swap — in email-recovery mode the key form is REPLACED by the
+   email/code flow (not expanded beneath it). Controlled by the
+   `wpomni-mode-email` class on <body> (toggled by the toggle / back link).
+   ---------------------------------------------------------------- */
+body.wpomni-oauth-page .wpomni-emergency-alt {
+    display: none;
+}
+
+body.wpomni-oauth-page.wpomni-mode-email .wpomni-emergency-keyform {
+    display: none;
+}
+
+body.wpomni-oauth-page.wpomni-mode-email .wpomni-emergency-alt {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Human-verification CAPTCHA block — image on the left, input on the right. */
+body.wpomni-oauth-page .wpomni-emergency-captcha {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border: 1px solid var(--wpomni-border);
+    border-radius: 10px;
+    background: var(--wpomni-card-bg);
+}
+
+body.wpomni-oauth-page .wpomni-captcha-img {
+    display: block;
+    height: 40px;
+    width: auto;
+    border-radius: 6px;
+    flex-shrink: 0;
+    user-select: none;
+}
+
+/* The input flexes to fill remaining width beside the image. */
+body.wpomni-oauth-page .wpomni-emergency-captcha .wpomni-captcha-field {
+    width: auto;
+    margin: 0;
+    flex: 1;
+    min-width: 80px;
+}
+
+body.wpomni-oauth-page .wpomni-captcha-code {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--wpomni-text);
+    text-align: center;
+    user-select: none;
+    padding: 0;
+}
+
+body.wpomni-oauth-page .wpomni-captcha-hint {
+    margin: 6px 0 0;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--wpomni-text-secondary);
+    text-align: center;
+}
+
+/* Inline CAPTCHA error (e.g. malformed answer blocked client-side). */
+body.wpomni-oauth-page .wpomni-emergency-msg.is-error {
+    margin: 8px 0 0;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #d63638;
+    text-align: center;
+}
+
+body.wpomni-oauth-page input[name="wpomni_captcha"] {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 600;
+}
+
+/* "Back to key entry" link inside the email-recovery flow. */
+body.wpomni-oauth-page .wpomni-emergency-back {
+    display: block;
+    text-align: center;
+    margin: 2px 0 0;
+    font-size: 13px;
+    color: var(--wpomni-text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+body.wpomni-oauth-page .wpomni-emergency-back:hover {
+    color: var(--wpomni-link);
+    text-decoration: underline;
+}
+
+/* ----------------------------------------------------------------
+   Email-recovery panel heading — gives the "Step 2" flow a clear
+   title + one-line guidance so users understand what happens next.
+   ---------------------------------------------------------------- */
+body.wpomni-oauth-page .wpomni-emergency-panel-head {
+    text-align: left;
+    margin: 0 0 4px;
+}
+
+body.wpomni-oauth-page .wpomni-emergency-panel-title {
+    margin: 0 0 6px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--wpomni-text);
+}
+
+body.wpomni-oauth-page .wpomni-emergency-panel-hint {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--wpomni-text-secondary);
+}
+
+/* "Get key via email" trigger — reuses the login screen's emergency link
+   look (the bottom-of-card divider link) so it reads as the same element. */
+/* "Get key via email" trigger — promoted from a faint divider link to a
+   clear, tappable CTA so the alternative path reads as an obvious action. */
+/* The "Can't access the key?..." trigger is a TEXT LINK, not a button.
+   Keep the top divider (from .wpomni-oauth-emergency) as a separator, but
+   drop all button chrome and use the theme text color (no blue). */
+body.wpomni-emergency-page button.wpomni-oauth-emergency {
+    appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    border: none;
+    border-top: 1px solid var(--wpomni-divider);
+    border-radius: 0;
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--wpomni-text);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    transition: color 0.2s ease;
+}
+
+body.wpomni-emergency-page button.wpomni-oauth-emergency:hover {
+    color: var(--wpomni-text-secondary);
+    text-decoration: underline;
+}
+
+/* Two-step chooser: pick a method, then only its card is revealed.
+   The blocks use the `hidden` attribute; guard against any UA-style
+   override so they truly stay collapsed until chosen. */
+.wpomni-emergency-block[hidden] {
+    display: none !important;
+}
+.wpomni-emergency-choice {
+    margin-top: 4px;
+}
+.wpomni-emergency-options {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 12px;
+}
+
+/* Entrance animation for the two method-chooser buttons (email / key):
+   they rise + fade in AFTER the card shell, one after the other, with a
+   gentle scale so the choice reads as a deliberate, inviting step.
+   Higher specificity + !important beats the base .wpomni-btn entrance
+   (wpomni-btn-in) so these get their own staged timing. */
+@keyframes wpomni-option-in {
+    from { opacity: 0; transform: translateY(18px) scale(0.97); }
+    to   { opacity: 1; transform: translateY(0)    scale(1); }
+}
+body.wpomni-oauth-page .wpomni-emergency-options .wpomni-btn {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+    animation: wpomni-option-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
+}
+body.wpomni-oauth-page .wpomni-emergency-options .wpomni-btn:nth-child(1) {
+    animation-delay: 0.30s !important;
+}
+body.wpomni-oauth-page .wpomni-emergency-options .wpomni-btn:nth-child(2) {
+    animation-delay: 0.42s !important;
+}
+/* When the user picks a method, the chooser is hidden (hidden attr) so its
+   entrance animation must not replay/leave a flash on the revealed form. */
+body.wpomni-oauth-page .wpomni-emergency-choice[hidden] .wpomni-btn {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+}
+/* The method chooser buttons reuse the login screen's .wpomni-btn component
+   (see the brand rules near .wpomni-btn-brand), so no separate option
+   styling is needed here.
+.wpomni-emergency-back {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--wpomni-link);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    cursor: pointer;
+}
+

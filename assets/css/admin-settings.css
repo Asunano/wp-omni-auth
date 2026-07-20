@@ -1,0 +1,813 @@
+/* ================================================================
+   WP-OmniAuth — admin settings styles
+
+   Extracted from the old inline <style> in WPOmniAuth_Settings_Page::admin_head()
+   so the stylesheets are cacheable, compressible, RTL-aware, and maintainable.
+   Enqueued via WPOmniAuth_Settings_Page::admin_scripts().
+
+   All colors / spacing / radii are driven by the design tokens in :root below.
+   Accent tokens follow the user's selected WP admin color scheme; the resolved
+   scheme colors are injected as literals by the settings page (see
+   WPOmniAuth_Settings_Page::admin_scripts). Everything else falls back to a
+   fixed palette.
+   ================================================================ */
+
+/* Design tokens — single source of truth for the admin UI */
+:root {
+    /* Accent — follows the current WP admin color scheme. The *resolved*
+       scheme colors are injected as literal values onto :root / .wpomni-admin
+       by WPOmniAuth_Settings_Page::admin_scripts() (so the active tab, sidebar
+       and modals track the user's chosen scheme instead of the Block Editor's
+       legacy #007cba). These literals are the fallback used only if that
+       injection does not run (classic fresh blue). */
+    --wpomni-accent: #2271b1;
+    --wpomni-accent-dark: #135e96;
+    --wpomni-accent-rgb: 34, 113, 177;
+    --wpomni-accent-tint: rgba(34, 113, 177, 0.08);
+    --wpomni-accent-tint-border: rgba(34, 113, 177, 0.15);
+
+    /* Text */
+    --wpomni-text: #1d2327;
+    --wpomni-text-muted: #646970;
+    --wpomni-text-faint: #a7aaad;
+
+    /* Surfaces & borders */
+    --wpomni-border: var(--wp-admin-border-color, #dcdcde);
+    --wpomni-border-strong: #c3c4c7;
+    --wpomni-bg-subtle: #f6f7f7;
+    --wpomni-bg-inset: #f0f0f1;
+    --wpomni-bg-hover: #e2e4e7;
+
+    /* Semantic status */
+    --wpomni-success: #00a32a;
+    --wpomni-success-bg: #edfaef;
+    --wpomni-danger: #d63638;
+    --wpomni-danger-dark: #a00;
+    --wpomni-danger-bg: #fcf0f1;
+
+    /* Surfaces & on-accent text (replace literal #fff in cards/modals/active tabs) */
+    --wpomni-surface: #fff;
+    --wpomni-on-accent: #fff;
+    --wpomni-code-bg: #1e1e1e;
+    --wpomni-code-fg: #d4d4d4;
+
+    /* Radii */
+    --wpomni-radius-sm: 6px;
+    --wpomni-radius: 8px;
+    --wpomni-radius-lg: 12px;
+    --wpomni-radius-pill: 10px;
+
+    /* Spacing scale */
+    --wpomni-space-1: 4px;
+    --wpomni-space-2: 8px;
+    --wpomni-space-3: 12px;
+    --wpomni-space-4: 16px;
+    --wpomni-space-5: 20px;
+    --wpomni-space-6: 24px;
+
+    /* Elevation */
+    --wpomni-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+/* ----------------------------------------------------------------
+   Navigation (shared language for top tab bar AND the
+   Settings-internal sidebar). Active/hover state follows the user's
+   selected WP admin color scheme via the injected --wpomni-accent
+   tokens. Neutral pills; active = scheme color fill.
+   ---------------------------------------------------------------- */
+.wpomni-tabs { display: flex; flex-wrap: wrap; gap: 4px; margin: var(--wpomni-space-5) 0 0; border-bottom: 1px solid var(--wpomni-border); }
+.wpomni-main { margin-top: var(--wpomni-space-4); }
+
+/* Top tab bar — underline-style tabs. Each item is a pill that joins the
+   panel via the active accent line across the bottom seam. */
+.wpomni-tab-item {
+    position: relative;
+    display: inline-block;
+    padding: 9px 18px 11px;
+    margin-bottom: -1px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--wpomni-text-muted);
+    text-decoration: none;
+    border: none;
+    border-radius: var(--wpomni-radius-sm) var(--wpomni-radius-sm) 0 0;
+    background: transparent;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+.wpomni-tab-item:hover { background: var(--wpomni-bg-hover); color: var(--wpomni-accent); }
+.wpomni-tab-item.active { color: var(--wpomni-accent); }
+.wpomni-tab-item.active::after {
+    content: '';
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: -1px;
+    height: 3px;
+    background: var(--wpomni-accent);
+    border-radius: 3px 3px 0 0;
+}
+/* Settings-internal sidebar — card panel with left-accent active marker.
+   Distinct from the top underline tabs so the two nav levels are visually
+   separate: top = accent line, sidebar = filled bar + tint background. */
+.wpomni-settings-layout { display: flex; align-items: flex-start; gap: var(--wpomni-space-6); }
+.wpomni-settings-sidebar {
+    width: 200px;
+    flex: 0 0 200px;
+    position: sticky;
+    top: 40px;
+    background: var(--wpomni-bg-subtle);
+    border: 1px solid var(--wpomni-border);
+    border-radius: var(--wpomni-radius);
+    padding: var(--wpomni-space-2);
+}
+.wpomni-settings-nav { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+.wpomni-settings-nav > li { margin: 0; }
+.wpomni-settings-nav-item {
+    display: block;
+    position: relative;
+    padding: 9px 12px 9px 14px;
+    color: var(--wpomni-text);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: var(--wpomni-radius-sm);
+    transition: background 0.15s ease, color 0.15s ease;
+    border-left: 3px solid transparent;
+}
+.wpomni-settings-nav-item:hover { background: var(--wpomni-accent-tint); color: var(--wpomni-accent); border-left-color: var(--wpomni-accent-tint-border); }
+.wpomni-settings-nav-item.active { background: var(--wpomni-accent-tint); color: var(--wpomni-accent); border-left-color: var(--wpomni-accent); }
+.wpomni-settings-content { flex: 1 1 auto; min-width: 0; }
+
+@media (max-width: 782px) {
+    .wpomni-settings-layout { flex-direction: column; }
+    .wpomni-settings-sidebar { width: 100%; flex: 1 1 auto; position: static; padding: var(--wpomni-space-2); }
+    .wpomni-settings-nav { display: flex; flex-wrap: wrap; gap: 4px; flex-direction: row; }
+    .wpomni-settings-nav-item { border-left: none; border-bottom: 3px solid transparent; padding: 8px 12px; }
+    .wpomni-settings-nav-item:hover { border-bottom-color: var(--wpomni-accent-tint-border); }
+    .wpomni-settings-nav-item.active { border-bottom-color: var(--wpomni-accent); }
+}
+
+/* Tab Content (top-level tabs shown/hidden via .active) */
+.wpomni-tab-content { display: none !important; }
+.wpomni-tab-content.active { display: block !important; }
+
+/* ================================================================
+   Settings Sub-tabs (show/hide wrappers, driven by ?sub=)
+   ================================================================ */
+.wpomni-subtab-content { display: none !important; }
+.wpomni-subtab-content.active { display: block !important; }
+
+/* ================================================================
+   Section Cards
+   ================================================================ */
+.wpomni-section { background: var(--wpomni-surface); border: 1px solid var(--wpomni-border); border-radius: var(--wpomni-radius); margin: var(--wpomni-space-5) 0; padding: 0; box-shadow: var(--wpomni-shadow); }
+.wpomni-section-header { padding: 14px 20px; border-bottom: 1px solid var(--wpomni-bg-inset); background: transparent; display: flex; align-items: center; gap: var(--wpomni-space-2); }
+.wpomni-section-header h2 { margin: 0; padding: 0; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: var(--wpomni-space-2); }
+.wpomni-section-header h2 svg { flex-shrink: 0; }
+.wpomni-section-body { padding: var(--wpomni-space-3) 20px var(--wpomni-space-4); }
+.wpomni-section-body .form-table { margin-top: 0; }
+.wpomni-section-body .form-table th { padding-left: 0; }
+
+/* ================================================================
+   Provider Cards (list view)
+   ================================================================ */
+.wpomni-provider-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: var(--wpomni-space-4); margin: var(--wpomni-space-3) 0; }
+
+.wpomni-provider-card {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    gap: var(--wpomni-space-3);
+    height: 280px;
+    padding: var(--wpomni-space-4);
+    border: 1px solid var(--wpomni-border);
+    border-radius: var(--wpomni-radius);
+    background: var(--wpomni-surface);
+    transition: all 0.15s ease;
+    box-shadow: var(--wpomni-shadow);
+}
+.wpomni-provider-card:hover {
+    border-color: var(--wpomni-accent);
+    box-shadow: 0 4px 14px rgba(var(--wpomni-accent-rgb), 0.18);
+    transform: translateY(-2px);
+}
+
+.wpomni-provider-card .wpomni-card-icon { flex-shrink: 0; width: 64px; height: 64px; display: flex; align-items: center; justify-content: center; margin: var(--wpomni-space-2) 0; background: var(--wpomni-bg-subtle); border-radius: var(--wpomni-radius-pill); }
+.wpomni-provider-card .wpomni-card-icon svg, .wpomni-provider-card .wpomni-card-icon img { width: 42px; height: 42px; }
+/* Providers using currentColor need explicit brand color in the card context. */
+.wpomni-provider-card[data-provider-slug="github"] .wpomni-card-icon svg { color: #24292e; }
+.wpomni-provider-card[data-provider-slug="wechat"] .wpomni-card-icon svg { color: #07C160; }
+.wpomni-provider-card[data-provider-slug="apple"] .wpomni-card-icon svg { color: #000000; }
+
+.wpomni-provider-card .wpomni-card-info { flex: 0 0 auto; min-width: 0; }
+.wpomni-provider-card .wpomni-card-info h3 { margin: 0 0 6px; font-size: 15px; font-weight: 600; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.wpomni-provider-card .wpomni-card-info p { margin: 0; color: var(--wpomni-text-muted); font-size: 13px; }
+
+/* Actions pinned to the bottom of the card */
+.wpomni-provider-card .wpomni-card-actions { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--wpomni-space-2); }
+.wpomni-provider-card .wpomni-card-actions .button { white-space: nowrap; border-radius: var(--wpomni-radius-sm); padding: 6px 16px; font-size: 13px; }
+
+/* "Add Custom Provider" tile — dashed, sits in the same grid */
+.wpomni-provider-card.wpomni-add-provider-tile {
+    cursor: pointer;
+    height: 280px;
+    justify-content: center;
+    border-style: dashed;
+    color: var(--wpomni-text-muted);
+    background: var(--wpomni-bg-subtle);
+}
+.wpomni-provider-card.wpomni-add-provider-tile:hover {
+    border-color: var(--wpomni-accent);
+    color: var(--wpomni-accent);
+    background: var(--wpomni-accent-tint);
+}
+.wpomni-add-provider-tile .wpomni-add-plus { font-size: 48px; line-height: 1; font-weight: 300; }
+.wpomni-add-provider-tile .wpomni-add-label { font-size: 14px; font-weight: 600; }
+.wpomni-card-status { display: inline-block; padding: 2px 10px; border-radius: var(--wpomni-radius-pill); font-size: 11px; font-weight: 600; letter-spacing: 0.02em; }
+.wpomni-card-status.enabled { background: var(--wpomni-success-bg); color: var(--wpomni-success); }
+.wpomni-card-status.disabled { background: var(--wpomni-bg-inset); color: var(--wpomni-text-muted); }
+
+/* ================================================================
+   Provider Detail View
+   ================================================================ */
+.wpomni-provider-detail { display: none !important; }
+.wpomni-provider-detail.active { display: block !important; }
+
+/* Provider "incomplete configuration" hint. Deliberately NOT a WP `.notice`
+   element: WP's common.js relocates every `.notice` on the page to the first
+   <h1>/<h2>, which would yank these out of their provider detail view and drop
+   them under the dashboard's first heading ("Recent Logins"). Keeping a
+   standalone class lets them stay put inside each provider's detail panel. */
+.wpomni-config-warning {
+    margin: 0 0 var(--wpomni-space-4);
+    padding: 10px 14px;
+    background: #fcf9e8;
+    border: 1px solid #f0e2b0;
+    border-left: 4px solid #dba617;
+    border-radius: var(--wpomni-radius);
+    color: var(--wpomni-text);
+    font-size: 13px;
+    line-height: 1.5;
+}
+.wpomni-config-warning p { margin: 0; }
+
+/* "Settings saved" confirmation on the settings page. Same reasoning as
+   .wpomni-config-warning: keep it off the WP `.notice` class so common.js
+   does not relocate it under the dashboard's first heading. */
+.wpomni-saved-notice {
+    margin: 0 0 var(--wpomni-space-4);
+    padding: 10px 14px;
+    background: #edfaef;
+    border: 1px solid #b7e3c4;
+    border-left: 4px solid #1a9c5b;
+    border-radius: var(--wpomni-radius);
+    color: var(--wpomni-text);
+    font-size: 13px;
+    line-height: 1.5;
+}
+.wpomni-saved-notice p { margin: 0; }
+.wpomni-provider-list.hidden { display: none !important; }
+
+/* Save button inside a provider's settings card */
+.wpomni-detail-submit { display: flex; justify-content: flex-end; gap: 12px; margin-top: var(--wpomni-space-4); }
+.wpomni-save-btn { font-size: 14px; font-weight: 600; padding: 8px 24px; border-radius: var(--wpomni-radius-sm); background: var(--wpomni-accent); border: 1px solid var(--wpomni-accent); color: var(--wpomni-on-accent); cursor: pointer; transition: background 0.15s ease, border-color 0.15s ease; }
+.wpomni-save-btn:hover { background: var(--wpomni-accent-dark); border-color: var(--wpomni-accent-dark); }
+.wpomni-test-bind-btn { font-size: 14px; font-weight: 600; padding: 8px 24px; border-radius: var(--wpomni-radius-sm); background: var(--wpomni-accent); border: 1px solid var(--wpomni-accent); color: var(--wpomni-on-accent); cursor: pointer; transition: background 0.15s ease, border-color 0.15s ease; }
+.wpomni-test-bind-btn:hover { background: var(--wpomni-accent-dark); border-color: var(--wpomni-accent-dark); }
+.wpomni-test-bind-btn:disabled { opacity: 0.6; cursor: progress; }
+
+/* "Bound" status shown under a provider's settings after a successful bind */
+.wpomni-bound-notice { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: var(--wpomni-space-3); padding: 10px 14px; background: var(--wpomni-ok-tint, #edfaef); border: 1px solid var(--wpomni-ok-border, #a4e3b3); border-radius: var(--wpomni-radius-sm); font-size: 13px; }
+.wpomni-bound-badge { display: inline-flex; align-items: center; padding: 2px 10px; border-radius: 999px; background: #00a32a; color: #fff; font-weight: 600; font-size: 12px; }
+.wpomni-bound-id { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: var(--wpomni-text-secondary); }
+.wpomni-bound-hint { color: var(--wpomni-text-secondary); }
+
+
+.wpomni-back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--wpomni-accent); text-decoration: none; font-size: 13px; font-weight: 500; margin: var(--wpomni-space-5) 0; cursor: pointer; padding: 6px 14px; border: 1px solid var(--wpomni-border); border-radius: var(--wpomni-radius-sm); background: var(--wpomni-surface); transition: all 0.15s; box-shadow: var(--wpomni-shadow); }
+.wpomni-back-link:hover { color: var(--wpomni-accent-dark); border-color: var(--wpomni-accent); background: var(--wpomni-accent-tint); }
+.wpomni-back-link::before { content: '\2190'; font-size: 14px; line-height: 1; }
+
+/* Detail header */
+.wpomni-detail-header { display: flex; align-items: center; gap: var(--wpomni-space-3); margin-bottom: 4px; }
+.wpomni-detail-header .wpomni-detail-icon { width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: var(--wpomni-accent-tint); border-radius: var(--wpomni-radius-lg); border: 1px solid var(--wpomni-border-strong); }
+.wpomni-detail-header .wpomni-detail-icon svg, .wpomni-detail-header .wpomni-detail-icon img { width: 32px; height: 32px; }
+.wpomni-provider-detail[data-slug="github"] .wpomni-detail-icon svg { color: #24292e; }
+.wpomni-provider-detail[data-slug="wechat"] .wpomni-detail-icon svg { color: #07C160; }
+.wpomni-provider-detail[data-slug="apple"] .wpomni-detail-icon svg { color: #000000; }
+.wpomni-detail-header h2 { margin: 0; font-size: 18px; font-weight: 600; }
+
+/* ================================================================
+   Setup Guide
+   ================================================================ */
+.wpomni-setup-guide { background: var(--wpomni-accent-tint); border: 1px solid var(--wpomni-accent-tint-border); border-radius: var(--wpomni-radius); margin: var(--wpomni-space-4) 0 var(--wpomni-space-5); padding: 0; overflow: hidden; }
+.wpomni-setup-guide summary { cursor: pointer; font-weight: 600; color: var(--wpomni-accent); padding: 14px 20px; font-size: 13px; list-style: none; display: flex; align-items: center; gap: var(--wpomni-space-2); }
+.wpomni-setup-guide summary::-webkit-details-marker { display: none; }
+.wpomni-setup-guide summary::before { content: '\25B6'; font-size: 10px; transition: transform 0.2s; }
+.wpomni-setup-guide[open] summary::before { transform: rotate(90deg); }
+.wpomni-setup-guide .wpomni-guide-body { padding: 0 20px var(--wpomni-space-4); }
+.wpomni-setup-guide ol { margin: 0; padding-left: 20px; }
+.wpomni-setup-guide ol li { margin-bottom: 8px; line-height: 1.7; font-size: 13px; }
+.wpomni-setup-guide .wpomni-notes { margin-top: var(--wpomni-space-3); padding-top: var(--wpomni-space-3); border-top: 1px solid var(--wpomni-accent-tint-border); }
+.wpomni-setup-guide .wpomni-notes li { color: var(--wpomni-text-muted); font-size: 12px; line-height: 1.6; margin-bottom: 4px; }
+
+/* Disabled overlay */
+.wpomni-disabled-overlay { position: relative; opacity: 0.5; pointer-events: none; }
+
+/* ================================================================
+   About page
+   ================================================================ */
+.wpomni-about { max-width: 960px; }
+
+/* Hero */
+.wpomni-about-hero { background: var(--wpomni-surface); border: 1px solid var(--wpomni-border); border-radius: var(--wpomni-radius); padding: var(--wpomni-space-5); box-shadow: var(--wpomni-shadow); }
+.wpomni-about-hero-body { min-width: 0; }
+.wpomni-about-hero-title { display: flex; align-items: center; gap: var(--wpomni-space-3); flex-wrap: wrap; }
+.wpomni-about-hero-title h2 { margin: 0; font-size: 22px; font-weight: 700; line-height: 1.2; }
+.wpomni-version-pill { display: inline-flex; align-items: center; padding: 2px 10px; border-radius: var(--wpomni-radius-pill); font-size: 12px; font-weight: 600; color: var(--wpomni-accent); background: var(--wpomni-accent-tint); border: 1px solid var(--wpomni-accent-tint-border); }
+.wpomni-about-desc { margin: var(--wpomni-space-2) 0 0; font-size: 14px; line-height: 1.6; color: var(--wpomni-text); }
+.wpomni-about-author { margin: 6px 0 0; font-size: 13px; }
+
+/* Hero links — inline card-style links below the author line */
+.wpomni-hero-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.wpomni-hero-link { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: var(--wpomni-radius-sm); font-size: 13px; font-weight: 500; text-decoration: none; color: var(--wpomni-text); background: var(--wpomni-bg-subtle); border: 1px solid var(--wpomni-border); transition: background 0.15s ease, border-color 0.15s ease; }
+.wpomni-hero-link:hover { background: var(--wpomni-bg-hover); border-color: var(--wpomni-accent); color: var(--wpomni-accent); }
+
+/* Grid of cards */
+.wpomni-about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--wpomni-space-4); margin-top: var(--wpomni-space-4); }
+.wpomni-about-card { background: var(--wpomni-surface); border: 1px solid var(--wpomni-border); border-radius: var(--wpomni-radius); padding: var(--wpomni-space-5); box-shadow: var(--wpomni-shadow); margin: 0; }
+.wpomni-about-card h3 { margin: 0 0 var(--wpomni-space-3); font-size: 15px; font-weight: 600; }
+.wpomni-about-card-wide { grid-column: 1 / -1; }
+.wpomni-about-meta { margin: 0 0 var(--wpomni-space-3); font-size: 13px; }
+.wpomni-about-actions { margin: 0 0 var(--wpomni-space-2); }
+
+/* Feature list */
+.wpomni-feature-list { list-style: none; margin: 0; padding: 0; }
+.wpomni-feature-list li { position: relative; padding: 7px 0 7px 26px; font-size: 13px; line-height: 1.5; border-bottom: 1px solid var(--wpomni-bg-inset); }
+
+/* Feature tags (pill-style badges) */
+.wpomni-feature-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.wpomni-tag { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 500; line-height: 1.5; }
+.wpomni-tag-blue { background: #e3f2fd; color: #1565c0; }
+.wpomni-tag-green { background: #e8f5e9; color: #2e7d32; }
+.wpomni-tag-purple { background: #f3e5f5; color: #7b1fa2; }
+.wpomni-tag-red { background: #ffebee; color: #c62828; }
+.wpomni-tag-orange { background: #fff3e0; color: #e65100; }
+.wpomni-tag-cyan { background: #e0f7fa; color: #00838f; }
+.wpomni-feature-list li:last-child { border-bottom: none; }
+.wpomni-feature-list li::before { content: "\2713"; position: absolute; left: 0; top: 7px; width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #fff; background: var(--wpomni-success, #1a7f37); border-radius: 50%; }
+
+/* Links */
+.wpomni-about-links { display: flex; flex-wrap: wrap; gap: var(--wpomni-space-3); margin-top: 14px; }
+
+/* Responsive */
+@media (max-width: 782px) {
+    .wpomni-about-grid { grid-template-columns: 1fr; }
+    .wpomni-about-hero { flex-direction: column; text-align: center; }
+    .wpomni-about-hero-title { justify-content: center; }
+}
+
+/* ================================================================
+   Debug Log
+   ================================================================ */
+#wpomni-log-content textarea { width: 100%; font-family: monospace; font-size: 12px; background: var(--wpomni-code-bg); color: var(--wpomni-code-fg); border: 1px solid var(--wpomni-border); border-radius: var(--wpomni-radius-sm); }
+
+/* ================================================================
+   Remove provider button
+   ================================================================ */
+.wpomni-remove-provider { border-radius: var(--wpomni-radius-sm); font-size: 12px !important; color: var(--wpomni-danger) !important; border-color: var(--wpomni-danger) !important; background: transparent !important; }
+.wpomni-remove-provider:hover { color: var(--wpomni-on-accent) !important; background: var(--wpomni-danger) !important; border-color: var(--wpomni-danger) !important; }
+
+/* ================================================================
+   Modal (custom provider add / remove confirm)
+   ================================================================ */
+.wpomni-modal-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.4); z-index: 100000; align-items: center; justify-content: center; }
+.wpomni-modal-overlay.active { display: flex; }
+.wpomni-modal { background: var(--wpomni-surface); border-radius: var(--wpomni-radius-lg); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); width: 420px; max-width: 90vw; overflow: hidden; animation: wpomni-modal-in 0.15s ease-out; }
+@keyframes wpomni-modal-in { from { opacity: 0; transform: scale(0.95) translateY(-8px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+.wpomni-modal-header { padding: 20px 24px 0; }
+.wpomni-modal-header h3 { margin: 0; font-size: 16px; font-weight: 600; }
+.wpomni-modal-body { padding: var(--wpomni-space-3) 24px var(--wpomni-space-4); }
+.wpomni-modal-body p { margin: 0 0 var(--wpomni-space-3); font-size: 13px; color: var(--wpomni-text-muted); line-height: 1.6; }
+.wpomni-modal-body input[type="text"] { width: 100%; padding: 8px 12px; border: 1px solid var(--wpomni-border); border-radius: var(--wpomni-radius-sm); font-size: 14px; outline: none; transition: border-color 0.15s; box-sizing: border-box; }
+.wpomni-modal-body input[type="text"]:focus { border-color: var(--wpomni-accent); box-shadow: 0 0 0 2px rgba(var(--wpomni-accent-rgb), 0.1); }
+.wpomni-modal-footer { padding: 0 24px var(--wpomni-space-4); display: flex; justify-content: flex-end; gap: var(--wpomni-space-2); }
+.wpomni-modal-footer .button { border-radius: var(--wpomni-radius-sm); min-width: 80px; text-align: center; }
+.wpomni-modal-footer .button-primary { background: var(--wpomni-accent); border-color: var(--wpomni-accent); }
+.wpomni-modal-footer .button-primary:hover { background: var(--wpomni-accent-dark); border-color: var(--wpomni-accent-dark); }
+.wpomni-modal-footer .button-danger { background: var(--wpomni-danger); border-color: var(--wpomni-danger); color: var(--wpomni-on-accent); }
+.wpomni-modal-footer .button-danger:hover { background: var(--wpomni-danger-dark); border-color: var(--wpomni-danger-dark); color: var(--wpomni-on-accent); }
+
+/* Key management modal: footer wraps on narrow screens */
+.wpomni-modal-footer-wrap { flex-wrap: wrap; }
+.wpomni-modal-footer-wrap .button { flex: 1 1 auto; min-width: 100px; }
+.wpomni-modal-key { max-width: 480px; }
+@media (max-width: 520px) {
+    .wpomni-modal-key { margin: var(--wpomni-space-4); }
+    .wpomni-modal-footer-wrap { flex-direction: column; }
+    .wpomni-modal-footer-wrap .button { width: 100%; }
+}
+
+/* ================================================================
+   Dashboard
+   ================================================================ */
+.wpomni-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--wpomni-space-4); margin: var(--wpomni-space-5) 0; }
+@media (max-width: 1200px) { .wpomni-stats-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .wpomni-stats-grid { grid-template-columns: 1fr; } }
+.wpomni-stat-card { background: var(--wpomni-surface); border: 1px solid var(--wpomni-border); border-radius: var(--wpomni-radius); padding: var(--wpomni-space-4); box-shadow: var(--wpomni-shadow); }
+.wpomni-stat-card .wpomni-stat-label { font-size: 12px; color: var(--wpomni-text-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.03em; margin: 0 0 8px; }
+.wpomni-stat-card .wpomni-stat-value { font-size: 28px; font-weight: 700; color: var(--wpomni-text); margin: 0; line-height: 1; }
+.wpomni-stat-card .wpomni-stat-sub { font-size: 12px; color: var(--wpomni-text-muted); margin: 6px 0 0; }
+.wpomni-stat-card.stat-success .wpomni-stat-value { color: var(--wpomni-success); }
+.wpomni-stat-card.stat-failure .wpomni-stat-value { color: var(--wpomni-danger); }
+
+.wpomni-dashboard-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--wpomni-space-5); margin: var(--wpomni-space-5) 0; }
+@media (max-width: 1200px) { .wpomni-dashboard-row { grid-template-columns: 1fr; } }
+
+.wpomni-recent-logins table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.wpomni-recent-logins th { text-align: left; padding: 8px 12px; font-size: 12px; font-weight: 600; color: var(--wpomni-text-muted); text-transform: uppercase; letter-spacing: 0.03em; border-bottom: 2px solid var(--wpomni-bg-inset); }
+.wpomni-recent-logins td { padding: 10px 12px; border-bottom: 1px solid var(--wpomni-bg-inset); vertical-align: middle; }
+.wpomni-recent-logins tr:last-child td { border-bottom: none; }
+.wpomni-recent-logins .wpomni-status-badge { display: inline-block; padding: 2px 8px; border-radius: var(--wpomni-radius-pill); font-size: 11px; font-weight: 600; }
+.wpomni-recent-logins .wpomni-status-badge.success { background: var(--wpomni-success-bg); color: var(--wpomni-success); }
+.wpomni-recent-logins .wpomni-status-badge.failure { background: var(--wpomni-danger-bg); color: var(--wpomni-danger); }
+.wpomni-recent-logins .wpomni-no-data { text-align: center; color: var(--wpomni-text-muted); padding: var(--wpomni-space-5) 12px; font-style: italic; }
+
+/* IP masking / eye toggle in recent-logins table */
+.wpomni-ip-cell { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
+.wpomni-ip-toggle { display: inline-flex; align-items: center; justify-content: center; background: none; border: 1px solid transparent; cursor: pointer; padding: 2px; color: var(--wpomni-text-muted); line-height: 1; border-radius: 3px; transition: color .15s, background .15s; }
+.wpomni-ip-toggle:hover { color: var(--wpomni-text); background: var(--wpomni-bg-hover); border-color: var(--wpomni-border); }
+.wpomni-ip-value { display: none; }
+
+
+.wpomni-provider-status-list { list-style: none; margin: 0; padding: 0; }
+.wpomni-provider-status-item { display: flex; align-items: center; gap: var(--wpomni-space-3); padding: 10px 0; border-bottom: 1px solid var(--wpomni-bg-inset); }
+.wpomni-provider-status-item:last-child { border-bottom: none; }
+.wpomni-provider-status-item .wpomni-ps-icon { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--wpomni-bg-subtle); border-radius: var(--wpomni-radius); flex-shrink: 0; }
+.wpomni-provider-status-item .wpomni-ps-icon svg, .wpomni-provider-status-item .wpomni-ps-icon img { width: 20px; height: 20px; }
+.wpomni-provider-status-item .wpomni-ps-info { flex: 1; min-width: 0; }
+.wpomni-provider-status-item .wpomni-ps-name { font-size: 13px; font-weight: 600; margin: 0; }
+.wpomni-provider-status-item .wpomni-ps-meta { font-size: 11px; color: var(--wpomni-text-muted); margin: 0; }
+.wpomni-provider-status-item.inactive { opacity: 0.5; }
+
+/* Cap the visible area to ~5 providers so the rest scrolls instead of breaking the layout. */
+.wpomni-provider-status-scroll { max-height: 280px; overflow-y: auto; margin: 0 -8px; padding: 0 8px; }
+.wpomni-provider-status-scroll::-webkit-scrollbar { width: 8px; }
+.wpomni-provider-status-scroll::-webkit-scrollbar-thumb { background: var(--wpomni-bg-inset); border-radius: 8px; }
+
+/* Count badge next to the Provider Status heading. */
+.wpomni-section-header .wpomni-section-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 22px;
+    height: 20px;
+    padding: 0 7px;
+    margin-left: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--wpomni-text-muted);
+    background: var(--wpomni-bg-subtle);
+    border-radius: 999px;
+    vertical-align: middle;
+}
+
+/* ================================================================
+   Semantic text helpers (replace inline color/font-size styles)
+   ================================================================ */
+.wpomni-text-muted { color: var(--wpomni-text-muted); }
+.wpomni-muted { color: var(--wpomni-text-muted); font-size: 12px; }
+.wpomni-italic { font-style: italic; }
+.wpomni-text-faint { color: var(--wpomni-text-faint); font-size: 11px; }
+.wpomni-success-text { color: var(--wpomni-success); }
+.wpomni-danger-text { color: var(--wpomni-danger); font-weight: 600; }
+
+/* ================================================================
+   Reusable components (replace one-off inline styles)
+   ================================================================ */
+.wpomni-code { display: inline-block; padding: 4px 8px; background: var(--wpomni-bg-inset); border-radius: 3px; word-break: break-all; }
+.wpomni-key-display { font-size: 13px; user-select: all; word-break: break-all; background: var(--wpomni-bg-subtle); padding: 10px 12px; border-radius: var(--wpomni-radius-sm); display: block; cursor: default; line-height: 1.5; }
+.wpomni-icon-preview { margin-top: var(--wpomni-space-2); min-height: 40px; display: flex; align-items: center; gap: var(--wpomni-space-2); }
+.wpomni-icon-preview-area { display: inline-flex; width: 32px; height: 32px; align-items: center; justify-content: center; color: var(--wpomni-text); }
+.wpomni-preview-img { max-width: 32px; max-height: 32px; }
+.wpomni-preview-invalid { color: var(--wpomni-danger); font-size: 11px; }
+.wpomni-notes-list { margin: 4px 0 0; padding-left: 20px; }
+.wpomni-reset-list { margin: 8px 0 8px 20px; list-style: disc; color: var(--wpomni-text-muted); }
+.wpomni-modal--reset { max-width: 440px; }
+
+/* ================================================================
+   Spacing + display utilities (replace one-off margin/display styles)
+   ================================================================ */
+.wpomni-block { display: block; }
+.wpomni-p-0 { padding: 0; }
+.wpomni-mt-0 { margin-top: 0; }
+.wpomni-mt-1 { margin-top: var(--wpomni-space-1); }
+.wpomni-mt-2 { margin-top: var(--wpomni-space-2); }
+.wpomni-mt-3 { margin-top: var(--wpomni-space-3); }
+.wpomni-mt-4 { margin-top: var(--wpomni-space-4); }
+.wpomni-mt-5 { margin-top: var(--wpomni-space-5); }
+.wpomni-mt-6 { margin-top: var(--wpomni-space-6); }
+.wpomni-mb-1 { margin-bottom: var(--wpomni-space-1); }
+.wpomni-mb-2 { margin-bottom: var(--wpomni-space-2); }
+.wpomni-mb-3 { margin-bottom: var(--wpomni-space-3); }
+.wpomni-mb-4 { margin-bottom: var(--wpomni-space-4); }
+.wpomni-ml-2 { margin-left: var(--wpomni-space-2); }
+.wpomni-ml-5 { margin-left: var(--wpomni-space-5); }
+.wpomni-maxw-600 { max-width: 600px; }
+.wpomni-ml-6 { margin-left: var(--wpomni-space-6); }
+.wpomni-w-100 { width: 100%; }
+
+/* Destructive-action button variants (replace inline color/border styles) */
+.wpomni-danger-outline { color: var(--wpomni-danger); border-color: var(--wpomni-danger); }
+.wpomni-danger-fill { background: var(--wpomni-danger); border-color: var(--wpomni-danger); color: var(--wpomni-on-accent); }
+
+/* Log textarea (replace inline width/font styles) */
+.wpomni-log-textarea { width: 100%; font-family: monospace; font-size: 12px; }
+
+/* ================================================================
+   Focus visibility
+   - Keyboard focus (:focus-visible) gets an explicit, scheme-colored ring
+     so keyboard users can see where they are.
+   - Mouse focus (a plain :focus from a click) must NOT leave a persistent
+     ring — that is abnormal. WP core paints a:focus with
+     var(--wp-admin-theme-color), which is the Block Editor's legacy #007cba
+     on this page, so we neutralize that ring (and keep text neutral) for
+     plain :focus instead.
+   ================================================================ */
+.wpomni-tab-item:focus-visible,
+.wpomni-settings-nav-item:focus-visible,
+.wpomni-back-link:focus-visible,
+.wpomni-remove-provider:focus-visible,
+.wpomni-add-provider-tile:focus-visible,
+.wpomni-modal-footer .button:focus-visible,
+.wpomni-admin a:focus-visible {
+    outline: 2px solid var(--wpomni-accent) !important;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(var(--wpomni-accent-rgb), 0.25) !important;
+}
+
+/* Mouse-click focus: suppress the ring (no persistent outline) and keep
+   text neutral, so neither a stuck focus ring nor the #007cba leak appears. */
+.wpomni-tab-item:focus,
+.wpomni-settings-nav-item:focus,
+.wpomni-back-link:focus,
+.wpomni-remove-provider:focus,
+.wpomni-add-provider-tile:focus,
+.wpomni-admin a:focus,
+.wpomni-admin a:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+.wpomni-tab-item:focus:not(.active),
+.wpomni-settings-nav-item:focus:not(.active),
+.wpomni-admin a:focus:not(.active),
+.wpomni-admin a:active:not(.active) {
+    color: var(--wpomni-text) !important;
+}
+
+/* ============================================================
+   Custom select (About tab — update source / mirror)
+   Replaces the native <select> with an accessible styled widget.
+   ============================================================ */
+.wpomni-field-label {
+    display: inline-block;
+    margin-right: var(--wpomni-space-2);
+    font-weight: 600;
+    color: var(--wpomni-text);
+    vertical-align: middle;
+}
+
+.wpomni-select {
+    position: relative;
+    display: inline-block;
+    min-width: 240px;
+    vertical-align: middle;
+}
+
+.wpomni-select-trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--wpomni-space-2);
+    padding: 7px 12px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--wpomni-text);
+    background: var(--wpomni-surface);
+    border: 1px solid var(--wpomni-border-strong);
+    border-radius: var(--wpomni-radius-sm);
+    cursor: pointer;
+    transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
+}
+
+.wpomni-select-trigger:hover {
+    border-color: var(--wpomni-accent);
+}
+
+.wpomni-select-trigger:focus-visible,
+.wpomni-select.is-open .wpomni-select-trigger {
+    border-color: var(--wpomni-accent);
+    box-shadow: 0 0 0 1px var(--wpomni-accent);
+    outline: none;
+}
+
+.wpomni-select-value {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.wpomni-select-caret {
+    flex: 0 0 auto;
+    color: var(--wpomni-text-muted);
+    font-size: 11px;
+    line-height: 1;
+    transition: transform .15s ease;
+}
+
+.wpomni-select.is-open .wpomni-select-caret {
+    transform: rotate(180deg);
+}
+
+.wpomni-select-menu {
+    position: absolute;
+    z-index: 50;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 4px;
+    list-style: none;
+    background: var(--wpomni-surface);
+    border: 1px solid var(--wpomni-border);
+    border-radius: var(--wpomni-radius-sm);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.wpomni-select-menu[hidden] {
+    display: none;
+}
+
+.wpomni-select-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--wpomni-space-2);
+    padding: 8px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--wpomni-text);
+    font-size: 13px;
+    transition: background .12s ease;
+}
+
+.wpomni-select-option:hover,
+.wpomni-select-option.is-active {
+    background: var(--wpomni-accent-tint);
+}
+
+.wpomni-select-option[aria-selected="true"] {
+    color: var(--wpomni-accent);
+    font-weight: 600;
+}
+
+.wpomni-select-check {
+    flex: 0 0 auto;
+    color: var(--wpomni-accent);
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity .12s ease;
+}
+
+.wpomni-select-option[aria-selected="true"] .wpomni-select-check {
+    opacity: 1;
+}
+
+/* Respect users who prefer reduced motion (P1). */
+@media (prefers-reduced-motion: reduce) {
+    .wpomni-tab-item,
+    .wpomni-settings-nav-item,
+    .wpomni-back-link,
+    .wpomni-provider-card,
+    .wpomni-modal,
+    .wpomni-setup-guide summary::before {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* ============================================ */
+/* Toast notifications (stacking, auto-dismiss) */
+/* ============================================ */
+.wpomni-toasts {
+    position: fixed !important;
+    top: 48px !important;
+    right: 20px !important;
+    left: auto !important;
+    bottom: auto !important;
+    z-index: 999999 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 380px;
+    width: calc(100vw - 40px);
+    pointer-events: none;
+}
+
+.wpomni-toast {
+    pointer-events: auto;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #fff;
+    border: 1px solid #dcdcde;
+    border-left: 4px solid var(--wpomni-accent, #2271b1);
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .12);
+    padding: 12px 34px 14px 14px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #1d2327;
+    animation: wpomni-toast-in .25s ease both;
+    overflow: hidden;
+}
+
+.wpomni-toast.is-leaving {
+    animation: wpomni-toast-out .2s ease both;
+}
+
+.wpomni-toast--warning { border-left-color: #dba617; }
+.wpomni-toast--success { border-left-color: #1a9c5b; }
+.wpomni-toast--error   { border-left-color: #d63638; }
+.wpomni-toast--info    { border-left-color: var(--wpomni-accent, #2271b1); }
+
+.wpomni-toast__icon {
+    flex: 0 0 auto;
+    width: 20px;
+    height: 20px;
+    margin-top: 1px;
+}
+
+.wpomni-toast--warning .wpomni-toast__icon { color: #dba617; }
+.wpomni-toast--success .wpomni-toast__icon { color: #1a9c5b; }
+.wpomni-toast--error   .wpomni-toast__icon { color: #d63638; }
+.wpomni-toast--info    .wpomni-toast__icon { color: var(--wpomni-accent, #2271b1); }
+
+.wpomni-toast__icon svg { width: 20px; height: 20px; display: block; }
+
+.wpomni-toast__body { flex: 1 1 auto; min-width: 0; }
+.wpomni-toast__title { font-weight: 600; margin: 0 0 2px; }
+.wpomni-toast__msg { margin: 0; word-break: break-word; }
+
+.wpomni-toast__close {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #787c82;
+    font-size: 18px;
+    line-height: 1;
+    padding: 2px 6px;
+}
+.wpomni-toast__close:hover { color: #1d2327; }
+
+.wpomni-toast__progress {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    transform-origin: left;
+    transform: scaleX(1);
+    opacity: .9;
+}
+.wpomni-toast--warning .wpomni-toast__progress { background: #dba617; }
+.wpomni-toast--success .wpomni-toast__progress { background: #1a9c5b; }
+.wpomni-toast--error   .wpomni-toast__progress { background: #d63638; }
+.wpomni-toast--info    .wpomni-toast__progress { background: var(--wpomni-accent, #2271b1); }
+
+@keyframes wpomni-toast-in {
+    from { opacity: 0; transform: translateX(24px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes wpomni-toast-out {
+    from { opacity: 1; transform: translateX(0); }
+    to   { opacity: 0; transform: translateX(24px); }
+}
+@keyframes wpomni-toast-progress {
+    from { transform: scaleX(1); }
+    to   { transform: scaleX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .wpomni-toast { animation: none !important; }
+    .wpomni-toast__progress { animation: none !important; }
+}

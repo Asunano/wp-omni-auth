@@ -1,0 +1,1788 @@
+# Copyright (C) 2026 WP-OmniAuth
+# This file is distributed under the same license as the WP-OmniAuth plugin.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WP-OmniAuth 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/Asunano/wp-omni-auth\n"
+"POT-Creation-Date: 2026-07-19 18:41+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: WP-OmniAuth Translation Builder\n"
+
+#: includes/core/class-emergency-access.php:380
+msgid "%1$d %2$s %3$d ="
+msgstr ""
+
+#: includes/admin/traits/class-settings-ajax.php:503
+msgid "%d login log entries"
+msgstr ""
+
+#: includes/admin/traits/class-settings-ajax.php:493
+msgid "%d user bindings"
+msgstr ""
+
+#: includes/views/settings/dashboard-tab.php:54
+msgid "%s ago"
+msgstr ""
+
+#: includes/views/emergency-page.php:131
+#: includes/views/oauth-login-screen.php:28
+msgid "&larr; Back to %s"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:148
+msgid "(log is empty)"
+msgstr ""
+
+#: includes/providers/class-apple-provider.php:12
+msgid "10-character Team ID from Membership details."
+msgstr ""
+
+#: includes/views/settings/provider-list-view.php:10
+msgid "<strong>免责声明：</strong>本插件展示的 OAuth 提供商图标仅用于身份识别目的，不代表与相关品牌有任何关联、认可或合作关系。部分图标系作者根据公开资料制作，可能与官方图标存在差异。所有商标和品牌名称归各自权利人所有。\n如您认为某图标侵犯了您的合法权益，或存在与事实不符、误导用户、影响品牌声誉的情形，请与我们联系，我们将在核实后尽快处理。\n欢迎前往 <a href=\"%s\" target=\"_blank\">我们的设置指南</a> 提交准确的官方图标资源。"
+msgstr ""
+
+#: includes/views/settings/settings-page.php:22
+msgid "About"
+msgstr ""
+
+#: includes/core/class-event-dispatcher.php:118
+msgid "Access Denied"
+msgstr ""
+
+#: includes/core/class-event-dispatcher.php:123
+#: includes/core/class-event-dispatcher.php:124
+#: includes/views/settings/notifications-section.php:34
+#: includes/views/settings/notifications-section.php:67
+msgid "Access denied"
+msgstr ""
+
+#: includes/core/class-oauth-manager.php:564
+msgid "Access denied. This account is not authorized."
+msgstr ""
+
+#: includes/core/class-oauth-manager.php:394
+#: includes/core/class-oauth-manager.php:709
+msgid "Access denied. Your IP address has been blocked."
+msgstr ""
+
+#: includes/core/class-oauth-manager.php:539
+msgid "Account not found. Please use the correct OAuth account."
+msgstr ""
+
+#: includes/views/settings/dashboard-tab.php:23
+msgid "Active Providers"
+msgstr ""
+
+#: includes/views/settings/data-management-section.php:26
+msgid "Active rate limit counters"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:161
+#: includes/views/settings/settings-page.php:207
+msgid "Add"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:157
+#: includes/views/settings/provider-list-view.php:22
+#: includes/views/settings/provider-list-view.php:24
+#: includes/views/settings/settings-page.php:199
+msgid "Add Custom Provider"
+msgstr ""
+
+#: includes/views/settings/security-section.php:143
+msgid "Added"
+msgstr ""
+
+#: includes/core/class-event-dispatcher.php:65
+msgid "Admin"
+msgstr ""
+
+#: includes/views/settings/user-profile-oauth-section.php:40
+msgid "After unbinding, the user must log in via OAuth again to re-establish the binding."
+msgstr ""
+
+#: includes/core/class-event-dispatcher.php:166
+#: includes/core/class-emergency-access.php:622
+msgid "Alert"
+msgstr ""
+
+#: includes/admin/traits/class-settings-ajax.php:332
+msgid "All data has been reset to defaults."
+msgstr ""
+
+#: includes/views/settings/general-section.php:50
+msgid "All registered users"
+msgstr ""
+
+#: includes/views/settings/settings-page.php:167
+msgid "All settings and provider configurations"
+msgstr ""
+
+#: includes/views/settings/general-section.php:32
+msgid "Allowed Users"
+msgstr ""
+
+#: includes/views/settings/field.php:20
+msgid "Already configured — leave empty to keep current"
+msgstr ""
+
+#: includes/core/class-emergency-access.php:624
+msgid "An emergency login link was requested for %s."
+msgstr ""
+
+#: includes/views/settings/general-section.php:51
+msgid "Any WordPress user matched by OAuth email can log in."
+msgstr ""
+
+#: includes/providers/class-qq-provider.php:12
+#: includes/providers/class-feishu-provider.php:9
+msgid "App ID"
+msgstr ""
+
+#: includes/providers/class-qq-provider.php:13
+msgid "App Key"
+msgstr ""
+
+#: includes/providers/class-weibo-provider.php:11
+msgid "App Key (App ID)"
+msgstr ""
+
+#: includes/providers/class-feishu-provider.php:10
+#: includes/providers/class-weibo-provider.php:12
+msgid "App Secret"
+msgstr ""
+
+#: includes/providers/class-wechat-provider.php:12
+msgid "AppID"
+msgstr ""
+
+#: includes/providers/class-dingtalk-provider.php:9
+msgid "AppKey"
+msgstr ""
+
+#: includes/providers/class-wechat-provider.php:13
+#: includes/providers/class-dingtalk-provider.php:10
+msgid "AppSecret"
+msgstr ""
+
+#: includes/providers/class-apple-provider.php:7
+msgid "Apple"
+msgstr ""
+
+#: includes/providers/class-apple-provider.php:11
+msgid "Apple Developer → Identifiers → Service IDs"
+msgstr ""
+
+#: includes/providers/class-microsoft-provider.php:9
+msgid "Application (client) ID"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:153
+msgid "Are you sure you want to clear the debug log?"
+msgstr ""
+
+#: includes/views/settings/settings-page.php:262
+msgid "Are you sure you want to regenerate the emergency key? The old key will stop working immediately."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:164
+#: includes/views/settings/settings-page.php:221
+msgid "Are you sure you want to remove this custom provider? All settings will be lost."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:145
+msgid "Are you sure you want to remove this provider?"
+msgstr ""
+
+#: includes/views/settings/user-profile-oauth-section.php:37
+msgid "Are you sure you want to unbind this OAuth account? The user will need to re-authenticate via OAuth."
+msgstr ""
+
+#: includes/core/class-event-dispatcher.php:135
+msgid "Attempted Email"
+msgstr ""
+
+#: includes/core/class-event-dispatcher.php:122
+#: includes/core/class-event-dispatcher.php:127
+msgid "Authentication failed"
+msgstr ""
+
+#: includes/providers/class-authentik-provider.php:5
+msgid "Authentik"
+msgstr ""
+
+#: includes/providers/class-authentik-provider.php:11
+msgid "Authentik URL"
+msgstr ""
+
+#: includes/providers/class-custom-provider.php:38
+msgid "Authorization URL"
+msgstr ""
+
+#: includes/views/settings/security-section.php:24
+msgid "Auto (CF-Connecting-IP → X-Forwarded-For first → X-Real-IP)"
+msgstr ""
+
+#: includes/views/settings/security-section.php:97
+msgid "Auto-Ban Duration"
+msgstr ""
+
+#: includes/views/settings/security-section.php:83
+msgid "Auto-Ban Threshold"
+msgstr ""
+
+#: includes/views/settings/security-section.php:90
+msgid "Auto-Ban Window"
+msgstr ""
+
+#: includes/core/class-security.php:394
+msgid "Auto-banned"
+msgstr ""
+
+#: includes/providers/class-gitee-provider.php:11
+msgid "Available: user_info projects pull_requests issues notes keys hook groups gists enterprises"
+msgstr ""
+
+#: includes/views/emergency-page.php:92
+#: includes/views/emergency-page.php:128
+msgid "Back to choice"
+msgstr ""
+
+#: includes/views/settings/provider-detail-view.php:8
+msgid "Back to provider list"
+msgstr ""
+
+#: includes/core/class-event-dispatcher.php:63
+msgid "Binding successful"
+msgstr ""
+
+#: includes/views/settings/data-management-section.php:21
+msgid "Blocked IP addresses"
+msgstr ""
+
+#: includes/views/settings/provider-detail-view.php:83
+msgid "Bound"
+msgstr ""
+
+#: includes/views/settings/user-profile-oauth-section.php:26
+msgid "Bound Since"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:80
+msgid "Built-in support for GitHub and Google OAuth."
+msgstr ""
+
+#: includes/providers/class-custom-provider.php:31
+msgid "Button Color"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:18
+msgid "By"
+msgstr ""
+
+#: includes/admin/traits/class-settings-ajax.php:255
+#: includes/views/settings/data-management-section.php:30
+msgid "Caches"
+msgstr ""
+
+#: includes/views/oauth-login-screen.php:26
+msgid "Can&rsquo;t sign in? Use emergency access."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:160
+#: includes/views/settings/settings-page.php:176
+#: includes/views/settings/settings-page.php:206
+#: includes/views/settings/settings-page.php:225
+#: includes/views/settings/settings-page.php:265
+msgid "Cancel"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:34
+msgid "Check for Updates"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:175
+msgid "Checking..."
+msgstr ""
+
+#: includes/providers/class-feishu-provider.php:11
+msgid "China (feishu.cn)"
+msgstr ""
+
+#: includes/views/oauth-login-screen.php:21
+msgid "Choose a provider to continue."
+msgstr ""
+
+#: includes/views/emergency-page.php:46
+msgid "Choose how to regain password login:"
+msgstr ""
+
+#: includes/views/settings/data-management-section.php:10
+msgid "Clear Data"
+msgstr ""
+
+#: includes/views/settings/debug-log-section.php:37
+msgid "Clear Debug Log"
+msgstr ""
+
+#: includes/views/settings/data-management-section.php:45
+msgid "Clear Selected"
+msgstr ""
+
+#: includes/admin/traits/class-settings-ajax.php:281
+msgid "Cleared: %s"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:154
+msgid "Clearing..."
+msgstr ""
+
+#: includes/views/callback-page.php:173
+msgid "Click here if not redirected"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:168
+#: includes/views/settings/settings-page.php:242
+msgid "Click to copy"
+msgstr ""
+
+#: includes/providers/class-gitee-provider.php:9
+#: includes/providers/class-google-provider.php:15
+#: includes/providers/class-custom-provider.php:17
+#: includes/providers/class-authentik-provider.php:9
+#: includes/providers/class-github-provider.php:15
+msgid "Client ID"
+msgstr ""
+
+#: includes/views/settings/security-section.php:19
+msgid "Client IP Source"
+msgstr ""
+
+#: includes/providers/class-microsoft-provider.php:10
+#: includes/providers/class-gitee-provider.php:10
+#: includes/providers/class-google-provider.php:22
+#: includes/providers/class-custom-provider.php:24
+#: includes/providers/class-authentik-provider.php:10
+#: includes/providers/class-github-provider.php:22
+msgid "Client Secret"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:173
+#: includes/views/settings/settings-page.php:246
+msgid "Close"
+msgstr ""
+
+#: includes/views/settings/security-section.php:25
+msgid "Cloudflare (CF-Connecting-IP)"
+msgstr ""
+
+#: includes/views/emergency-page.php:73
+#: includes/views/emergency-page.php:109
+msgid "Code"
+msgstr ""
+
+#: includes/providers/class-custom-provider.php:34
+msgid "Color of this provider’s button on the login screen. Leave blank to use the site’s admin theme color. Text color is chosen automatically for contrast."
+msgstr ""
+
+#: includes/views/settings/provider-card.php:25
+msgid "Configure"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:94
+msgid "Configure Providers"
+msgstr ""
+
+#: includes/core/class-provider-checker.php:63
+msgid "Configured"
+msgstr ""
+
+#: includes/views/settings/settings-page.php:162
+msgid "Confirm Full Reset"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:169
+msgid "Copied!"
+msgstr ""
+
+#: includes/views/settings/settings-page.php:240
+msgid "Current key"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:29
+msgid "Current version:"
+msgstr ""
+
+#: includes/views/settings/security-section.php:43
+msgid "Custom Header Name"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:141
+#: includes/admin/traits/class-settings-ajax.php:22
+msgid "Custom Provider"
+msgstr ""
+
+#: includes/views/settings/security-section.php:31
+msgid "Custom header (configure below)"
+msgstr ""
+
+#: includes/views/settings/settings-page.php:13
+msgid "Dashboard"
+msgstr ""
+
+#: includes/views/settings/data-management-section.php:31
+msgid "Dashboard stats & GitHub release cache"
+msgstr ""
+
+#: includes/admin/traits/class-settings-views.php:83
+#: includes/admin/traits/class-settings-registration.php:56
+#: includes/views/settings/settings-page.php:147
+msgid "Data Management"
+msgstr ""
+
+#: includes/admin/traits/class-settings-views.php:82
+#: includes/admin/traits/class-settings-registration.php:29
+msgid "Debug Log"
+msgstr ""
+
+#: includes/views/settings/debug-log-section.php:8
+msgid "Debug Mode"
+msgstr ""
+
+#: includes/admin/traits/class-settings-ajax.php:81
+msgid "Debug Mode is off. Enable it (Debug Log settings) and perform an OAuth login to generate the log file."
+msgstr ""
+
+#: includes/admin/traits/class-settings-ajax.php:263
+#: includes/views/settings/data-management-section.php:35
+msgid "Debug log"
+msgstr ""
+
+#: includes/views/settings/data-management-section.php:36
+msgid "Debug log file contents"
+msgstr ""
+
+#: includes/admin/traits/class-settings-ajax.php:124
+msgid "Debug log file has not been created yet."
+msgstr ""
+
+#: includes/admin/traits/class-settings-ajax.php:80
+msgid "Debug log file has not been created yet. Perform an OAuth login or any plugin action to generate it."
+msgstr ""
+
+#: includes/views/settings/about-tab.php:82
+msgid "Debug logging with built-in log viewer."
+msgstr ""
+
+#: includes/views/settings/debug-log-section.php:23
+msgid "Debug logs are written to the following file (dot-prefixed, not web-accessible). It only appears after a debug-logged event occurs while Debug Mode is on — use"
+msgstr ""
+
+#: includes/admin/traits/class-settings-ajax.php:463
+msgid "Decryption failed. This backup was exported from a different site."
+msgstr ""
+
+#: includes/views/settings/notifications-section.php:22
+msgid "Defaults to admin email if empty."
+msgstr ""
+
+#: includes/views/settings/data-management-section.php:53
+msgid "Delete ALL plugin data and restore default settings. This cannot be undone."
+msgstr ""
+
+#: includes/views/settings/security-section.php:39
+msgid "Different CDNs populate X-Forwarded-For inconsistently. Pick the header / segment that carries the real client IP for your setup."
+msgstr ""
+
+#: includes/providers/class-dingtalk-provider.php:5
+msgid "DingTalk"
+msgstr ""
+
+#: includes/providers/class-dingtalk-provider.php:9
+msgid "DingTalk Open Platform → App Details → Credentials & Basic Info → AppKey"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:50
+#: includes/views/settings/about-tab.php:60
+msgid "Direct (GitHub)"
+msgstr ""
+
+#: includes/views/settings/provider-card.php:13
+msgid "Disabled"
+msgstr ""
+
+#: includes/views/settings/debug-log-section.php:39
+#: includes/views/settings/debug-log-section.php:41
+msgid "Download Debug Log"
+msgstr ""
+
+#: includes/views/settings/data-management-section.php:63
+msgid "Download all plugin data as JSON for backup, or restore from a previous export."
+msgstr ""
+
+#: includes/views/settings/security-section.php:27
+msgid "ESA / generic CDN (X-Forwarded-For last → X-Real-IP)"
+msgstr ""
+
+#: includes/views/settings/security-section.php:26
+msgid "EdgeOne (EO-Connecting-IP)"
+msgstr ""
+
+#: includes/core/class-event-dispatcher.php:74
+#: includes/core/class-event-dispatcher.php:99
+#: includes/views/emergency-page.php:48
+#: includes/views/emergency-page.php:67
+msgid "Email"
+msgstr ""
+
+#: includes/providers/class-custom-provider.php:62
+msgid "Email Field"
+msgstr ""
+
+#: includes/views/settings/notifications-section.php:6
+msgid "Email Notifications"
+msgstr ""
+
+#: includes/views/emergency-page.php:50
+msgid "Email login link"
+msgstr ""
+
+#: includes/views/emergency-page.php:12
+#: includes/views/emergency-page.php:42
+msgid "Emergency Access"
+msgstr ""
+
+#: includes/views/settings/general-section.php:18
+msgid "Emergency Access Key"
+msgstr ""
+
+#: includes/views/emergency-page.php:103
+msgid "Emergency Key"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:171
+#: includes/views/settings/settings-page.php:237
+msgid "Emergency Key Management"
+msgstr ""
+
+#: includes/views/settings/settings-page.php:170
+msgid "Emergency access key"
+msgstr ""
+
+#: includes/views/emergency-page.php:54
+msgid "Emergency key"
+msgstr ""
+
+#: includes/core/class-emergency-access.php:609
+msgid "Emergency mode activated. Password login is available for 15 minutes."
+msgstr ""
+
+#: includes/views/settings/provider-detail-view.php:58
+msgid "Enable"
+msgstr ""
+
+#: includes/views/settings/provider-detail-view.php:64
+msgid "Enable %s login"
+msgstr ""
+
+#: includes/views/settings/notifications-section.php:9
+msgid "Enable Email Notifications"
+msgstr ""
+
+#: includes/views/settings/debug-log-section.php:13
+msgid "Enable debug logging for OAuth callbacks"
+msgstr ""
+
+#: includes/views/settings/security-section.php:15
+msgid "Enable only if your site is behind Cloudflare, CDN, or a reverse proxy. Leave disabled for direct connections."
+msgstr ""
+
+#: includes/admin/traits/class-settings-views.php:233
+#: includes/views/settings/provider-card.php:13
+msgid "Enabled"
+msgstr ""
+
+#: includes/views/settings/dashboard-tab.php:25
+msgid "Enabled OAuth providers"
+msgstr ""
+
+#: includes/views/settings/provider-detail-view.php:47
+msgid "Enter an image URL (e.g. https://example.com/icon.svg) or paste SVG code."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:140
+msgid "Enter provider name:"
+msgstr ""
+
+#: includes/views/emergency-page.php:99
+msgid "Enter the emergency access key to temporarily enable password login."
+msgstr ""
+
+#: includes/views/emergency-page.php:63
+msgid "Enter your admin email to receive a one-time link (valid 15 min)."
+msgstr ""
+
+#: includes/core/class-emergency-access.php:125
+#: includes/core/class-emergency-access.php:151
+#: includes/core/class-emergency-access.php:221
+#: includes/core/class-emergency-access.php:261
+#: includes/core/class-emergency-access.php:286
+msgid "Error"
+msgstr ""
+
+#: includes/views/settings/security-section.php:144
+msgid "Expires"
+msgstr ""
+
+#: includes/views/settings/data-management-section.php:61
+msgid "Export / Restore"
+msgstr ""
+
+#: includes/views/settings/data-management-section.php:65
+msgid "Export Data"
+msgstr ""
+
+#: includes/views/settings/dashboard-tab.php:20
+msgid "Failed attempts (7 days)"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:142
+msgid "Failed to add provider: "
+msgstr ""
+
+#: includes/core/class-oauth-manager.php:468
+msgid "Failed to get access token."
+msgstr ""
+
+#: includes/core/class-oauth-manager.php:479
+msgid "Failed to get user data."
+msgstr ""
+
+#: includes/admin/traits/class-settings-ajax.php:129
+msgid "Failed to read log file."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:146
+msgid "Failed to remove provider: "
+msgstr ""
+
+#: includes/admin/class-settings-page.php:151
+msgid "Failed: "
+msgstr ""
+
+#: includes/views/settings/dashboard-tab.php:18
+msgid "Failures (Week)"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:77
+msgid "Features"
+msgstr ""
+
+#: includes/providers/class-feishu-provider.php:5
+msgid "Feishu"
+msgstr ""
+
+#: includes/providers/class-feishu-provider.php:9
+msgid "Feishu Open Platform → App Details → Credentials & Basic Info → App ID"
+msgstr ""
+
+#: includes/views/settings/debug-log-section.php:30
+msgid "File exists"
+msgstr ""
+
+#: includes/admin/traits/class-settings-ajax.php:453
+msgid "File upload failed."
+msgstr ""
+
+#: includes/views/settings/security-section.php:55
+msgid "First (leftmost) — client IP from X-Forwarded-For"
+msgstr ""
+
+#: includes/views/settings/security-section.php:57
+msgid "For chained X-Forwarded-For, choose which comma-separated segment to trust. Use \"First\" when your CDN places the client IP at the start."
+msgstr ""
+
+#: includes/views/settings/data-management-section.php:51
+msgid "Full Reset"
+msgstr ""
+
+#: includes/admin/traits/class-settings-ajax.php:385
+msgid "Full plugin data export"
+msgstr ""
+
+#: includes/admin/traits/class-settings-views.php:79
+msgid "General"
+msgstr ""
+
+#: includes/admin/traits/class-settings-registration.php:20
+msgid "General Settings"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:166
+msgid "Generating..."
+msgstr ""
+
+#: includes/providers/class-github-provider.php:8
+msgid "GitHub"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:91
+msgid "GitHub Repository"
+msgstr ""
+
+#: includes/providers/class-gitee-provider.php:5
+msgid "Gitee"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:178
+msgid "Go to Plugins page"
+msgstr ""
+
+#: includes/providers/class-google-provider.php:8
+msgid "Google"
+msgstr ""
+
+#: includes/views/settings/security-section.php:46
+msgid "HTTP header holding the client IP (no HTTP_ prefix). E.g. X-Forwarded-For, X-Real-IP, X-Client-IP."
+msgstr ""
+
+#: includes/views/settings/dashboard-tab.php:63
+msgid "Hide IP"
+msgstr ""
+
+#: includes/views/settings/general-section.php:13
+msgid "Hide username/password login form (show only OAuth buttons)"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:39
+msgid "Hooks into WordPress's native update system — update notifications appear on the standard Plugins → Installed Plugins page. Version metadata is served via version.json on GitHub, no API key required."
+msgstr ""
+
+#: includes/views/emergency-page.php:71
+#: includes/views/emergency-page.php:107
+msgid "Human verification code"
+msgstr ""
+
+#: includes/core/class-event-dispatcher.php:76
+#: includes/core/class-event-dispatcher.php:102
+#: includes/core/class-event-dispatcher.php:138
+#: includes/views/settings/dashboard-tab.php:47
+#: includes/views/settings/security-section.php:141
+msgid "IP"
+msgstr ""
+
+#: includes/views/settings/security-section.php:133
+msgid "IP Blacklist"
+msgstr ""
+
+#: includes/core/class-event-dispatcher.php:119
+msgid "IP Blocked"
+msgstr ""
+
+#: includes/admin/traits/class-settings-ajax.php:240
+#: includes/views/settings/data-management-section.php:20
+msgid "IP blacklist"
+msgstr ""
+
+#: includes/views/settings/settings-page.php:169
+msgid "IP blacklist and rate limits"
+msgstr ""
+
+#: includes/views/settings/notifications-section.php:35
+#: includes/views/settings/notifications-section.php:68
+msgid "IP blocked"
+msgstr ""
+
+#: includes/views/settings/provider-detail-view.php:40
+msgid "Icon"
+msgstr ""
+
+#: includes/views/emergency-page.php:36
+msgid "If that email is authorized, a one-time login link has been sent."
+msgstr ""
+
+#: includes/core/class-emergency-access.php:627
+msgid "If you did not request this, you can safely ignore this email."
+msgstr ""
+
+#: includes/views/settings/provider-detail-view.php:44
+msgid "Image URL or SVG code"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:189
+msgid "Importing..."
+msgstr ""
+
+#: includes/admin/traits/class-settings-registration.php:499
+msgid "Incomplete configuration:"
+msgstr ""
+
+#: includes/views/emergency-page.php:28
+msgid "Incorrect emergency key. Please try again."
+msgstr ""
+
+#: includes/views/emergency-page.php:30
+msgid "Incorrect verification code. Please try again."
+msgstr ""
+
+#: includes/providers/class-feishu-provider.php:11
+msgid "International (larksuite.com)"
+msgstr ""
+
+#: includes/core/class-oauth-manager.php:414
+#: includes/core/class-oauth-manager.php:727
+#: includes/core/class-oauth-manager.php:736
+#: includes/core/class-oauth-manager.php:776
+msgid "Invalid OAuth provider."
+msgstr ""
+
+#: includes/core/class-oauth-manager.php:421
+msgid "Invalid OAuth response."
+msgstr ""
+
+#: includes/core/class-oauth-provider.php:126
+msgid "Invalid URL format."
+msgstr ""
+
+#: includes/admin/traits/class-settings-ajax.php:471
+msgid "Invalid backup file."
+msgstr ""
+
+#: includes/core/class-oauth-manager.php:767
+msgid "Invalid or disabled OAuth provider."
+msgstr ""
+
+#: includes/admin/traits/class-settings-views.php:451
+msgid "Invalid user."
+msgstr ""
+
+#: includes/views/emergency-page.php:52
+msgid "Key"
+msgstr ""
+
+#: includes/providers/class-apple-provider.php:13
+msgid "Key ID"
+msgstr ""
+
+#: includes/providers/class-apple-provider.php:13
+msgid "Key ID of the \"Sign in with Apple\" key."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:170
+#: includes/views/settings/general-section.php:26
+msgid "Key Management"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:167
+msgid "Key regenerated"
+msgstr ""
+
+#: includes/views/settings/security-section.php:54
+msgid "Last (rightmost) — trusted edge appended it"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:88
+msgid "Links"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:147
+msgid "Loading..."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:155
+msgid "Log cleared"
+msgstr ""
+
+#: includes/views/settings/debug-log-section.php:41
+msgid "Log file not created yet"
+msgstr ""
+
+#: includes/core/class-emergency-access.php:626
+msgid "Log in now"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:149
+msgid "Log is empty"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:150
+msgid "Log loaded (%s lines)"
+msgstr ""
+
+#: includes/core/class-oauth-manager.php:669
+#: includes/core/class-event-dispatcher.php:117
+#: includes/core/class-event-dispatcher.php:126
+msgid "Login Failed"
+msgstr ""
+
+#: includes/core/class-oauth-manager.php:668
+#: includes/views/callback-page.php:159
+msgid "Login Successful"
+msgstr ""
+
+#: includes/core/class-oauth-manager.php:444
+#: includes/core/class-oauth-manager.php:454
+msgid "Login already in progress. Please try again."
+msgstr ""
+
+#: includes/views/settings/notifications-section.php:33
+#: includes/views/settings/notifications-section.php:66
+msgid "Login failure"
+msgstr ""
+
+#: includes/views/settings/settings-page.php:168
+msgid "Login history logs"
+msgstr ""
+
+#: includes/views/settings/dashboard-tab.php:37
+msgid "Login history table not yet created."
+msgstr ""
+
+#: includes/admin/traits/class-settings-ajax.php:234
+#: includes/views/settings/data-management-section.php:15
+msgid "Login logs"
+msgstr ""
+
+#: includes/views/settings/notifications-section.php:32
+#: includes/views/settings/notifications-section.php:65
+msgid "Login success"
+msgstr ""
+
+#: includes/core/class-event-dispatcher.php:92
+msgid "Login successful"
+msgstr ""
+
+#: includes/core/class-login-buttons.php:82
+msgid "Login with %s"
+msgstr ""
+
+#: includes/views/settings/debug-log-section.php:15
+msgid "Logs are saved to wp-content/.wp-omni-auth-debug.log (dot-prefix, not web-accessible)"
+msgstr ""
+
+#: includes/admin/traits/class-settings-registration.php:257
+msgid "Manual entry"
+msgstr ""
+
+#: includes/providers/class-microsoft-provider.php:5
+msgid "Microsoft"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:49
+#: includes/views/settings/about-tab.php:64
+msgid "Mirror (gh-proxy.org)"
+msgstr ""
+
+#: includes/admin/traits/class-settings-views.php:351
+msgid "Missing: "
+msgstr ""
+
+#: includes/views/settings/about-tab.php:79
+msgid "Modular OAuth provider system — add new providers by dropping a single file."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:152
+msgid "Network error"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:144
+msgid "Network error. Please try again."
+msgstr ""
+
+#: includes/core/class-event-dispatcher.php:92
+msgid "New Login"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:177
+msgid "New version %s available."
+msgstr ""
+
+#: includes/views/settings/settings-page.php:94
+msgid "No OAuth providers configured."
+msgstr ""
+
+#: includes/admin/traits/class-settings-ajax.php:222
+msgid "No categories selected."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:270
+#: includes/views/settings/health-check.php:28
+msgid "No emergency access key is set. If all OAuth providers go down, you will be locked out. Generate a key in the settings page."
+msgstr ""
+
+#: includes/admin/traits/class-settings-ajax.php:152
+msgid "No emergency key set. Click \"Regenerate Key\" to create one."
+msgstr ""
+
+#: includes/views/settings/dashboard-tab.php:87
+msgid "No enabled providers yet."
+msgstr ""
+
+#: includes/views/settings/dashboard-tab.php:39
+msgid "No login records yet."
+msgstr ""
+
+#: includes/views/settings/provider-list-view.php:17
+msgid "No providers configured yet."
+msgstr ""
+
+#: includes/core/class-oauth-manager.php:510
+msgid "No user identity found in OAuth response."
+msgstr ""
+
+#: includes/core/class-provider-checker.php:64
+#: includes/admin/traits/class-settings-views.php:236
+#: includes/views/settings/provider-card.php:16
+msgid "Not configured"
+msgstr ""
+
+#: includes/views/settings/debug-log-section.php:32
+msgid "Not created yet"
+msgstr ""
+
+#: includes/admin/traits/class-settings-ajax.php:274
+msgid "Nothing to clear."
+msgstr ""
+
+#: includes/views/settings/notifications-section.php:19
+msgid "Notification Email"
+msgstr ""
+
+#: includes/admin/traits/class-settings-views.php:81
+#: includes/admin/traits/class-settings-registration.php:47
+msgid "Notifications"
+msgstr ""
+
+#: includes/views/settings/notifications-section.php:26
+msgid "Notify On"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:14
+msgid "OAuth 2.0 login for WordPress with GitHub, Google, and unlimited custom providers. Supports OAuth-only mode, a security/rate-limit layer, login history, and self-updates via GitHub (with an optional mirror source for mainland China)."
+msgstr ""
+
+#: includes/views/settings/user-profile-oauth-section.php:6
+msgid "OAuth Binding"
+msgstr ""
+
+#: includes/views/settings/user-profile-oauth-section.php:20
+msgid "OAuth Email"
+msgstr ""
+
+#: includes/core/class-event-dispatcher.php:73
+#: includes/views/settings/user-profile-oauth-section.php:14
+msgid "OAuth ID"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:47
+#: includes/admin/class-settings-page.php:48
+msgid "OAuth Login"
+msgstr ""
+
+#: includes/views/settings/provider-list-view.php:6
+#: includes/views/settings/settings-page.php:16
+msgid "OAuth Providers"
+msgstr ""
+
+#: includes/views/settings/unbind-notice.php:7
+msgid "OAuth binding removed successfully."
+msgstr ""
+
+#: includes/views/settings/data-management-section.php:41
+msgid "OAuth code replay protection data"
+msgstr ""
+
+#: includes/core/class-oauth-provider.php:121
+msgid "OAuth endpoints must use HTTPS for security."
+msgstr ""
+
+#: includes/views/settings/data-management-section.php:16
+msgid "OAuth login history records"
+msgstr ""
+
+#: includes/views/settings/general-section.php:8
+msgid "OAuth-Only Mode"
+msgstr ""
+
+#: includes/views/settings/health-check.php:14
+msgid "OAuth-only mode is enabled, but no OAuth providers are configured. Users <strong>cannot log in</strong>. <a href=\"%s\">Configure providers</a>."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:262
+msgid "OAuth-only mode is enabled, but no OAuth providers are configured. Users cannot log in."
+msgstr ""
+
+#: includes/views/settings/about-tab.php:83
+msgid "OAuth-only mode to disable password login."
+msgstr ""
+
+#: includes/views/settings/security-section.php:134
+msgid "One IP or CIDR per line (e.g. 1.2.3.4 or 5.6.7.0/24)"
+msgstr ""
+
+#: includes/views/settings/security-section.php:78
+msgid "Only trust proxy headers (X-Forwarded-For, etc.) when the direct connection comes from one of these IPs/CIDRs. Leaving this empty trusts headers from any source (only safe behind a proxy that strips client-supplied headers). Required to prevent IP spoofing of rate limits / bans."
+msgstr ""
+
+#: includes/views/emergency-page.php:97
+msgid "Or use your emergency key"
+msgstr ""
+
+#: includes/core/class-oauth-manager.php:368
+#: includes/core/class-login-guard.php:159
+msgid "Password login is disabled. Please use OAuth to log in."
+msgstr ""
+
+#: includes/providers/class-apple-provider.php:14
+msgid "Paste the .p8 file contents (including BEGIN/END PRIVATE KEY)."
+msgstr ""
+
+#: includes/views/settings/security-section.php:153
+msgid "Permanent"
+msgstr ""
+
+#: includes/views/emergency-page.php:83
+#: includes/views/emergency-page.php:119
+msgid "Please enter the code shown (letters and numbers only)."
+msgstr ""
+
+#: includes/views/emergency-page.php:83
+#: includes/views/emergency-page.php:119
+msgid "Please enter the number shown (digits only, 100 or less)."
+msgstr ""
+
+#: includes/views/settings/settings-page.php:98
+msgid "Please go to <a href=\"%s\">OAuth Providers</a> to set up at least one login method."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:186
+msgid "Please select at least one category."
+msgstr ""
+
+#: includes/views/settings/provider-detail-view.php:50
+msgid "Preview:"
+msgstr ""
+
+#: includes/providers/class-apple-provider.php:14
+msgid "Private Key (.p8)"
+msgstr ""
+
+#: includes/core/class-event-dispatcher.php:72
+#: includes/core/class-event-dispatcher.php:100
+#: includes/core/class-event-dispatcher.php:136
+#: includes/views/settings/dashboard-tab.php:46
+#: includes/views/settings/user-profile-oauth-section.php:9
+msgid "Provider"
+msgstr ""
+
+#: includes/core/class-event-dispatcher.php:63
+msgid "Provider Bound"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:158
+#: includes/views/settings/settings-page.php:202
+#: includes/views/settings/provider-detail-view.php:33
+msgid "Provider Name"
+msgstr ""
+
+#: includes/views/settings/dashboard-tab.php:81
+msgid "Provider Status"
+msgstr ""
+
+#: includes/views/settings/notifications-section.php:36
+#: includes/views/settings/notifications-section.php:69
+msgid "Provider bound"
+msgstr ""
+
+#: includes/admin/traits/class-settings-registration.php:506
+msgid "Provider settings saved. All enabled providers are configured."
+msgstr ""
+
+#: includes/providers/class-qq-provider.php:8
+msgid "QQ"
+msgstr ""
+
+#: includes/views/settings/security-section.php:111
+msgid "Rate Limit (global)"
+msgstr ""
+
+#: includes/views/settings/security-section.php:104
+msgid "Rate Limit (per IP)"
+msgstr ""
+
+#: includes/views/settings/security-section.php:125
+msgid "Rate Limit (per identity)"
+msgstr ""
+
+#: includes/views/settings/security-section.php:118
+msgid "Rate Limit (per provider)"
+msgstr ""
+
+#: includes/admin/traits/class-settings-ajax.php:247
+#: includes/views/settings/data-management-section.php:25
+msgid "Rate limits"
+msgstr ""
+
+#: includes/views/settings/provider-detail-view.php:76
+msgid "Re-test & re-bind"
+msgstr ""
+
+#: includes/views/settings/security-section.php:13
+msgid "Read client IP from proxy headers (Cloudflare, X-Forwarded-For)"
+msgstr ""
+
+#: includes/core/class-event-dispatcher.php:139
+#: includes/views/settings/security-section.php:142
+msgid "Reason"
+msgstr ""
+
+#: includes/views/settings/dashboard-tab.php:33
+msgid "Recent Logins"
+msgstr ""
+
+#: includes/views/oauth-login-screen.php:36
+msgid "Redirecting"
+msgstr ""
+
+#: includes/views/oauth-login-screen.php:35
+msgid "Redirecting to %s"
+msgstr ""
+
+#: includes/views/callback-page.php:172
+msgid "Redirecting..."
+msgstr ""
+
+#: includes/views/settings/settings-page.php:266
+msgid "Regenerate"
+msgstr ""
+
+#: includes/views/settings/settings-page.php:259
+msgid "Regenerate Emergency Key"
+msgstr ""
+
+#: includes/views/settings/settings-page.php:248
+msgid "Regenerate Key"
+msgstr ""
+
+#: includes/providers/class-feishu-provider.php:11
+msgid "Region"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:162
+#: includes/views/settings/provider-card.php:22
+#: includes/views/settings/settings-page.php:226
+msgid "Remove"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:163
+#: includes/views/settings/settings-page.php:218
+msgid "Remove Provider"
+msgstr ""
+
+#: includes/views/emergency-page.php:61
+msgid "Request a login link"
+msgstr ""
+
+#: includes/views/settings/data-management-section.php:55
+msgid "Reset All Data"
+msgstr ""
+
+#: includes/views/settings/settings-page.php:177
+msgid "Reset Everything"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:187
+msgid "Resetting..."
+msgstr ""
+
+#: includes/views/settings/data-management-section.php:68
+msgid "Restore from file:"
+msgstr ""
+
+#: includes/admin/traits/class-settings-ajax.php:511
+msgid "Restored: %s"
+msgstr ""
+
+#: includes/views/callback-page.php:186
+msgid "Return to login"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:71
+msgid "Route both update checks and downloads through a GitHub mirror (gh-proxy.org) to avoid connectivity issues in mainland China. When enabled, the proxy prefix is added to the version.json URL and the update package URL."
+msgstr ""
+
+#: includes/views/settings/provider-detail-view.php:73
+msgid "Save Changes"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:184
+msgid "Save failed"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:183
+msgid "Saved"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:182
+msgid "Saving..."
+msgstr ""
+
+#: includes/providers/class-microsoft-provider.php:13
+#: includes/providers/class-gitee-provider.php:11
+#: includes/providers/class-google-provider.php:29
+#: includes/providers/class-custom-provider.php:69
+#: includes/providers/class-authentik-provider.php:12
+#: includes/providers/class-github-provider.php:29
+msgid "Scope"
+msgstr ""
+
+#: includes/views/settings/field.php:22
+msgid "Secret is configured"
+msgstr ""
+
+#: includes/admin/traits/class-settings-views.php:80
+msgid "Security"
+msgstr ""
+
+#: includes/admin/traits/class-settings-registration.php:38
+msgid "Security Settings"
+msgstr ""
+
+#: includes/core/class-emergency-access.php:130
+#: includes/core/class-emergency-access.php:135
+#: includes/core/class-emergency-access.php:266
+#: includes/core/class-emergency-access.php:271
+msgid "Security check failed."
+msgstr ""
+
+#: includes/admin/traits/class-settings-registration.php:407
+msgid "Security check failed. Please refresh the page and try again."
+msgstr ""
+
+#: includes/core/class-oauth-manager.php:432
+msgid "Security verification failed."
+msgstr ""
+
+#: includes/views/settings/security-section.php:50
+msgid "Segment Position"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:188
+msgid "Select a file first"
+msgstr ""
+
+#: includes/views/settings/data-management-section.php:6
+msgid "Select data categories to clear, or perform a full reset."
+msgstr ""
+
+#: includes/views/settings/notifications-section.php:46
+msgid "Select which events trigger an email notification."
+msgstr ""
+
+#: includes/providers/class-custom-provider.php:79
+msgid "Send access token in Authorization header (Bearer)"
+msgstr ""
+
+#: includes/views/settings/notifications-section.php:14
+msgid "Send email notifications for login events"
+msgstr ""
+
+#: includes/views/emergency-page.php:90
+msgid "Send link"
+msgstr ""
+
+#: includes/providers/class-apple-provider.php:11
+msgid "Service ID"
+msgstr ""
+
+#: includes/core/class-emergency-access.php:125
+#: includes/core/class-emergency-access.php:151
+#: includes/core/class-emergency-access.php:221
+#: includes/core/class-emergency-access.php:261
+#: includes/core/class-emergency-access.php:286
+msgid "Service temporarily unavailable."
+msgstr ""
+
+#: includes/views/settings/settings-page.php:19
+msgid "Settings"
+msgstr ""
+
+#: wp-omni-auth.php:62
+msgid "Guide"
+msgstr ""
+
+#: wp-omni-auth.php:62
+msgid "Configuration Guide"
+msgstr ""
+
+#: includes/views/settings/settings-page.php:32
+msgid "Settings saved."
+msgstr ""
+
+#: includes/views/settings/settings-page.php:78
+msgid "Settings sections"
+msgstr ""
+
+#: includes/views/settings/dashboard-tab.php:62
+msgid "Show IP"
+msgstr ""
+
+#: includes/views/oauth-login-screen.php:13
+msgid "Sign in &lsaquo; %s"
+msgstr ""
+
+#: includes/views/settings/general-section.php:37
+msgid "Specific users only"
+msgstr ""
+
+#: includes/views/settings/dashboard-tab.php:48
+msgid "Status"
+msgstr ""
+
+#: includes/core/class-event-dispatcher.php:166
+msgid "Success"
+msgstr ""
+
+#: includes/views/settings/dashboard-tab.php:15
+msgid "Successful logins (7 days)"
+msgstr ""
+
+#: includes/views/settings/dashboard-tab.php:10
+msgid "Successful logins today"
+msgstr ""
+
+#: includes/providers/class-apple-provider.php:12
+msgid "Team ID"
+msgstr ""
+
+#: includes/providers/class-microsoft-provider.php:11
+msgid "Tenant ID"
+msgstr ""
+
+#: includes/views/settings/provider-detail-view.php:76
+msgid "Test connection & bind"
+msgstr ""
+
+#: includes/providers/class-custom-provider.php:87
+msgid "The key in the token response that contains the access token."
+msgstr ""
+
+#: includes/core/class-oauth-manager.php:818
+msgid "The provider did not return a stable user ID, so it cannot be bound."
+msgstr ""
+
+#: includes/views/settings/dashboard-tab.php:13
+msgid "This Week"
+msgstr ""
+
+#: includes/views/settings/settings-page.php:173
+msgid "This action cannot be undone!"
+msgstr ""
+
+#: includes/core/class-emergency-access.php:625
+msgid "This link is valid for 15 minutes and only works from the IP that requested it (%s). Do not share it."
+msgstr ""
+
+#: includes/views/emergency-page.php:34
+msgid "This login link is invalid or has expired (wrong IP or timeout). Please request a new one."
+msgstr ""
+
+#: includes/views/settings/settings-page.php:165
+msgid "This will delete ALL plugin data including:"
+msgstr ""
+
+#: includes/core/class-event-dispatcher.php:75
+#: includes/core/class-event-dispatcher.php:101
+#: includes/core/class-event-dispatcher.php:137
+#: includes/views/settings/dashboard-tab.php:44
+msgid "Time"
+msgstr ""
+
+#: includes/views/settings/dashboard-tab.php:8
+msgid "Today's Logins"
+msgstr ""
+
+#: includes/views/settings/dashboard-tab.php:61
+msgid "Toggle IP visibility"
+msgstr ""
+
+#: includes/providers/class-custom-provider.php:83
+msgid "Token Response Key"
+msgstr ""
+
+#: includes/providers/class-custom-provider.php:46
+msgid "Token URL"
+msgstr ""
+
+#: includes/providers/class-custom-provider.php:76
+msgid "Token in Header"
+msgstr ""
+
+#: includes/core/class-oauth-manager.php:526
+#: includes/core/class-oauth-manager.php:717
+msgid "Too many login attempts. Please try again later."
+msgstr ""
+
+#: includes/core/class-oauth-manager.php:402
+msgid "Too many requests. Please try again later."
+msgstr ""
+
+#: includes/views/settings/notifications-section.php:60
+msgid "Trigger Events"
+msgstr ""
+
+#: includes/views/settings/security-section.php:75
+msgid "Trusted Proxy IPs"
+msgstr ""
+
+#: includes/views/settings/security-section.php:8
+msgid "Trusted Proxy Mode"
+msgstr ""
+
+#: includes/admin/traits/class-settings-ajax.php:117
+#: includes/admin/traits/class-settings-registration.php:368
+#: includes/admin/traits/class-settings-registration.php:403
+msgid "Unauthorized"
+msgstr ""
+
+#: includes/admin/traits/class-settings-ajax.php:449
+msgid "Unauthorized."
+msgstr ""
+
+#: includes/views/settings/user-profile-oauth-section.php:31
+msgid "Unbind"
+msgstr ""
+
+#: includes/views/settings/user-profile-oauth-section.php:38
+msgid "Unbind OAuth"
+msgstr ""
+
+#: includes/admin/class-github-updater.php:197
+msgid "Unified OAuth 2.0 login for WordPress with 12 built-in providers (GitHub, Google, Apple, Discord, Facebook, GitLab, LinkedIn, Microsoft, QQ, WeChat, WeCom, Weibo), unlimited custom OAuth providers, a security/rate-limit layer, login history, and self-updates via the native WordPress update system. Supports OAuth-only mode, emergency access, debug logging, and trusted proxy IP allowlisting."
+msgstr ""
+
+#: includes/core/class-event-dispatcher.php:90
+msgid "Unknown"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:143
+msgid "Unknown error"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:81
+msgid "Unlimited custom OAuth providers for self-hosted or third-party servers."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:179
+msgid "Update check failed."
+msgstr ""
+
+#: includes/views/settings/about-tab.php:43
+msgid "Update source:"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:27
+msgid "Updates"
+msgstr ""
+
+#: includes/views/settings/data-management-section.php:70
+msgid "Upload & Restore"
+msgstr ""
+
+#: includes/providers/class-microsoft-provider.php:12
+msgid "Use \"common\" for personal + organizational, \"consumers\" for personal only, \"organizations\" for work/school only, or a specific Tenant ID."
+msgstr ""
+
+#: includes/admin/traits/class-settings-ajax.php:268
+#: includes/views/settings/data-management-section.php:40
+msgid "Used codes"
+msgstr ""
+
+#: includes/views/settings/notifications-section.php:85
+msgid "Used for HMAC-SHA256 signature verification. Leave empty to disable signing."
+msgstr ""
+
+#: includes/views/settings/general-section.php:21
+msgid "Used for emergency password login when all OAuth providers are down. Access via:"
+msgstr ""
+
+#: includes/core/class-event-dispatcher.php:71
+#: includes/core/class-event-dispatcher.php:98
+#: includes/views/settings/dashboard-tab.php:45
+msgid "User"
+msgstr ""
+
+#: includes/providers/class-custom-provider.php:54
+msgid "User Info URL"
+msgstr ""
+
+#: includes/views/settings/settings-page.php:171
+msgid "User OAuth bindings"
+msgstr ""
+
+#: includes/views/emergency-page.php:126
+msgid "Verify"
+msgstr ""
+
+#: includes/views/settings/debug-log-section.php:36
+msgid "View Debug Log"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:172
+#: includes/views/settings/settings-page.php:247
+msgid "View Full Key"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:264
+#: includes/admin/class-settings-page.php:272
+msgid "WP-OmniAuth"
+msgstr ""
+
+#: includes/views/settings/settings-page.php:11
+msgid "WP-OmniAuth navigation"
+msgstr ""
+
+#: includes/views/settings/health-check.php:9
+#: includes/views/settings/health-check.php:27
+msgid "WP-OmniAuth:"
+msgstr ""
+
+#: includes/core/class-emergency-access.php:603
+msgid "WP-OmniAuth: Emergency mode active. Password login is temporarily enabled (expires in 15 minutes)."
+msgstr ""
+
+#: includes/views/emergency-page.php:32
+msgid "We could not send the email. Please check your mail configuration or use the manual key below."
+msgstr ""
+
+#: includes/providers/class-wechat-provider.php:8
+msgid "WeChat"
+msgstr ""
+
+#: includes/views/settings/notifications-section.php:51
+msgid "Webhook"
+msgstr ""
+
+#: includes/views/settings/notifications-section.php:82
+msgid "Webhook Secret"
+msgstr ""
+
+#: includes/views/settings/notifications-section.php:54
+msgid "Webhook URL"
+msgstr ""
+
+#: includes/views/emergency-page.php:87
+#: includes/views/emergency-page.php:123
+msgid "Website"
+msgstr ""
+
+#: includes/views/callback-page.php:168
+msgid "Welcome back,"
+msgstr ""
+
+#: includes/views/settings/security-section.php:28
+msgid "X-Forwarded-For (first segment)"
+msgstr ""
+
+#: includes/views/settings/security-section.php:29
+msgid "X-Forwarded-For (last segment)"
+msgstr ""
+
+#: includes/views/settings/security-section.php:30
+msgid "X-Real-IP"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:176
+msgid "You are running the latest version."
+msgstr ""
+
+#: includes/admin/traits/class-settings-views.php:460
+msgid "You do not have permission to edit this user."
+msgstr ""
+
+#: includes/core/class-oauth-manager.php:761
+msgid "You must be an administrator to perform this action."
+msgstr ""
+
+#: includes/providers/class-authentik-provider.php:11
+msgid "Your Authentik instance URL (no trailing slash)."
+msgstr ""
+
+#: includes/views/settings/provider-detail-view.php:85
+msgid "Your account is linked to this provider via its stable ID (not email)."
+msgstr ""
+
+#: includes/core/class-oauth-manager.php:810
+msgid "Your login session expired during binding. Please log in and try again."
+msgstr ""
+
+#: includes/core/class-emergency-access.php:184
+#: includes/core/class-emergency-access.php:623
+msgid "[%s] Emergency login link"
+msgstr ""
+
+#: includes/views/settings/security-section.php:121
+msgid "authorization requests per minute per provider (0 = disabled). Protects a single OAuth app from being overwhelmed."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:159
+#: includes/views/settings/settings-page.php:203
+msgid "e.g. My GitLab"
+msgstr ""
+
+#: includes/views/settings/security-section.php:86
+msgid "failed attempts before auto-banning an IP (0 = disabled)"
+msgstr ""
+
+#: includes/views/settings/security-section.php:100
+msgid "hours an IP stays banned after auto-ban (time-limited, so a shared/NAT IP is not locked out forever). Manual blacklist entries remain permanent."
+msgstr ""
+
+#: includes/views/settings/security-section.php:93
+msgid "hours to look back for failures"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:180
+msgid "latest"
+msgstr ""
+
+#: includes/views/settings/security-section.php:128
+msgid "login attempts per minute per OAuth account/email (0 = disabled). Throttles a single looping or compromised account without permanently locking out legitimate users."
+msgstr ""
+
+#: includes/views/settings/debug-log-section.php:25
+msgid "or enable \"Show hidden files\" in your file manager to see it."
+msgstr ""
+
+#: includes/views/settings/security-section.php:107
+msgid "requests per minute per IP (0 = disabled)"
+msgstr ""
+
+#: includes/views/settings/security-section.php:114
+msgid "total requests per minute across all IPs (0 = disabled)"
+msgstr ""
+
+#: includes/views/callback-page.php:166
+msgid "你的账号已成功绑定到 %s"
+msgstr ""
+
+#: includes/providers/class-weibo-provider.php:7
+msgid "微博"
+msgstr ""
+
+#: includes/views/callback-page.php:159
+msgid "绑定成功"
+msgstr ""
+
+#: includes/views/settings/provider-detail-view.php:24
+msgid "配置指导，请访问 <a href=\"%s\" target=\"_blank\">我们的设置指南</a>。"
+msgstr ""
+

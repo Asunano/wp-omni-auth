@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+    bootstrap="tests/bootstrap.php"
+    colors="true"
+    failOnWarning="false"
+    cacheResultFile=".phpunit.result.cache"
+>
+    <testsuites>
+        <testsuite name="WP-OmniAuth">
+            <file>tests/Test_Sanitizers.php</file>
+            <file>tests/Test_Security.php</file>
+            <file>tests/Test_OAuth_Callback.php</file>
+            <file>tests/Test_Login_Guard.php</file>
+            <file>tests/Test_Login_Buttons.php</file>
+            <file>tests/Test_Custom_Provider.php</file>
+            <file>tests/Test_Event_Dispatcher.php</file>
+            <file>tests/Test_Emergency_Access.php</file>
+            <file>tests/Test_Logger.php</file>
+            <file>tests/Test_Login_Log.php</file>
+            <file>tests/Test_Provider_Checker.php</file>
+        </testsuite>
+    </testsuites>
+    <coverage>
+        <include>
+            <directory suffix=".php">includes</directory>
+            <file>wp-omni-auth.php</file>
+        </include>
+    </coverage>
+</phpunit>
