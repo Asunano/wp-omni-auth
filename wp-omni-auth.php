@@ -36,7 +36,7 @@ if (isset($_SERVER['HTTP_X_FORWARDED_SSL']) && $_SERVER['HTTP_X_FORWARDED_SSL'] 
     $_SERVER['HTTPS'] = 'on';
 }
 
-define('WPOMNIAUTH_VERSION', '0.1.0');
+define('WPOMNIAUTH_VERSION', '0.1.1');
 define('WPOMNIAUTH_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('WPOMNIAUTH_PLUGIN_URL', plugin_dir_url(__FILE__));
 
