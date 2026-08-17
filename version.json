@@ -5,5 +5,5 @@
   "requires": "6.0",
   "tested": "",
   "requires_php": "7.4",
-  "changelog": "## 0.1.1\n\n- **Fix:** 后台个人资料保存报 “The link you followed has expired”（解绑 OAuth 嵌套表单重复输出 _wpnonce，与 WP 原生 update-user nonce 冲突）。\n- **Fix:** GitHub 更新器 changelog 渲染的存储型 XSS（改用 esc_html/esc_url）。\n- **Fix:** “重置全部数据” 残留 wpomni_{slug}_id 用户元数据。\n- **Fix:** 应急模式密码登录绕过未校验 IP 绑定（窗口内任意 IP 可走密码登录）。\n- **Fix:** OAuth 登录后保留 redirect_to，不再一律跳转到后台首页。\n- **Docs:** 删除 README 中 “自动注册” 的虚假说明。"
+  "changelog": ""
 }
