@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP-OmniAuth 0.1.0\n"
 "Report-Msgid-Bugs-To: https://github.com/Asunano/wp-omni-auth\n"
-"POT-Creation-Date: 2026-07-19 17:58+0000\n"
+"POT-Creation-Date: 2026-08-17 10:21+0000\n"
 "PO-Revision-Date: 2026-07-07 15:00+0000\n"
 "Last-Translator: WP-OmniAuth\n"
 "Language-Team: Chinese (Simplified)\n"
@@ -12,15 +12,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: includes/core/class-emergency-access.php:380
+#: includes/core/class-emergency-access.php:386
 msgid "%1$d %2$s %3$d ="
 msgstr "%1$d %2$s %3$d ="
 
-#: includes/admin/traits/class-settings-ajax.php:503
+#: includes/admin/traits/class-settings-ajax.php:505
 msgid "%d login log entries"
 msgstr "登录日志"
 
-#: includes/admin/traits/class-settings-ajax.php:493
+#: includes/admin/traits/class-settings-ajax.php:495
 msgid "%d user bindings"
 msgstr "用户 OAuth 绑定"
 
@@ -28,8 +28,8 @@ msgstr "用户 OAuth 绑定"
 msgid "%s ago"
 msgstr "%s 前"
 
-#: includes/views/emergency-page.php:131
 #: includes/views/oauth-login-screen.php:28
+#: includes/views/emergency-page.php:131
 msgid "&larr; Back to %s"
 msgstr "← 返回 %s"
 
@@ -40,6 +40,10 @@ msgstr "（日志为空）"
 #: includes/providers/class-apple-provider.php:12
 msgid "10-character Team ID from Membership details."
 msgstr "来自会员详情的 10 位团队 ID。"
+
+#: includes/views/settings/about-tab.php:43
+msgid "11 个内置提供商（Apple、GitHub、Google、微信、QQ、钉钉、飞书等）"
+msgstr ""
 
 #: includes/views/settings/provider-list-view.php:10
 msgid ""
@@ -60,10 +64,10 @@ msgstr "关于"
 msgid "Access Denied"
 msgstr "访问被拒绝"
 
-#: includes/core/class-event-dispatcher.php:123
-#: includes/core/class-event-dispatcher.php:124
 #: includes/views/settings/notifications-section.php:34
 #: includes/views/settings/notifications-section.php:67
+#: includes/core/class-event-dispatcher.php:123
+#: includes/core/class-event-dispatcher.php:124
 msgid "Access denied"
 msgstr "访问被拒绝"
 
@@ -72,7 +76,7 @@ msgid "Access denied. This account is not authorized."
 msgstr "访问被拒绝，此账户未获授权。"
 
 #: includes/core/class-oauth-manager.php:394
-#: includes/core/class-oauth-manager.php:709
+#: includes/core/class-oauth-manager.php:716
 msgid "Access denied. Your IP address has been blocked."
 msgstr "访问被拒绝，你的 IP 地址已被封禁。"
 
@@ -88,15 +92,15 @@ msgstr "活跃提供商"
 msgid "Active rate limit counters"
 msgstr "当前活跃的速率限制计数器"
 
-#: includes/admin/class-settings-page.php:161
 #: includes/views/settings/settings-page.php:207
+#: includes/admin/class-settings-page.php:161
 msgid "Add"
 msgstr "添加"
 
-#: includes/admin/class-settings-page.php:157
 #: includes/views/settings/provider-list-view.php:22
 #: includes/views/settings/provider-list-view.php:24
 #: includes/views/settings/settings-page.php:199
+#: includes/admin/class-settings-page.php:157
 msgid "Add Custom Provider"
 msgstr "添加自定义提供商"
 
@@ -108,18 +112,18 @@ msgstr "添加时间"
 msgid "Admin"
 msgstr "管理员"
 
-#: includes/views/settings/user-profile-oauth-section.php:40
+#: includes/views/settings/user-profile-oauth-section.php:59
 msgid ""
 "After unbinding, the user must log in via OAuth again to re-establish the "
 "binding."
 msgstr "解除绑定后，用户需要通过 OAuth 重新登录以建立新的绑定。"
 
+#: includes/core/class-emergency-access.php:655
 #: includes/core/class-event-dispatcher.php:166
-#: includes/core/class-emergency-access.php:622
 msgid "Alert"
 msgstr "告警"
 
-#: includes/admin/traits/class-settings-ajax.php:332
+#: includes/admin/traits/class-settings-ajax.php:334
 msgid "All data has been reset to defaults."
 msgstr "所有数据已重置为默认值。"
 
@@ -139,7 +143,7 @@ msgstr "允许登录的用户"
 msgid "Already configured — leave empty to keep current"
 msgstr "已配置 — 留空保持不变"
 
-#: includes/core/class-emergency-access.php:624
+#: includes/core/class-emergency-access.php:657
 msgid "An emergency login link was requested for %s."
 msgstr "已为 %s 请求了紧急登录链接。"
 
@@ -147,8 +151,8 @@ msgstr "已为 %s 请求了紧急登录链接。"
 msgid "Any WordPress user matched by OAuth email can log in."
 msgstr "任何通过 OAuth 邮箱匹配的 WordPress 用户均可登录。"
 
-#: includes/providers/class-qq-provider.php:12
 #: includes/providers/class-feishu-provider.php:9
+#: includes/providers/class-qq-provider.php:12
 msgid "App ID"
 msgstr "App ID"
 
@@ -161,8 +165,8 @@ msgstr "App ID"
 msgid "App Key (App ID)"
 msgstr "App Key（App ID）"
 
-#: includes/providers/class-feishu-provider.php:10
 #: includes/providers/class-weibo-provider.php:12
+#: includes/providers/class-feishu-provider.php:10
 msgid "App Secret"
 msgstr "App Secret"
 
@@ -201,8 +205,8 @@ msgid ""
 "working immediately."
 msgstr "确定要重新生成紧急密钥吗？旧密钥将立即失效。"
 
-#: includes/admin/class-settings-page.php:164
 #: includes/views/settings/settings-page.php:221
+#: includes/admin/class-settings-page.php:164
 msgid ""
 "Are you sure you want to remove this custom provider? All settings will be "
 "lost."
@@ -212,7 +216,7 @@ msgstr "确定要移除此自定义提供商吗？所有设置将会丢失。"
 msgid "Are you sure you want to remove this provider?"
 msgstr "确定要移除此提供商吗？"
 
-#: includes/views/settings/user-profile-oauth-section.php:37
+#: includes/views/settings/user-profile-oauth-section.php:56
 msgid ""
 "Are you sure you want to unbind this OAuth account? The user will need to re-"
 "authenticate via OAuth."
@@ -289,20 +293,16 @@ msgstr "已绑定"
 msgid "Bound Since"
 msgstr "绑定时间"
 
-#: includes/views/settings/about-tab.php:80
-msgid "Built-in support for GitHub and Google OAuth."
-msgstr "内置 GitHub 和 Google OAuth 支持。"
-
 #: includes/providers/class-custom-provider.php:31
 msgid "Button Color"
 msgstr "按钮颜色"
 
-#: includes/views/settings/about-tab.php:18
+#: includes/views/settings/about-tab.php:19
 msgid "By"
 msgstr "作者"
 
-#: includes/admin/traits/class-settings-ajax.php:255
 #: includes/views/settings/data-management-section.php:30
+#: includes/admin/traits/class-settings-ajax.php:255
 msgid "Caches"
 msgstr "缓存"
 
@@ -310,17 +310,13 @@ msgstr "缓存"
 msgid "Can&rsquo;t sign in? Use emergency access."
 msgstr "无法登录？请使用紧急访问。"
 
-#: includes/admin/class-settings-page.php:160
 #: includes/views/settings/settings-page.php:176
 #: includes/views/settings/settings-page.php:206
 #: includes/views/settings/settings-page.php:225
 #: includes/views/settings/settings-page.php:265
+#: includes/admin/class-settings-page.php:160
 msgid "Cancel"
 msgstr "取消"
-
-#: includes/views/settings/about-tab.php:34
-msgid "Check for Updates"
-msgstr "检查更新"
 
 #: includes/admin/class-settings-page.php:175
 msgid "Checking..."
@@ -362,16 +358,16 @@ msgstr "清除中..."
 msgid "Click here if not redirected"
 msgstr "未跳转请点击这里"
 
-#: includes/admin/class-settings-page.php:168
 #: includes/views/settings/settings-page.php:242
+#: includes/admin/class-settings-page.php:168
 msgid "Click to copy"
 msgstr "点击复制"
 
+#: includes/providers/class-custom-provider.php:17
 #: includes/providers/class-gitee-provider.php:9
 #: includes/providers/class-google-provider.php:15
-#: includes/providers/class-custom-provider.php:17
-#: includes/providers/class-authentik-provider.php:9
 #: includes/providers/class-github-provider.php:15
+#: includes/providers/class-authentik-provider.php:9
 msgid "Client ID"
 msgstr "客户端 ID"
 
@@ -379,17 +375,17 @@ msgstr "客户端 ID"
 msgid "Client IP Source"
 msgstr "客户端 IP 来源"
 
+#: includes/providers/class-custom-provider.php:24
 #: includes/providers/class-microsoft-provider.php:10
 #: includes/providers/class-gitee-provider.php:10
 #: includes/providers/class-google-provider.php:22
-#: includes/providers/class-custom-provider.php:24
-#: includes/providers/class-authentik-provider.php:10
 #: includes/providers/class-github-provider.php:22
+#: includes/providers/class-authentik-provider.php:10
 msgid "Client Secret"
 msgstr "客户端密钥"
 
-#: includes/admin/class-settings-page.php:173
 #: includes/views/settings/settings-page.php:246
+#: includes/admin/class-settings-page.php:173
 msgid "Close"
 msgstr "关闭"
 
@@ -410,13 +406,13 @@ msgstr ""
 "择以保证对比度。此提供商在登录界面上的按钮颜色。留空则使用站点的管理主题色，"
 "文字颜色将根据对比度自动选择。"
 
+#: wp-omni-auth.php:85
+msgid "Configuration Guide"
+msgstr "配置教程"
+
 #: includes/views/settings/provider-card.php:25
 msgid "Configure"
 msgstr "配置"
-
-#: includes/views/settings/about-tab.php:94
-msgid "Configure Providers"
-msgstr "配置提供商"
 
 #: includes/core/class-provider-checker.php:63
 msgid "Configured"
@@ -433,10 +429,6 @@ msgstr "已复制！"
 #: includes/views/settings/settings-page.php:240
 msgid "Current key"
 msgstr "当前密钥"
-
-#: includes/views/settings/about-tab.php:29
-msgid "Current version:"
-msgstr "当前版本："
 
 #: includes/views/settings/security-section.php:43
 msgid "Custom Header Name"
@@ -459,14 +451,14 @@ msgstr "仪表盘"
 msgid "Dashboard stats & GitHub release cache"
 msgstr "仪表盘统计和 GitHub 版本检查缓存"
 
-#: includes/admin/traits/class-settings-views.php:83
-#: includes/admin/traits/class-settings-registration.php:56
 #: includes/views/settings/settings-page.php:147
+#: includes/admin/traits/class-settings-registration.php:56
+#: includes/admin/traits/class-settings-views.php:83
 msgid "Data Management"
 msgstr "数据管理"
 
-#: includes/admin/traits/class-settings-views.php:82
 #: includes/admin/traits/class-settings-registration.php:29
+#: includes/admin/traits/class-settings-views.php:82
 msgid "Debug Log"
 msgstr "调试日志"
 
@@ -483,8 +475,8 @@ msgstr ""
 "调试模式已关闭。请在（通用设置）中启用，并执行一次 OAuth 登录以生成日志文件。"
 "调试模式已关闭。请先在“常规”设置中启用，并执行一次 OAuth 登录以生成日志文件。"
 
-#: includes/admin/traits/class-settings-ajax.php:263
 #: includes/views/settings/data-management-section.php:35
+#: includes/admin/traits/class-settings-ajax.php:263
 msgid "Debug log"
 msgstr "调试日志"
 
@@ -502,10 +494,6 @@ msgid ""
 "plugin action to generate it."
 msgstr "调试日志文件尚未创建。请执行一次 OAuth 登录或任意插件操作以生成它。"
 
-#: includes/views/settings/about-tab.php:82
-msgid "Debug logging with built-in log viewer."
-msgstr "调试日志及内置日志查看器。"
-
 #: includes/views/settings/debug-log-section.php:23
 msgid ""
 "Debug logs are written to the following file (dot-prefixed, not web-"
@@ -516,7 +504,7 @@ msgstr ""
 "录事件后才会出现 —— 使用调试日志将写入以下文件（以点开头，无法通过 Web 访"
 "问）。仅当调试模式开启且发生被记录的事件后才会出现 —— 使用"
 
-#: includes/admin/traits/class-settings-ajax.php:463
+#: includes/admin/traits/class-settings-ajax.php:465
 msgid "Decryption failed. This backup was exported from a different site."
 msgstr "解密失败。此备份文件是从其他站点导出的。"
 
@@ -546,11 +534,6 @@ msgid ""
 "DingTalk Open Platform → App Details → Credentials & Basic Info → AppKey"
 msgstr "钉钉开放平台 → 应用详情 → 凭证与基础信息 → AppKey"
 
-#: includes/views/settings/about-tab.php:50
-#: includes/views/settings/about-tab.php:60
-msgid "Direct (GitHub)"
-msgstr "直连（GitHub）"
-
 #: includes/views/settings/provider-card.php:13
 msgid "Disabled"
 msgstr "已禁用"
@@ -574,9 +557,9 @@ msgstr ""
 msgid "EdgeOne (EO-Connecting-IP)"
 msgstr ""
 
+#: includes/views/emergency-page.php:48 includes/views/emergency-page.php:67
 #: includes/core/class-event-dispatcher.php:74
 #: includes/core/class-event-dispatcher.php:99
-#: includes/views/emergency-page.php:48 includes/views/emergency-page.php:67
 msgid "Email"
 msgstr "邮箱"
 
@@ -604,8 +587,8 @@ msgstr "紧急访问密钥"
 msgid "Emergency Key"
 msgstr "紧急密钥"
 
-#: includes/admin/class-settings-page.php:171
 #: includes/views/settings/settings-page.php:237
+#: includes/admin/class-settings-page.php:171
 msgid "Emergency Key Management"
 msgstr "紧急密钥管理"
 
@@ -617,7 +600,7 @@ msgstr "紧急访问密钥"
 msgid "Emergency key"
 msgstr "紧急密钥"
 
-#: includes/core/class-emergency-access.php:609
+#: includes/core/class-emergency-access.php:642
 msgid "Emergency mode activated. Password login is available for 15 minutes."
 msgstr "紧急模式已激活。密码登录将在 15 分钟内可用。"
 
@@ -645,8 +628,8 @@ msgstr ""
 "仅当您的站点位于 Cloudflare、CDN 或反向代理之后时启用。直连时请保持关闭。仅在"
 "站点位于 Cloudflare、CDN 或反向代理后面时启用。直连站点请保持禁用。"
 
-#: includes/admin/traits/class-settings-views.php:233
 #: includes/views/settings/provider-card.php:13
+#: includes/admin/traits/class-settings-views.php:233
 msgid "Enabled"
 msgstr "已启用"
 
@@ -723,10 +706,6 @@ msgstr "失败："
 msgid "Failures (Week)"
 msgstr "失败次数（本周）"
 
-#: includes/views/settings/about-tab.php:77
-msgid "Features"
-msgstr "功能特性"
-
 #: includes/providers/class-feishu-provider.php:5
 msgid "Feishu"
 msgstr "飞书"
@@ -739,7 +718,7 @@ msgstr "飞书开放平台 → 应用详情 → 凭证与基础信息 → App ID
 msgid "File exists"
 msgstr "文件已存在"
 
-#: includes/admin/traits/class-settings-ajax.php:453
+#: includes/admin/traits/class-settings-ajax.php:455
 msgid "File upload failed."
 msgstr "文件上传失败。"
 
@@ -757,7 +736,7 @@ msgstr ""
 msgid "Full Reset"
 msgstr "完全重置"
 
-#: includes/admin/traits/class-settings-ajax.php:385
+#: includes/admin/traits/class-settings-ajax.php:387
 msgid "Full plugin data export"
 msgstr "完整插件数据导出"
 
@@ -777,9 +756,9 @@ msgstr "生成中..."
 msgid "GitHub"
 msgstr ""
 
-#: includes/views/settings/about-tab.php:91
-msgid "GitHub Repository"
-msgstr "GitHub 仓库"
+#: includes/views/settings/about-tab.php:25
+msgid "GitHub 仓库"
+msgstr ""
 
 #: includes/providers/class-gitee-provider.php:5
 msgid "Gitee"
@@ -792,6 +771,10 @@ msgstr "前往插件页面"
 #: includes/providers/class-google-provider.php:8
 msgid "Google"
 msgstr ""
+
+#: wp-omni-auth.php:66
+msgid "Guide"
+msgstr "教程"
 
 #: includes/views/settings/security-section.php:46
 msgid ""
@@ -807,24 +790,15 @@ msgstr "隐藏 IP"
 msgid "Hide username/password login form (show only OAuth buttons)"
 msgstr "隐藏用户名/密码登录表单（仅显示 OAuth 按钮）"
 
-#: includes/views/settings/about-tab.php:39
-msgid ""
-"Hooks into WordPress's native update system — update notifications appear on "
-"the standard Plugins → Installed Plugins page. Version metadata is served "
-"via version.json on GitHub, no API key required."
-msgstr ""
-"集成 WordPress 原生更新系统——更新通知将显示在标准的「插件 → 已安装插件」页"
-"面。版本元数据通过 GitHub 上的 version.json 分发，无需 API 密钥。"
-
 #: includes/views/emergency-page.php:71 includes/views/emergency-page.php:107
 msgid "Human verification code"
 msgstr "人机验证验证码"
 
+#: includes/views/settings/dashboard-tab.php:47
+#: includes/views/settings/security-section.php:141
 #: includes/core/class-event-dispatcher.php:76
 #: includes/core/class-event-dispatcher.php:102
 #: includes/core/class-event-dispatcher.php:138
-#: includes/views/settings/dashboard-tab.php:47
-#: includes/views/settings/security-section.php:141
 msgid "IP"
 msgstr "IP"
 
@@ -836,8 +810,8 @@ msgstr "IP 黑名单"
 msgid "IP Blocked"
 msgstr "IP 已被限制"
 
-#: includes/admin/traits/class-settings-ajax.php:240
 #: includes/views/settings/data-management-section.php:20
+#: includes/admin/traits/class-settings-ajax.php:240
 msgid "IP blacklist"
 msgstr "IP 黑名单"
 
@@ -858,7 +832,7 @@ msgstr "图标"
 msgid "If that email is authorized, a one-time login link has been sent."
 msgstr "若该邮箱已授权，一次性登录链接已发送。"
 
-#: includes/core/class-emergency-access.php:627
+#: includes/core/class-emergency-access.php:660
 msgid "If you did not request this, you can safely ignore this email."
 msgstr "如果您未请求此邮件，请放心忽略。"
 
@@ -887,9 +861,9 @@ msgid "International (larksuite.com)"
 msgstr "国际版（larksuite.com）"
 
 #: includes/core/class-oauth-manager.php:414
-#: includes/core/class-oauth-manager.php:727
-#: includes/core/class-oauth-manager.php:736
-#: includes/core/class-oauth-manager.php:776
+#: includes/core/class-oauth-manager.php:734
+#: includes/core/class-oauth-manager.php:755
+#: includes/core/class-oauth-manager.php:795
 msgid "Invalid OAuth provider."
 msgstr "无效的 OAuth 提供商。"
 
@@ -901,15 +875,15 @@ msgstr "无效的 OAuth 响应。"
 msgid "Invalid URL format."
 msgstr "无效的 URL 格式。"
 
-#: includes/admin/traits/class-settings-ajax.php:471
+#: includes/admin/traits/class-settings-ajax.php:473
 msgid "Invalid backup file."
 msgstr "无效的备份文件。"
 
-#: includes/core/class-oauth-manager.php:767
+#: includes/core/class-oauth-manager.php:786
 msgid "Invalid or disabled OAuth provider."
 msgstr "无效的 OAuth 提供商。"
 
-#: includes/admin/traits/class-settings-views.php:451
+#: includes/admin/traits/class-settings-views.php:453
 msgid "Invalid user."
 msgstr "无效的用户。"
 
@@ -925,8 +899,8 @@ msgstr "密钥 ID"
 msgid "Key ID of the \"Sign in with Apple\" key."
 msgstr "“通过 Apple 登录”密钥的密钥 ID。"
 
-#: includes/admin/class-settings-page.php:170
 #: includes/views/settings/general-section.php:26
+#: includes/admin/class-settings-page.php:170
 msgid "Key Management"
 msgstr "密钥管理"
 
@@ -937,10 +911,6 @@ msgstr "密钥已重新生成"
 #: includes/views/settings/security-section.php:54
 msgid "Last (rightmost) — trusted edge appended it"
 msgstr ""
-
-#: includes/views/settings/about-tab.php:88
-msgid "Links"
-msgstr "链接"
 
 #: includes/admin/class-settings-page.php:147
 msgid "Loading..."
@@ -954,7 +924,7 @@ msgstr "日志已清除"
 msgid "Log file not created yet"
 msgstr "日志文件尚未创建"
 
-#: includes/core/class-emergency-access.php:626
+#: includes/core/class-emergency-access.php:659
 msgid "Log in now"
 msgstr "立即登录"
 
@@ -966,14 +936,14 @@ msgstr "日志为空"
 msgid "Log loaded (%s lines)"
 msgstr "日志已加载（%s 行）"
 
-#: includes/core/class-oauth-manager.php:669
+#: includes/core/class-oauth-manager.php:676
 #: includes/core/class-event-dispatcher.php:117
 #: includes/core/class-event-dispatcher.php:126
 msgid "Login Failed"
 msgstr "登录失败"
 
-#: includes/core/class-oauth-manager.php:668
 #: includes/views/callback-page.php:159
+#: includes/core/class-oauth-manager.php:675
 msgid "Login Successful"
 msgstr "登录成功"
 
@@ -995,8 +965,8 @@ msgstr "登录历史日志"
 msgid "Login history table not yet created."
 msgstr "登录历史表尚未创建。"
 
-#: includes/admin/traits/class-settings-ajax.php:234
 #: includes/views/settings/data-management-section.php:15
+#: includes/admin/traits/class-settings-ajax.php:234
 msgid "Login logs"
 msgstr "登录日志"
 
@@ -1009,7 +979,7 @@ msgstr "登录成功"
 msgid "Login successful"
 msgstr "登录成功"
 
-#: includes/core/class-login-buttons.php:82
+#: includes/core/class-login-buttons.php:95
 msgid "Login with %s"
 msgstr "使用 %s 登录"
 
@@ -1029,19 +999,9 @@ msgstr "手动添加"
 msgid "Microsoft"
 msgstr ""
 
-#: includes/views/settings/about-tab.php:49
-#: includes/views/settings/about-tab.php:64
-msgid "Mirror (gh-proxy.org)"
-msgstr "镜像源（gh-proxy.org）"
-
 #: includes/admin/traits/class-settings-views.php:351
 msgid "Missing: "
 msgstr "缺失："
-
-#: includes/views/settings/about-tab.php:79
-msgid ""
-"Modular OAuth provider system — add new providers by dropping a single file."
-msgstr "模块化 OAuth 提供商系统 — 只需添加一个文件即可支持新的提供商。"
 
 #: includes/admin/class-settings-page.php:152
 msgid "Network error"
@@ -1067,8 +1027,8 @@ msgstr "未配置任何 OAuth 提供商。"
 msgid "No categories selected."
 msgstr "未选择任何类别。"
 
-#: includes/admin/class-settings-page.php:270
 #: includes/views/settings/health-check.php:28
+#: includes/admin/class-settings-page.php:270
 msgid ""
 "No emergency access key is set. If all OAuth providers go down, you will be "
 "locked out. Generate a key in the settings page."
@@ -1097,9 +1057,9 @@ msgstr "尚未配置任何提供商。"
 msgid "No user identity found in OAuth response."
 msgstr "OAuth 响应中未找到邮箱。"
 
+#: includes/views/settings/provider-card.php:16
 #: includes/core/class-provider-checker.php:64
 #: includes/admin/traits/class-settings-views.php:236
-#: includes/views/settings/provider-card.php:16
 msgid "Not configured"
 msgstr "未配置"
 
@@ -1115,25 +1075,14 @@ msgstr "没有可清除的内容。"
 msgid "Notification Email"
 msgstr "通知邮箱"
 
-#: includes/admin/traits/class-settings-views.php:81
 #: includes/admin/traits/class-settings-registration.php:47
+#: includes/admin/traits/class-settings-views.php:81
 msgid "Notifications"
 msgstr "通知"
 
 #: includes/views/settings/notifications-section.php:26
 msgid "Notify On"
 msgstr "通知条件"
-
-#: includes/views/settings/about-tab.php:14
-msgid ""
-"OAuth 2.0 login for WordPress with GitHub, Google, and unlimited custom "
-"providers. Supports OAuth-only mode, a security/rate-limit layer, login "
-"history, and self-updates via GitHub (with an optional mirror source for "
-"mainland China)."
-msgstr ""
-"为 WordPress 提供 OAuth 2.0 登录，支持 GitHub、Google 及无限自定义提供商。支"
-"持仅 OAuth 模式、安全与限流层、登录历史记录，以及通过 GitHub 自更新（可选中国"
-"大陆镜像源）。"
 
 #: includes/views/settings/user-profile-oauth-section.php:6
 msgid "OAuth Binding"
@@ -1143,8 +1092,8 @@ msgstr "OAuth 绑定"
 msgid "OAuth Email"
 msgstr "OAuth 邮箱"
 
-#: includes/core/class-event-dispatcher.php:73
 #: includes/views/settings/user-profile-oauth-section.php:14
+#: includes/core/class-event-dispatcher.php:73
 msgid "OAuth ID"
 msgstr "OAuth ID"
 
@@ -1178,6 +1127,10 @@ msgstr "OAuth 登录历史记录"
 msgid "OAuth-Only Mode"
 msgstr "仅 OAuth 模式"
 
+#: includes/views/settings/about-tab.php:45
+msgid "OAuth-Only 模式：隐藏密码登录，适合纯 SSO 场景"
+msgstr ""
+
 #: includes/views/settings/health-check.php:14
 msgid ""
 "OAuth-only mode is enabled, but no OAuth providers are configured. Users "
@@ -1193,10 +1146,6 @@ msgid ""
 msgstr ""
 "已启用仅 OAuth 模式，但尚未配置任何 OAuth 提供商。用户<strong>无法登录</"
 "strong>。<a href=\"%s\">配置提供商</a>。"
-
-#: includes/views/settings/about-tab.php:83
-msgid "OAuth-only mode to disable password login."
-msgstr "仅 OAuth 模式，可禁用密码登录。"
 
 #: includes/views/settings/security-section.php:134
 msgid "One IP or CIDR per line (e.g. 1.2.3.4 or 5.6.7.0/24)"
@@ -1218,7 +1167,7 @@ msgid "Or use your emergency key"
 msgstr "或使用紧急密钥"
 
 #: includes/core/class-oauth-manager.php:368
-#: includes/core/class-login-guard.php:159
+#: includes/core/class-login-guard.php:163
 msgid "Password login is disabled. Please use OAuth to log in."
 msgstr "密码登录已禁用。请使用 OAuth 登录。"
 
@@ -1256,11 +1205,11 @@ msgstr "预览："
 msgid "Private Key (.p8)"
 msgstr "私钥 (.p8)"
 
+#: includes/views/settings/user-profile-oauth-section.php:9
+#: includes/views/settings/dashboard-tab.php:46
 #: includes/core/class-event-dispatcher.php:72
 #: includes/core/class-event-dispatcher.php:100
 #: includes/core/class-event-dispatcher.php:136
-#: includes/views/settings/dashboard-tab.php:46
-#: includes/views/settings/user-profile-oauth-section.php:9
 msgid "Provider"
 msgstr "提供商"
 
@@ -1268,9 +1217,9 @@ msgstr "提供商"
 msgid "Provider Bound"
 msgstr "提供商已绑定"
 
-#: includes/admin/class-settings-page.php:158
-#: includes/views/settings/settings-page.php:202
 #: includes/views/settings/provider-detail-view.php:33
+#: includes/views/settings/settings-page.php:202
+#: includes/admin/class-settings-page.php:158
 msgid "Provider Name"
 msgstr "提供商名称"
 
@@ -1307,8 +1256,8 @@ msgstr "频率限制（单身份）"
 msgid "Rate Limit (per provider)"
 msgstr "频率限制（单提供商）"
 
-#: includes/admin/traits/class-settings-ajax.php:247
 #: includes/views/settings/data-management-section.php:25
+#: includes/admin/traits/class-settings-ajax.php:247
 msgid "Rate limits"
 msgstr "速率限制"
 
@@ -1320,8 +1269,8 @@ msgstr "重新测试并绑定"
 msgid "Read client IP from proxy headers (Cloudflare, X-Forwarded-For)"
 msgstr "从代理头读取客户端 IP（Cloudflare、X-Forwarded-For）"
 
-#: includes/core/class-event-dispatcher.php:139
 #: includes/views/settings/security-section.php:142
+#: includes/core/class-event-dispatcher.php:139
 msgid "Reason"
 msgstr "原因"
 
@@ -1357,14 +1306,14 @@ msgstr "重新生成密钥"
 msgid "Region"
 msgstr "地区"
 
-#: includes/admin/class-settings-page.php:162
 #: includes/views/settings/provider-card.php:22
 #: includes/views/settings/settings-page.php:226
+#: includes/admin/class-settings-page.php:162
 msgid "Remove"
 msgstr "移除"
 
-#: includes/admin/class-settings-page.php:163
 #: includes/views/settings/settings-page.php:218
+#: includes/admin/class-settings-page.php:163
 msgid "Remove Provider"
 msgstr "移除提供商"
 
@@ -1388,24 +1337,13 @@ msgstr "重置中..."
 msgid "Restore from file:"
 msgstr "从文件恢复："
 
-#: includes/admin/traits/class-settings-ajax.php:511
+#: includes/admin/traits/class-settings-ajax.php:513
 msgid "Restored: %s"
 msgstr "已清除：%s"
 
 #: includes/views/callback-page.php:186
 msgid "Return to login"
 msgstr "返回登录"
-
-#: includes/views/settings/about-tab.php:71
-msgid ""
-"Route both update checks and downloads through a GitHub mirror (gh-proxy."
-"org) to avoid connectivity issues in mainland China. When enabled, the proxy "
-"prefix is added to the version.json URL and the update package URL."
-msgstr ""
-"通过 GitHub 镜像（gh-proxy.org）进行更新检查与下载，以避免中国大陆的网络连接"
-"问题。启用后，代理前缀将添加到 version.json URL 与更新包 URL。将更新检查和下"
-"载都通过 GitHub 镜像（gh-proxy.org）进行，以避免中国大陆的网络连接问题。启用"
-"后，代理前缀会同时加在 version.json 地址和更新包下载地址上。"
 
 #: includes/views/settings/provider-detail-view.php:73
 msgid "Save Changes"
@@ -1423,12 +1361,12 @@ msgstr "已保存"
 msgid "Saving..."
 msgstr "保存中…"
 
+#: includes/providers/class-custom-provider.php:69
 #: includes/providers/class-microsoft-provider.php:13
 #: includes/providers/class-gitee-provider.php:11
 #: includes/providers/class-google-provider.php:29
-#: includes/providers/class-custom-provider.php:69
-#: includes/providers/class-authentik-provider.php:12
 #: includes/providers/class-github-provider.php:29
+#: includes/providers/class-authentik-provider.php:12
 msgid "Scope"
 msgstr "作用域 (Scope)"
 
@@ -1499,17 +1437,9 @@ msgstr "服务 ID"
 msgid "Service temporarily unavailable."
 msgstr "服务暂时不可用。"
 
-#: includes/views/settings/settings-page.php:19
+#: wp-omni-auth.php:64 includes/views/settings/settings-page.php:19
 msgid "Settings"
 msgstr "设置"
-
-#: wp-omni-auth.php:62
-msgid "Guide"
-msgstr "教程"
-
-#: wp-omni-auth.php:62
-msgid "Configuration Guide"
-msgstr "配置教程"
 
 #: includes/views/settings/settings-page.php:32
 msgid "Settings saved."
@@ -1563,7 +1493,7 @@ msgstr "测试连接并绑定"
 msgid "The key in the token response that contains the access token."
 msgstr "令牌响应中包含访问令牌的键名。"
 
-#: includes/core/class-oauth-manager.php:818
+#: includes/core/class-oauth-manager.php:837
 msgid "The provider did not return a stable user ID, so it cannot be bound."
 msgstr "提供商未返回稳定用户 ID，无法完成绑定。"
 
@@ -1575,7 +1505,7 @@ msgstr "本周"
 msgid "This action cannot be undone!"
 msgstr "此操作不可撤销！"
 
-#: includes/core/class-emergency-access.php:625
+#: includes/core/class-emergency-access.php:658
 msgid ""
 "This link is valid for 15 minutes and only works from the IP that requested "
 "it (%s). Do not share it."
@@ -1591,10 +1521,10 @@ msgstr "此登录链接无效或已过期（IP 不符或超时）。请重新获
 msgid "This will delete ALL plugin data including:"
 msgstr "这将删除所有插件数据，包括："
 
+#: includes/views/settings/dashboard-tab.php:44
 #: includes/core/class-event-dispatcher.php:75
 #: includes/core/class-event-dispatcher.php:101
 #: includes/core/class-event-dispatcher.php:137
-#: includes/views/settings/dashboard-tab.php:44
 msgid "Time"
 msgstr "时间"
 
@@ -1619,7 +1549,7 @@ msgid "Token in Header"
 msgstr "令牌在 Header 中"
 
 #: includes/core/class-oauth-manager.php:526
-#: includes/core/class-oauth-manager.php:717
+#: includes/core/class-oauth-manager.php:724
 msgid "Too many login attempts. Please try again later."
 msgstr "请求过于频繁，请稍后再试。"
 
@@ -1639,23 +1569,19 @@ msgstr "受信代理 IP"
 msgid "Trusted Proxy Mode"
 msgstr "可信代理模式"
 
-#: includes/admin/traits/class-settings-ajax.php:117
 #: includes/admin/traits/class-settings-registration.php:368
 #: includes/admin/traits/class-settings-registration.php:403
+#: includes/admin/traits/class-settings-ajax.php:117
 msgid "Unauthorized"
 msgstr "未授权"
 
-#: includes/admin/traits/class-settings-ajax.php:449
+#: includes/admin/traits/class-settings-ajax.php:451
 msgid "Unauthorized."
 msgstr "未授权。"
 
 #: includes/views/settings/user-profile-oauth-section.php:31
 msgid "Unbind"
 msgstr "解除绑定"
-
-#: includes/views/settings/user-profile-oauth-section.php:38
-msgid "Unbind OAuth"
-msgstr "解除 OAuth 绑定"
 
 #: includes/admin/class-github-updater.php:197
 msgid ""
@@ -1675,22 +1601,9 @@ msgstr "未知错误"
 msgid "Unknown error"
 msgstr "未知错误"
 
-#: includes/views/settings/about-tab.php:81
-msgid ""
-"Unlimited custom OAuth providers for self-hosted or third-party servers."
-msgstr "支持无限自定义 OAuth 提供商（自建或第三方服务器）。"
-
 #: includes/admin/class-settings-page.php:179
 msgid "Update check failed."
 msgstr "更新检查失败。"
-
-#: includes/views/settings/about-tab.php:43
-msgid "Update source:"
-msgstr "更新源："
-
-#: includes/views/settings/about-tab.php:27
-msgid "Updates"
-msgstr "更新"
 
 #: includes/views/settings/data-management-section.php:70
 msgid "Upload & Restore"
@@ -1705,8 +1618,8 @@ msgstr ""
 "或使用特定的租户 ID。使用“common”表示个人+组织账号，“consumers”仅个"
 "人，“organizations”仅工作或学校账号，或填写具体的租户 ID。"
 
-#: includes/admin/traits/class-settings-ajax.php:268
 #: includes/views/settings/data-management-section.php:40
+#: includes/admin/traits/class-settings-ajax.php:268
 msgid "Used codes"
 msgstr "已用验证码"
 
@@ -1721,9 +1634,9 @@ msgid ""
 "via:"
 msgstr "当所有 OAuth 提供商不可用时用于紧急密码登录。访问地址："
 
+#: includes/views/settings/dashboard-tab.php:45
 #: includes/core/class-event-dispatcher.php:71
 #: includes/core/class-event-dispatcher.php:98
-#: includes/views/settings/dashboard-tab.php:45
 msgid "User"
 msgstr "用户"
 
@@ -1743,8 +1656,8 @@ msgstr "验证"
 msgid "View Debug Log"
 msgstr "查看调试日志"
 
-#: includes/admin/class-settings-page.php:172
 #: includes/views/settings/settings-page.php:247
+#: includes/admin/class-settings-page.php:172
 msgid "View Full Key"
 msgstr "查看完整密钥"
 
@@ -1757,12 +1670,20 @@ msgstr "WP-OmniAuth 设置"
 msgid "WP-OmniAuth navigation"
 msgstr "WP-OmniAuth 导航"
 
+#: includes/views/settings/about-tab.php:16
+msgid ""
+"WP-OmniAuth 是一个轻量级 WordPress 插件，为你的站点添加 OAuth 2.0 登录能力。"
+"支持 GitHub、Google、微信等 11 个主流平台一键登录，也支持通过后台配置接入任"
+"意 OAuth 2.0 服务商。无需 Composer、无构建步骤，标准「拖入即用」的 WordPress "
+"插件。"
+msgstr ""
+
 #: includes/views/settings/health-check.php:9
 #: includes/views/settings/health-check.php:27
 msgid "WP-OmniAuth:"
 msgstr "WP-OmniAuth 设置"
 
-#: includes/core/class-emergency-access.php:603
+#: includes/core/class-emergency-access.php:636
 msgid ""
 "WP-OmniAuth: Emergency mode active. Password login is temporarily enabled "
 "(expires in 15 minutes)."
@@ -1814,11 +1735,11 @@ msgstr ""
 msgid "You are running the latest version."
 msgstr "你已运行最新版本。"
 
-#: includes/admin/traits/class-settings-views.php:460
+#: includes/admin/traits/class-settings-views.php:462
 msgid "You do not have permission to edit this user."
 msgstr "你没有编辑此用户的权限。"
 
-#: includes/core/class-oauth-manager.php:761
+#: includes/core/class-oauth-manager.php:780
 msgid "You must be an administrator to perform this action."
 msgstr "您需要管理员权限才能执行此操作。"
 
@@ -1830,12 +1751,12 @@ msgstr "你的 Authentik 实例地址（结尾不要斜杠）。"
 msgid "Your account is linked to this provider via its stable ID (not email)."
 msgstr "您的账户已通过稳定 ID 与此提供商绑定（非邮箱）。"
 
-#: includes/core/class-oauth-manager.php:810
+#: includes/core/class-oauth-manager.php:829
 msgid "Your login session expired during binding. Please log in and try again."
 msgstr "绑定过程中登录会话已过期，请重新登录后重试。"
 
 #: includes/core/class-emergency-access.php:184
-#: includes/core/class-emergency-access.php:623
+#: includes/core/class-emergency-access.php:656
 msgid "[%s] Emergency login link"
 msgstr "[%s] 紧急登录链接"
 
@@ -1846,8 +1767,8 @@ msgid ""
 msgstr ""
 "每分钟每个提供商的授权请求数（0 = 禁用）。防止单个 OAuth 应用被请求压垮。"
 
-#: includes/admin/class-settings-page.php:159
 #: includes/views/settings/settings-page.php:203
+#: includes/admin/class-settings-page.php:159
 msgid "e.g. My GitLab"
 msgstr "例如 My GitLab"
 
@@ -1896,17 +1817,150 @@ msgstr "次/分钟/所有 IP 总计（0 = 禁用）"
 msgid "你的账号已成功绑定到 %s"
 msgstr ""
 
+#: includes/views/settings/about-tab.php:41
+msgid "功能特性"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:14
+msgid "如果这个项目对你有帮助，请给它一个 Star！"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:46
+msgid "安全防护：CSRF state 防护 + 限流 + IP 黑名单 + 日志脱敏"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:47
+msgid "应急访问：两步式入口，被锁门外也能恢复密码登录"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:84
+msgid "当前版本:"
+msgstr ""
+
 #: includes/providers/class-weibo-provider.php:7
 msgid "微博"
 msgstr ""
+
+#: includes/views/settings/about-tab.php:56
+msgid "更新源:"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:53
+msgid "更新设置"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:87
+msgid "检查更新"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:62
+#: includes/views/settings/about-tab.php:72
+#, fuzzy
+msgid "直连 (GitHub)"
+msgstr "直连（GitHub）"
 
 #: includes/views/callback-page.php:159
 msgid "绑定成功"
 msgstr ""
 
+#: includes/views/settings/about-tab.php:48
+msgid "自动更新：接入 WordPress 原生更新系统，后台一键升级"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:44
+msgid "自定义提供商：通过后台界面配置即可接入任意 OAuth 2.0 服务商"
+msgstr ""
+
 #: includes/views/settings/provider-detail-view.php:24
 msgid "配置指导，请访问 <a href=\"%s\" target=\"_blank\">我们的设置指南</a>。"
 msgstr ""
+
+#: includes/views/settings/about-tab.php:33
+msgid "配置提供商"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:29
+msgid "配置教程"
+msgstr ""
+
+#: includes/views/settings/about-tab.php:61
+#: includes/views/settings/about-tab.php:76
+#, fuzzy
+msgid "镜像 (gh-proxy.org)"
+msgstr "镜像源（gh-proxy.org）"
+
+#~ msgid "Built-in support for GitHub and Google OAuth."
+#~ msgstr "内置 GitHub 和 Google OAuth 支持。"
+
+#~ msgid "Check for Updates"
+#~ msgstr "检查更新"
+
+#~ msgid "Configure Providers"
+#~ msgstr "配置提供商"
+
+#~ msgid "Current version:"
+#~ msgstr "当前版本："
+
+#~ msgid "Debug logging with built-in log viewer."
+#~ msgstr "调试日志及内置日志查看器。"
+
+#~ msgid "Features"
+#~ msgstr "功能特性"
+
+#~ msgid "GitHub Repository"
+#~ msgstr "GitHub 仓库"
+
+#~ msgid ""
+#~ "Hooks into WordPress's native update system — update notifications appear "
+#~ "on the standard Plugins → Installed Plugins page. Version metadata is "
+#~ "served via version.json on GitHub, no API key required."
+#~ msgstr ""
+#~ "集成 WordPress 原生更新系统——更新通知将显示在标准的「插件 → 已安装插件」页"
+#~ "面。版本元数据通过 GitHub 上的 version.json 分发，无需 API 密钥。"
+
+#~ msgid "Links"
+#~ msgstr "链接"
+
+#~ msgid ""
+#~ "Modular OAuth provider system — add new providers by dropping a single "
+#~ "file."
+#~ msgstr "模块化 OAuth 提供商系统 — 只需添加一个文件即可支持新的提供商。"
+
+#~ msgid ""
+#~ "OAuth 2.0 login for WordPress with GitHub, Google, and unlimited custom "
+#~ "providers. Supports OAuth-only mode, a security/rate-limit layer, login "
+#~ "history, and self-updates via GitHub (with an optional mirror source for "
+#~ "mainland China)."
+#~ msgstr ""
+#~ "为 WordPress 提供 OAuth 2.0 登录，支持 GitHub、Google 及无限自定义提供商。"
+#~ "支持仅 OAuth 模式、安全与限流层、登录历史记录，以及通过 GitHub 自更新（可"
+#~ "选中国大陆镜像源）。"
+
+#~ msgid "OAuth-only mode to disable password login."
+#~ msgstr "仅 OAuth 模式，可禁用密码登录。"
+
+#~ msgid ""
+#~ "Route both update checks and downloads through a GitHub mirror (gh-proxy."
+#~ "org) to avoid connectivity issues in mainland China. When enabled, the "
+#~ "proxy prefix is added to the version.json URL and the update package URL."
+#~ msgstr ""
+#~ "通过 GitHub 镜像（gh-proxy.org）进行更新检查与下载，以避免中国大陆的网络连"
+#~ "接问题。启用后，代理前缀将添加到 version.json URL 与更新包 URL。将更新检查"
+#~ "和下载都通过 GitHub 镜像（gh-proxy.org）进行，以避免中国大陆的网络连接问"
+#~ "题。启用后，代理前缀会同时加在 version.json 地址和更新包下载地址上。"
+
+#~ msgid "Unbind OAuth"
+#~ msgstr "解除 OAuth 绑定"
+
+#~ msgid ""
+#~ "Unlimited custom OAuth providers for self-hosted or third-party servers."
+#~ msgstr "支持无限自定义 OAuth 提供商（自建或第三方服务器）。"
+
+#~ msgid "Update source:"
+#~ msgstr "更新源："
+
+#~ msgid "Updates"
+#~ msgstr "更新"
 
 #~ msgid "\"common\" allows both personal and organizational accounts."
 #~ msgstr "“common”允许个人和组织账号。"
