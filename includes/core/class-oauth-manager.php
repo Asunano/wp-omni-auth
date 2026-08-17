@@ -587,12 +587,19 @@ class WPOmniAuth_Manager {
             $this->log('Stored OAuth meta for user', ['user_id' => $user->ID, 'provider' => $slug]);
         }
 
-        // [S4] Validate redirect_to — only allow same-site URLs
+        // [S4] Validate redirect_to — only allow same-site URLs.
+        // Prefer the redirect stashed when the flow began (so the user returns
+        // to where they were headed); fall back to any redirect_to on the
+        // callback request itself.
         $redirect = admin_url();
-        if (isset($_GET['redirect_to'])) {
+        $stashed  = get_transient('wpomni_oauth_redirect_' . hash('sha256', $state));
+        if (!empty($stashed)) {
+            delete_transient('wpomni_oauth_redirect_' . hash('sha256', $state));
+            $redirect = $stashed;
+        } elseif (isset($_GET['redirect_to'])) {
             $raw_redirect = esc_url_raw($_GET['redirect_to']);
-            $validated = wp_validate_redirect($raw_redirect, admin_url());
-            $redirect = $validated ?: admin_url();
+            $validated    = wp_validate_redirect($raw_redirect, admin_url());
+            $redirect     = $validated ?: admin_url();
         }
 
         // Prevent any caching layer from stripping Set-Cookie headers
@@ -731,6 +738,18 @@ class WPOmniAuth_Manager {
         self::increment_rate_limit_per_provider($slug);
 
         $state = $this->create_oauth_state($slug);
+
+        // Stash the requested post-login redirect (if any) so it survives the
+        // OAuth provider round-trip. The provider returns only code+state to
+        // our callback, so the redirect must be remembered server-side.
+        if (isset($_GET['wpomni_redirect_to'])) {
+            $raw_redirect = esc_url_raw($_GET['wpomni_redirect_to']);
+            $validated    = wp_validate_redirect($raw_redirect, false);
+            if ($validated !== false && $validated !== '') {
+                set_transient('wpomni_oauth_redirect_' . hash('sha256', $state), $validated, 600);
+            }
+        }
+
         $url   = $provider->get_authorization_url($state);
         if (empty($url)) {
             $this->render_callback_page('error', __('Invalid OAuth provider.', 'wp-omni-auth'), '', '', '', $this->build_callback_context($slug));

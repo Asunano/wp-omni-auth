@@ -3,7 +3,7 @@
  * Plugin Name: WP-OmniAuth
  * Plugin URI: https://github.com/Asunano/wp-omni-auth
  * Description: OAuth 2.0 login for WordPress with 11 built-in providers and unlimited custom OAuth. Supports OAuth-only mode, security/rate-limit layer, login history, and self-updates. | 为 WordPress 添加 OAuth 2.0 登录能力，支持 11 个内置提供商与不限数量的自定义提供商。教程：https://blog.drxian.cn/archives/1465
- * Version: 0.1.0
+ * Version: 0.1.1
  * Author: Asunano
  * Author URI: https://github.com/Asunano
  * License: GPL v2 or later

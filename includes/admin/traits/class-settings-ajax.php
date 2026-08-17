@@ -307,9 +307,11 @@ trait WPOmniAuth_Settings_Ajax {
         $table = $wpdb->prefix . 'wpomni_login_log';
         $wpdb->query("DROP TABLE IF EXISTS {$table}");
 
-        // 4. Delete user meta
+        // 4. Delete user meta (all wpomni_ bindings, including per-provider
+        // wpomni_{slug}_id, so no orphaned bindings remain after reset — this
+        // matches the scope collected by admin_export_data).
         $wpdb->query(
-            "DELETE FROM {$wpdb->usermeta} WHERE meta_key IN ('wpomni_provider', 'wpomni_id', 'wpomni_email', 'wpomni_binding_time')"
+            "DELETE FROM {$wpdb->usermeta} WHERE meta_key LIKE 'wpomni\_%'"
         );
 
         // 5. Clear debug log file

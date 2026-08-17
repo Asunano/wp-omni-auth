@@ -238,6 +238,14 @@ class WPOmniAuth_GitHub_Updater {
             return '';
         }
 
+        // Escape the entire body first. The changelog originates from the remote
+        // version.json (which can be MITM'd when the mirror source is enabled or if
+        // the upstream repo is compromised), so it must never be trusted as HTML.
+        // Escaping up front neutralizes any injected markup; the markdown patterns
+        // below only use characters that survive esc_html (asterisks, brackets,
+        // hashes, hyphens), so they still apply correctly.
+        $body = esc_html($body);
+
         // Headers
         $body = preg_replace('/^### (.+)$/m', '<h4>$1</h4>', $body);
         $body = preg_replace('/^## (.+)$/m', '<h3>$1</h3>', $body);
@@ -245,8 +253,17 @@ class WPOmniAuth_GitHub_Updater {
         // Bold
         $body = preg_replace('/\*\*(.+?)\*\*/', '<strong>$1</strong>', $body);
 
-        // Links
-        $body = preg_replace('/\[(.+?)\]\((.+?)\)/', '<a href="$2">$1</a>', $body);
+        // Links — sanitize the captured URL (esc_url blocks javascript:/data: etc.)
+        // and text via a callback before substitution.
+        $body = preg_replace_callback(
+            '/\[(.+?)\]\((.+?)\)/',
+            function ($m) {
+                $href = esc_url(trim($m[2], '"\''));
+                $text = $m[1];
+                return '<a href="' . $href . '">' . $text . '</a>';
+            },
+            $body
+        );
 
         // Lists
         $body = preg_replace('/^- (.+)$/m', '<li>$1</li>', $body);

@@ -137,8 +137,12 @@ class WPOmniAuth_Login_Guard {
         if (empty($username) && empty($password)) {
             return $user;
         }
-        // Emergency mode: temporarily allow password login
-        if (get_transient('wpomni_emergency_active')) {
+        // Emergency mode: temporarily allow password login — but only from the
+        // same IP that activated it (is_emergency_active() enforces the IP bind,
+        // unlike a raw transient check). This keeps the global REST/XML-RPC
+        // vector consistent with the Manager's web-path filter, so the break-glass
+        // cannot be used to log in from an arbitrary IP during the 15-min window.
+        if (self::is_emergency_active()) {
             return $user;
         }
         // Safety net: if no providers are enabled, don't block password login (prevents lockout)

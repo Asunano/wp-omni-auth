@@ -30,15 +30,33 @@ if (!defined('ABSPATH')) {
     <tr>
         <th scope="row"><?php esc_html_e('Unbind', 'wp-omni-auth'); ?></th>
         <td>
-            <form method="post" action="<?php echo esc_url(set_url_scheme(admin_url('admin-post.php'), 'https')); ?>">
-                <input type="hidden" name="action" value="wpomni_unbind_user">
-                <input type="hidden" name="user_id" value="<?php echo esc_attr($user_id); ?>">
-                <?php wp_nonce_field('wpomni_unbind_' . $user_id); ?>
-                <button type="submit" class="button wpomni-danger-outline" onclick="return confirm('<?php echo esc_js(__('Are you sure you want to unbind this OAuth account? The user will need to re-authenticate via OAuth.', 'wp-omni-auth')); ?>');">
-                    <?php esc_html_e('Unbind OAuth', 'wp-omni-auth'); ?>
-                </button>
-                <p class="description"><?php esc_html_e('After unbinding, the user must log in via OAuth again to re-establish the binding.', 'wp-omni-auth'); ?></p>
-            </form>
+            <?php
+            // Render as a nonce-protected GET link to admin-post.php instead of a
+            // nested <form>. The profile edit screen is itself wrapped in a single
+            // <form id="your-profile">, so a nested <form> here is invalid HTML and
+            // its wp_nonce_field() emitted a second name="_wpnonce" hidden input that
+            // collided with WordPress's own profile-update nonce — causing
+            // "The link you followed has expired" on profile save. A GET link to
+            // admin-post.php carries the nonce as a URL parameter (no form collision)
+            // and actually reaches the unbind handler, which also fixes the previously
+            // broken unbind button.
+            $unbind_url = wp_nonce_url(
+                add_query_arg(
+                    [
+                        'action'  => 'wpomni_unbind_user',
+                        'user_id' => $user_id,
+                    ],
+                    admin_url('admin-post.php')
+                ),
+                'wpomni_unbind_' . $user_id
+            );
+            ?>
+            <a class="button wpomni-danger-outline"
+               href="<?php echo esc_url($unbind_url); ?>"
+               onclick="return confirm('<?php echo esc_js(__('Are you sure you want to unbind this OAuth account? The user will need to re-authenticate via OAuth.', 'wp-omni-auth')); ?>');">
+                <?php esc_html_e('Unbind OAuth', 'wpomni-auth'); ?>
+            </a>
+            <p class="description"><?php esc_html_e('After unbinding, the user must log in via OAuth again to re-establish the binding.', 'wp-omni-auth'); ?></p>
         </td>
     </tr>
 </table>

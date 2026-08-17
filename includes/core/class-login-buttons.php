@@ -36,6 +36,14 @@ class WPOmniAuth_Login_Buttons {
 
         self::log('Enabled providers', array_keys($enabled_providers));
 
+        // Preserve the login page's redirect_to so OAuth login returns the
+        // user to where they were headed (e.g. a protected page), instead of
+        // always dumping them on the dashboard.
+        $redirect_to = '';
+        if (!empty($_GET['redirect_to'])) {
+            $redirect_to = esc_url_raw($_GET['redirect_to']);
+        }
+
         $html = '<div class="wpomni-login-buttons">';
         foreach ($enabled_providers as $provider) {
             $state = WPOmniAuth_OAuth_State::create($provider->get_slug());
@@ -47,6 +55,11 @@ class WPOmniAuth_Login_Buttons {
             self::log('Generated auth URL', ['slug' => $provider->get_slug(), 'url' => $url]);
             $icon = self::get_icon($provider);
             $slug = $provider->get_slug();
+
+            $btn_url = add_query_arg('wpomni_login', $slug, wp_login_url());
+            if ($redirect_to !== '') {
+                $btn_url = add_query_arg('wpomni_redirect_to', $redirect_to, $btn_url);
+            }
 
             $extra_class = '';
             $style = '';
@@ -73,7 +86,7 @@ class WPOmniAuth_Login_Buttons {
 
             $html .= sprintf(
                 '<p><a href="%s" class="wpomni-btn wpomni-btn-%s%s" data-provider-name="%s"%s>%s<span class="wpomni-btn-label">%s</span></a></p>',
-                esc_url(add_query_arg('wpomni_login', $slug, wp_login_url())),
+                esc_url($btn_url),
                 esc_attr($slug),
                 $extra_class,
                 esc_attr($provider->get_name()),

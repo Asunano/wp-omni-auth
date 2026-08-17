@@ -446,7 +446,9 @@ trait WPOmniAuth_Settings_Views {
     }
 
     public function handle_unbind_user() {
-        $user_id = isset($_POST['user_id']) ? (int) $_POST['user_id'] : 0;
+        // The unbind control is now a nonce-protected GET link to admin-post.php,
+        // so read the target user id from the request (GET or POST).
+        $user_id = isset($_REQUEST['user_id']) ? (int) $_REQUEST['user_id'] : 0;
         if (!$user_id) {
             wp_die(__('Invalid user.', 'wp-omni-auth'));
         }
